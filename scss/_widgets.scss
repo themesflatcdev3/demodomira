@@ -1,31 +1,73 @@
 @use "./abstracts/index" as *;
 
+.image {
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.wg-avatar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .image {
+        flex-shrink: 0;
+        display: flex;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .sub {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+    }
+    .dot {
+        display: flex;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #00B96A;    
+    }
+}
+
+.wg-social {
+    display: flex;
+    gap: 24px;
+    a {
+        display: flex;
+        font-size: 24px;
+        color: var(--Text-light);
+    }
+    &.style-black {
+        a {
+            color: var(--Text-primary);
+        }
+    }
+}
+
+
+
+
+
+
 .breadcrumb {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 8px;
     margin-bottom: 0;
-    li {
-        color: var(--Text-secondary-2);
-        &:not(:last-child) {
-            color: var(--White);
-            position: relative;
-            &::after {
-                content: "\e90f";
-                position: absolute;
-                font-family: $fontIcon;
-                font-size: 12px;
-                right: -17px;
-            }
-        }
+    .dot {
+        display: flex;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: var(--Text-muted);
     }
-    &.style-1 {
-        margin-bottom: 4px;
-        li {
-            &:not(:last-child) {
-                color: var(--Text-primary);
-            }
-        }
+    li {
+        color: var(--Text-secondary);
     }
 }
 
@@ -65,32 +107,25 @@
     li {
         a {
             @include flex(center, center);
-            height: 48px;
-            width: 48px;
+            height: 40px;
+            width: 40px;
             color: var(--Text-primary);
             background-color: var(--White);
             border: 1px solid var(--Line);
-            border-radius: 8px;
+            border-radius: 50%;
             font-size: 16px;
             line-height: 26px;
-            font-weight: 700;
+            font-weight: 600;
         }
         i {
-            font-size: 24px;
+            font-size: 16px;
         }
         &:hover,
         &.active {
             a {
                 color: var(--White);
                 background-color: var(--Text-primary);
-            }
-        }
-    }
-    @include res(md) {
-        li {
-            a {
-                width: 40px;
-                height: 40px;
+                border-color: var(--Text-primary);
             }
         }
     }

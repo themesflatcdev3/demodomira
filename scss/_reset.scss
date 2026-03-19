@@ -815,7 +815,7 @@ a {
 .text-Primary {
     color: var(--Primary) !important;
 }
-.text-primary {
+.text-cl-primary {
     color: var(--Text-primary) !important;
 }
 .text-secondary {
@@ -1397,6 +1397,10 @@ a {
     z-index: 5;
 }
 
+.line {
+    border-bottom: 1px solid var(--Line);
+}
+
 .swiper-slide {
     height: auto !important;
 }
@@ -1493,19 +1497,9 @@ a {
     background: var(--White);
     box-shadow: 0px 10px 25px 0px #475c851a;
 
-    &::after {
+    .icon {
         position: absolute;
-        content: "\e90c";
-        font-family: $fontIcon;
-        text-align: center;
-        line-height: 40px;
-        font-size: 24px;
-        color: var(--Text-primary);
-        cursor: pointer;
-        z-index: 1;
-        -webkit-transition: all 400ms linear;
-        -o-transition: all 400ms linear;
-        transition: all 400ms linear;
+        display: flex;
     }
     &.active-progress {
         opacity: 1;
@@ -1532,8 +1526,5 @@ a {
         right: 15px;
         height: 40px;
         width: 40px;
-        &::after {
-            font-size: 20px;
-        }
     }
 }

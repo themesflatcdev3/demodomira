@@ -17,8 +17,10 @@
         border-radius: 4px;
         top: 12px;
         left: 12px;
-        letter-spacing: 1.6px;
         z-index: 2;
+    }
+    .title {
+        text-transform: capitalize;
     }
     @include res(lg, min) {
         .btn-readmore {
@@ -121,7 +123,9 @@
 }
 
 .meta-post {
-    gap: 33px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
     .item {
         &:not(:last-child) {
             position: relative;
@@ -132,7 +136,7 @@
                 height: 16px;
                 top: 50%;
                 transform: translateY(-50%);
-                right: -16px;
+                right: -13px;
                 background-color: var(--Line);
             }
         }
@@ -187,12 +191,6 @@
         .tf-btn {
             margin-top: 40px;
         }
-    }
-}
-
-.blog-list {
-    .wg-pagination {
-        margin-top: 0;
     }
 }
 

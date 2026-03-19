@@ -2,95 +2,75 @@
 
 .footer {
     background-color: var(--Text-primary);
-    padding-top: 60px;
     .footer-body {
-        padding-bottom: 60px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 60px;
+        padding-bottom: 100px;
+        border-bottom: 1px solid #FFFFFF1A;
     }
-    .footer-heading {
-        margin-bottom: 20px;
+    .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+    .text {
+        color: var(--Text-muted);
+    }
+    .footer-logo {
+        margin-bottom: 24px;
+    }
+    .footer-image {
+        padding-top: 51px;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 61%;
+            background: linear-gradient(360deg, #101010 0%, rgba(16, 16, 16, 0) 100%);
+        }
     }
     .footer-bottom {
         padding: 16px 0;
     }
-    .social {
-        gap: 24px;
-        a {
-            font-size: 24px;
-            color: var(--White);
-            &:hover {
-                color: var(--Primary);
-            }
-        }
+    .newsletter {
+        flex-grow: 1;
+        max-width: 340px;
     }
-    textarea {
-        height: 130px;
+    .footer-about {
+        flex-grow: 1;
+        max-width: 280px;
     }
-    &.style-1 {
-        padding-top: 99px;
-        .footer-infor {
-            display: flex;
-            .item {
-                text-align: center;
-            }
-        }
-        .footer-body {
-            padding-bottom: 80px;
-        }
-        .item {
-            max-width: 376px;
-            width: 100%;
-        }
-
-        @include res(xl) {
-            .footer-infor {
-                align-items: center;
-                flex-direction: column;
-                gap: 40px;
-            }
-        }
-        @include res(lg) {
-            padding-top: 80px;
-        }
-        @include res(md) {
-            padding-top: 50px;
-            .footer-body {
-                padding-bottom: 50px;
-            }
-        }
-    }
-    @include res(lg, min) {
-        .footer-newsletter {
-            max-width: 339px;
-            margin-left: auto;
-        }
-        .footer-about {
-            max-width: 312px;
-        }
-    }
-    @include res(xl, min) {
-        .footer-content {
-            margin-left: 14px;
-        }
-        .company {
-            flex: 54%;
-        }
-        .quick-link {
-            flex: 20%;
-        }
+    .footer-content {
+        flex-grow: 1;
+        max-width: 420px;
     }
     @include res(lg) {
-        .footer-body {
-            .row {
-                row-gap: 40px;
+        .footer-inner {
+            flex-wrap: wrap;
+            .newsletter {
+                max-width: 100%;
             }
         }
     }
     @include res(md) {
+        .footer-inner {
+            flex-direction: column;
+            align-items: flex-start;
+            > * {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+
+
+
+
         .footer-logo {
             width: 200px;
         }
-        padding-top: 50px;
         .footer-about {
             > div {
                 &:not(:last-child) {
@@ -99,8 +79,8 @@
             }
         }
         .footer-body {
-            margin-bottom: 24px;
-            padding-bottom: 40px;
+            padding-top: 40px;
+            padding-bottom: 60px;
         }
         .footer-content {
             flex-direction: column;

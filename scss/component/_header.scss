@@ -72,7 +72,7 @@
         gap: 30px;
     }
     .site-logo {
-        @include res(xxl, min) {
+        @include res(xxxl, min) {
             min-width: 378px;
         } 
     }
@@ -98,8 +98,13 @@
         }
     }
     &.style-default {
-        @include res(md) {
+        @include res(xxl) {
             .tf-btn {
+                display: none;
+            }
+        }
+        @include res(xl) {
+            .hot-line {
                 display: none;
             }
         }
@@ -349,8 +354,10 @@
 }
 
 .mobile-button {
+    display: flex;
+    font-size: 24px;
+    color: var(--Text-primary);
     cursor: pointer;
-    padding: 18px 0;
     .burger {
         position: relative;
         width: 25px;
@@ -688,7 +695,10 @@
             }
         }
     }
-    .offcanvas-header {
+    .top-nav-mobile {
+        padding: 2rem 1rem;
+    }
+    .inner-mobile-nav {
         padding: 2rem 1rem;
     }
     .mb-body {
@@ -705,23 +715,6 @@
                 margin-bottom: 11px;
                 color: var(--Text-secondary);
             }
-            .mb-info {
-                li {
-                    color: rgb(134, 134, 134);
-                    font-size: 14px;
-                    line-height: 24px;
-                    span {
-                        margin-left: 5px;
-                        font-weight: 600;
-                        color: var(--Text-primary);
-                    }
-                    a {
-                        margin-left: 5px;
-                        font-weight: 400;
-                        color: var(--Text-primary);
-                    }
-                }
-            }
         }
     }
     .tf-btn {
@@ -735,13 +728,9 @@
     .wrap-social {
         display: flex;
         align-items: center;
-    }
-    .social {
-        a {
-            font-size: 22px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        gap: 8px;
+        .wg-social {
+            gap: 8px;
         }
     }
     .mb-info {
@@ -775,7 +764,7 @@
             position: relative;
             &::after {
                 position: absolute;
-                content: "\e90e";
+                content: "\e908";
                 font-family: $fontIcon;
                 font-size: 20px;
                 font-weight: 400;

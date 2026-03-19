@@ -3,59 +3,70 @@
 .page-title {
     position: relative;
     z-index: 99;
-    .thumbs {
-        img {
-            width: 100%;
-            object-fit: cover;
+    background-color: var(--Bg-light);
+    .content {
+        padding: 100px 0;
+    }
+    .title {
+        margin-bottom: 12px;
+    }
+    .line,
+    .sub {
+        margin-bottom: 20px;
+    }
+
+    @include res(lg) {
+        .content {
+            padding: 50px 0;
         }
     }
-    &.style-default {
-        .thumbs {
-            background-color: var(--Text-primary);
-            img {
-                width: 100%;
-                opacity: 0.5;
-                min-height: 300px;
-                object-fit: cover;
-            }
+
+    &.style-1 {
+        .sub-title {
+            display: inline-flex;
+            padding: 4px 16px;
+            border-radius: 4px;
+            background-color: var(--Primary);
+            color: var(--Text-light);
+            margin-bottom: 16px;
         }
         .title {
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
-        .content {
-            position: absolute;
-            inset: 0;
+        .infor {
             display: flex;
-            display: flex;
+            align-items: center;
             justify-content: center;
-            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            .space {
+                display: flex;
+                width: 1px;
+                height: 16px;
+                background-color: var(--Line);
+            }
         }
-    }
-    &.style-1 {
-        .content {
+      
+        .author {
             display: flex;
-            margin-bottom: 70px;
-            padding-top: 61px;
+            gap: 12px;
             align-items: center;
-            gap: 24px;
-            > div {
-                flex: 20%;
-            }
-            .title {
-                letter-spacing: -1px;
-                flex: 44.8%;
+            .image {
+                display: flex;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                overflow: hidden;
+                flex-shrink: 0;
             }
         }
-        .flat-tab-form {
-            position: relative;
-            z-index: 9;
-            margin-top: -119px;
-        }
-        .slide-inner {
-            img {
-                min-height: 300px;
-                object-fit: cover;
-                width: 100%;
+        .date {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            .icon {
+                font-size: 24px;
             }
         }
         @include res(lg) {
