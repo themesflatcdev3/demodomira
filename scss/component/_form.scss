@@ -62,7 +62,19 @@ form {
     }
 }
 
-.form-search,
+.form-search {
+    position: relative;
+    .button-submit {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 16px;
+        display: flex;
+        font-size: 24px;
+        color: var(--Text-primary);
+    }
+}
+
 .form-newsletter-1 {
     position: relative;
     .button-submit {
@@ -99,7 +111,7 @@ form {
     }
 }
 
-.tf-check {
+input.tf-check {
     position: relative;
     cursor: pointer;
     outline: 0;
@@ -121,13 +133,14 @@ form {
     }
     &::before {
         font-family: $fontIcon;
-        content: "\e911";
+        content: "\e938";
         position: absolute;
         color: var(--White);
         opacity: 0;
-        left: 0px;
-        top: 0px;
-        font-size: 10px;
+        left: 1px;
+        top: 1px;
+        font-size: 8px;
+        line-height: 8px;
         transform: scale(0.5);
         @include transition3;
     }
@@ -142,19 +155,14 @@ form {
 }
 
 .leave-comment {
+    background-color: var(--Bg-light);
+    border-radius: 8px;
+    padding: 32px;
     .tf-grid-layout {
         gap: 20px;
     }
-    &.style-1 {
-        fieldset input,
-        textarea {
-            background-color: rgba(255, 255, 255, 0.1);
-            border: unset;
-            color: var(--White);
-            &::placeholder {
-                color: var(--Text-muted);
-            }
-        }
+    @include res(md) {
+       padding: 24px 15px;
     }
 }
 

@@ -22,7 +22,7 @@
     border-radius: 8px;
     position: relative;
     &::after {
-        content: "\e90e";
+        content: "\e908";
         font-family: $fontIcon;
         right: 10px;
         font-size: 20px;
@@ -107,16 +107,7 @@
                 background-color: rgba(0, 0, 0, 0.12);
             }
             &.selected {
-                color: var(--Main-color);
                 background-color: rgba(0, 0, 0, 0.12);
-                &::after {
-                    position: absolute;
-                    font-family: $fontIcon !important;
-                    content: "\e91a";
-                    right: 18px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
             }
         }
     }
