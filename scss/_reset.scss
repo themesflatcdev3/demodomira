@@ -1275,7 +1275,7 @@ a {
 }
 
 .mb_40 {
-    margin-bottom: 40px;
+    margin-bottom: 40px !important;
 }
 
 .mb_46 {
@@ -1392,8 +1392,8 @@ a {
 .bg-Text-light {
     background-color: var(--Text-light);
 }
-.bg-Bg-light {
-    background-color: var(--Bg-light);
+.bg-light {
+    background-color: var(--Bg-light) !important;
 }
 
 /* Extra classes

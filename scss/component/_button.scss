@@ -63,6 +63,9 @@
     }
     &.btn-bg-white {
         background-color: var(--White);
+        span {
+            color: var(--Text-primary);
+        }
         .bg-effect {
             background-color: var(--Primary);
         }

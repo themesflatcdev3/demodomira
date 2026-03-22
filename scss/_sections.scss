@@ -99,7 +99,40 @@
     }
 }
 
-.section-about,
+.section-about {
+    .left-image {
+        img {
+            border-radius: 16px;
+        }
+    }
+
+    @include res(xxl, min) {
+        .left-image {
+            padding-right: 30px;
+        }
+        .right-content {
+            padding: 14px 50px 0 15px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .banner-2 {
     .parallaxie {
         height: 600px;
@@ -707,10 +740,6 @@
             cursor: url("../images/section/cursor.png"), auto;
         }
     }
-}
-
-.section-categories {
-    background-color: var(--Bg-light);
 }
 
 .section-location,
