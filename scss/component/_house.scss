@@ -115,4 +115,115 @@
             transform: translateY(0);
         }
     }
+    &.style-list {
+        display: flex;
+        gap: 32px;
+        padding: 27px;
+        border-radius: 12px;
+        background-color: var(--White);
+        align-items: center;
+        border: 1px solid var(--Line);
+        .wrap-img {
+            display: flex;
+            gap: 20px;
+            flex: 13.3%;
+        }
+        .wrap-tag {
+            position: unset;
+            .tag {
+                display: flex;
+                height: 32px;
+                align-items: center;
+                padding: 0 12px;
+                border-radius: 4px;
+                &.rent {
+                    background-color: var(--Secondary-2);
+                }
+                &.categoreis {
+                    background-color: var(--Bg-light);
+                }
+                &.sale {
+                    background-color: var(--Secondary);
+                    color: var(--White);
+                }
+            }
+        }
+        .info {
+            padding-top: 16px;
+            margin-top: 16px;
+            border-top: 1px solid var(--Line);
+            gap: 24px;
+        }
+        .img-style {
+            position: relative;
+            overflow: hidden;
+            &:after {
+                content: "";
+                position: absolute;
+                width: 200%;
+                height: 0%;
+                left: 50%;
+                top: 50%;
+                background-color: rgba(255, 255, 255, 0.3);
+                transform: translate(-50%, -50%) rotate(-45deg);
+                z-index: 1;
+                pointer-events: none;
+            }
+            img {
+                min-height: 260px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 1s;
+            }
+            &:hover {
+                &:after {
+                    height: 250%;
+                    transition: all 600ms linear;
+                    background-color: transparent;
+                }
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .wrap-btn {
+            margin-top: 28px;
+        }
+        .content {
+            flex: 20%;
+        }
+       
+        &.v2 {
+      
+        }
+
+        @include res(xl) {
+            .info {
+                margin-top: 10px;
+                padding-top: 10px;
+                row-gap: 10px;
+            }
+            .top {
+                margin-bottom: 12px;
+            }
+            .wrap-btn {
+                margin-top: 12px;
+            }
+        }
+
+        @include res(md) {
+            flex-direction: column;
+            padding: 27px 15px !important;
+            .content {
+                width: 100%;
+            }
+            .info {
+                gap: 10px;
+                li {
+                    gap: 6px;
+                }
+            }
+        }
+    }
 }

@@ -34,11 +34,33 @@
             left: 50%;
             transform: translate(-50%,-50%);
         }
-        &.noUi-handle-lower {
 
-        }
-        &.noUi-handle-upper {
+    }
+}
 
+.range-price-1 {
+    padding-top: 8px;
+    .range {
+        margin-bottom: 20px;
+    }
+    .value-wrap {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        .value {
+            position: relative;
+            width: 100%;
+            display: flex;
+            padding: 11px 15px;
+            border-radius: 8px;
+            border: 1px solid var(--Line);
+            background-color: var(--Text-light);
+            span {
+                position: absolute;
+                right: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
         }
     }
 }

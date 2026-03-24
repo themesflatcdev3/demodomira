@@ -125,12 +125,6 @@
             }
         }
     }
-    @include res(lg) {
-        padding: 75px 0 40px;
-        .content {
-            padding: 50px 0;
-        }
-    }
     &.style-2 {
         padding: 132px 0 132px;
         .image {
@@ -181,6 +175,16 @@
                     width: 100%;
                 }
             }
+        }
+    }
+    @include res(lg) {
+        padding: 75px 0 40px;
+        &.style-inner,
+        &.style-inner-2 {
+            padding: 0;
+        }
+        .content {
+            padding: 50px 0;
         }
     }
 }

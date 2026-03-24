@@ -409,34 +409,6 @@
     }
 }
 
-.box-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    .right {
-        max-width: 344px;
-        width: 100%;
-    }
-    .nav-tab-filter {
-        .nav-link-item {
-            color: var(--Text-secondary-2);
-            &.active {
-                color: var(--Text-primary);
-            }
-        }
-        i {
-            font-size: 40px;
-        }
-    }
-    .nice-select {
-        max-width: 240px;
-        width: 100%;
-        flex-shrink: 0;
-    }
-}
-
 .categories-item {
     display: flex;
     gap: 20px;
@@ -798,6 +770,151 @@
     }
 }
 
+.tf-filter-sidebar {
+    padding: 32px;
+    border-radius: 12px;
+    background-color: var(--Bg-light);
+    @include res(xl, min) {
+        max-width: 400px;
+    }
+    @include res(xl) {
+        padding: 24px 15px;
+    }
+}
+
+.wd-filter-select {
+    .nice-select {
+        padding: 11px 15px;
+        &::after {
+            right: 15px;
+        }
+    }
+    .show-avanced {
+        i {
+            font-size: 28px;
+        }
+    }
+    .bot-btn {
+        a {
+            span {
+                text-decoration: underline;
+            }
+            .icon {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.top-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    .left {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+    .right {
+        display: flex;
+        gap: 12px 28px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .btn-filter {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        padding: 8px 20px;
+        border-radius: 99px;
+        background-color: var(--Text-primary);
+        color: var(--Text-light);
+        cursor: pointer;
+        &.style-white {
+            background-color: transparent;
+            color: var(--Text-primary);
+            border: 1px solid var(--Line);
+        }
+    } 
+    .nav-tab-filter {
+        .nav-link-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid var(--Line);
+            color: var(--Text-primary);
+            i {
+                font-size: 24px;
+            }
+            &.active {
+                background-color: var(--Text-primary);
+                border-color: var(--Text-primary);
+                color: var(--Text-light);
+            }
+        }
+    }
+}
+
+.tf-switch-check {
+    position: relative;
+    display: flex !important;
+    width: 48px !important;
+    height: 24px !important;
+    -webkit-appearance: none;
+    background-color: var(--Line);
+    border-radius: 99px;
+    transition: 0.3s;
+    cursor: pointer;
+    &::before {
+        content: "";
+        border-radius: 99px;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        background: var(--White);
+        transition: 0.2s;
+    }
+    &:checked {
+        background-color: var(--Primary);
+        &::before {
+            left: 26px;
+        }
+    }
+}
+
+.list-filter {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    .item {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        padding: 4px 16px;
+        border-radius: 99px;
+        background-color: var(--Bg-light);
+        color: var(--Text-primary);
+        cursor: pointer;
+        @include transition3;
+        .icon {
+            font-size: 16px;
+        }
+    }
+    .clear-all {
+        text-decoration: underline;
+        color: var(--Text-primary);
+        cursor: pointer;
+        @include transition3;
+    }
+}
 
 
 
@@ -1422,35 +1539,6 @@
         .content-inner {
             padding-left: 9px;
         }
-    }
-}
-
-.tf-filter-sidebar {
-    padding: 24px;
-    border-radius: 16px;
-    border: 1px solid var(--Line);
-    background-color: var(--White);
-    .show-avanced {
-        i {
-            font-size: 28px;
-        }
-    }
-    &.style-1 {
-        background-color: var(--Bg-light);
-        border: unset;
-        border-radius: 0;
-    }
-    &.style-2 {
-        border: unset;
-    }
-    @include res(xl, min) {
-        max-width: 380px;
-    }
-    @include res(xl) {
-        padding: 24px 15px;
-    }
-    @include res(md) {
-        padding: 24px 15px;
     }
 }
 
