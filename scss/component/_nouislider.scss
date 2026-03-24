@@ -1,0 +1,44 @@
+@use "../abstracts/index" as *;
+
+.price-value-range {
+    background: var(--Line);
+    border-radius: 12px;
+    border: 0;
+    box-shadow: none;
+    height: 4px;
+    .noUi-connect {
+        background-color: var(--Text-primary);
+    }
+    .noUi-handle {
+        top: -8px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: var(--Text-light);
+        border: 2px solid var(--Text-primary);
+        cursor: pointer;
+        &::after {
+            display: none;
+        }
+        &::before {
+            position: absolute;
+            content: '\e91c';
+            font-family: $fontIcon;
+            font-size: 12px;
+            line-height: 12px;
+            color: var(--Text-primary);
+            width: 12px;
+            height: 12px;
+            background-color: unset;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        &.noUi-handle-lower {
+
+        }
+        &.noUi-handle-upper {
+
+        }
+    }
+}

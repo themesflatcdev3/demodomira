@@ -1,0 +1,91 @@
+@use "../abstracts/index" as *;
+
+.flat-tab-form {
+    .nav-tab-form {
+        position: relative;
+        display: flex;
+        gap: 8px;
+        margin: 0 auto;
+        max-width: max-content;
+        border-radius: 12px 12px 0 0;
+        padding: 12px;
+        background-color: var(--White);
+        .nav-link-item {
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-align: center;
+            color: var(--Text-primary);
+            &.active {
+                background-color: var(--Text-primary);
+                color: var(--White);
+            }
+        }
+       
+    }
+}
+
+.tabs-hover-wrap {
+    .tab-content-wrap {
+        position: relative;
+        overflow: hidden;
+    }
+    .item {
+        @include transition3();
+    }
+    .tab-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        box-sizing: border-box;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(40px);
+        @include transition3();
+        &.active {
+            position: relative;
+            z-index: 2;
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+            transition: 0.35s ease-in-out 0.35s;
+        }
+    }
+}
+
+.menu-tab {
+    position: relative;
+    border-bottom: 1px solid var(--Line);
+
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .tab-link {
+            padding: 12px 0;
+            @include transition3();
+            color: var(--Text-secondary-2);
+        }
+        &.active {
+            .tab-link {
+                color: var(--Text-primary);
+            }
+        }
+    }
+    .item-slide-effect {
+        position: absolute;
+        height: 2px;
+        background: var(--Text-primary);
+        -webkit-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        transition: all 0.5s;
+        left: 0%;
+        bottom: 0;
+    }
+    .nav-tab-item {
+        position: relative;
+        z-index: 1;
+    }
+}

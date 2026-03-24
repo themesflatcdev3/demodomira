@@ -1,0 +1,118 @@
+@use "../abstracts/index" as *;
+.card-house {
+    position: relative;
+    .img-style {
+        position: relative;
+    }
+    .wrap-tag {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        .tag {
+            display: flex;
+            align-items: center;
+            padding: 4px 12px;
+            border-radius: 99px;
+            background-color: var(--Bg-light);
+            text-transform: uppercase;
+        }
+    }
+    .info {
+        padding-top: 12px;
+        gap: 12px 24px;
+        flex-wrap: wrap;
+        i {
+            font-size: 24px;
+            color: var(--Text-secondary);
+        }
+    }
+    .title {
+        text-transform: capitalize;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        display: -webkit-box !important;
+    }
+    .wrap-btn {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        z-index: 6;
+    }
+    .img-style {
+        border-radius: 12px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &.style-default {
+        .wrap-btn {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            .tf-btn {
+                transform: translateY(10px);
+                opacity: 0;
+                visibility: hidden;
+                transition-duration: 0.4s;
+            }
+            .quick-view {
+                transition-delay: 0.1s;
+            }
+            .compare {
+                transition-delay: 0.3s;
+            }
+        }
+        &:hover {
+            .wrap-btn {
+                .tf-btn {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+    &.style-1 {
+        .content {
+            position: absolute;
+            bottom: 0;
+            right: 12px;
+            left: 12px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: var(--White);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 2;
+            @include transition3;
+        }
+        &:hover {
+            .content {
+                opacity: 1;
+                visibility: visible;
+                bottom: 12px;
+            }
+        }
+    }
+    @include res(xl, min) {
+        .tooltip {
+            display: block;
+        }
+    }
+    @include res(sm) {
+        .info {
+            gap: 12px 22px;
+        }
+    }
+    &:hover {
+        .wishlist {
+            opacity: 1;
+            margin-left: 0;
+            transform: translateY(0);
+        }
+    }
+}
