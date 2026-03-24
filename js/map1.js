@@ -1,6 +1,6 @@
 (function ($) {
     "use strict";
-    mapboxgl.accessToken = "";
+    mapboxgl.accessToken = "pk.eyJ1IjoiaG9hbmdoYW5kbiIsImEiOiJjbTdsbTkydm8wZGpiMmxxcTdvdzVqbHd3In0.HUUli-jvI1ALTBuzSeKTpw";
 
     const officeCoordinates = [-87.4548, 41.6389];
 

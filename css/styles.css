@@ -5163,6 +5163,19 @@ input.tf-check::before {
 .card-house.style-list .content {
   flex: 20%;
 }
+.card-house.style-list .content .title {
+  margin-bottom: 8px;
+}
+.card-house.style-list .content .tf-btn {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+@media (max-width: 1440px) {
+  .card-house.style-list {
+    gap: 12px;
+    padding: 24px 15px;
+  }
+}
 @media (max-width: 1199px) {
   .card-house.style-list .info {
     margin-top: 10px;
@@ -7912,6 +7925,12 @@ input.tf-check::before {
     margin-top: 28px;
     margin-bottom: 28px;
   }
+}
+
+.form-top-filter .flat-tab-form {
+  display: flex;
+  gap: 20px;
+  padding: 24px 0;
 }
 
 .banner-2 .parallaxie {
