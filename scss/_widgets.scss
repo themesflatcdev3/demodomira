@@ -1166,98 +1166,18 @@
             font-size: 20px;
         }
     }
-    &.style-1 {
-        border-radius: 16px;
-        background-color: var(--Bg-light);
-        border: none;
-        padding: 28px;
-        max-width: unset;
-        margin-left: unset;
-        .author {
-            .avatar {
-                text-align: center;
-                border-radius: unset;
-                img {
-                    border-radius: 12px;
-                }
-            }
-        }
-    }
-    &.style-2 {
-        display: flex;
-        justify-content: space-between;
-        gap: 12px;
-        border: unset;
-        background-color: var(--Bg-light);
-        padding: 28px 28px 28px;
-        .wrap-author {
-            display: flex;
-            gap: 40px;
-        }
-        .info {
-            display: flex;
-            align-self: start;
-            gap: 68px;
-            .item {
-                &:last-child {
-                    .icon {
-                        margin-top: 6px;
-                    }
-                }
-            }
-        }
-        .author {
-            .author-info {
-                padding-top: 6px;
-            }
-        }
-        .info {
-            padding-top: 6px;
-        }
-        .tf-btn {
-            min-width: 240px;
-        }
-        @include res(xl) {
-            align-items: center;
-            .wrap-author {
-                flex-direction: column;
-                gap: 24px;
-            }
-        }
-        @include res(lg) {
-            flex-direction: column;
-            align-items: start;
-            gap: 24px;
-            .wrap-btn {
-                width: 100%;
-            }
-        }
-        @include res(sm) {
-            .info {
-                flex-direction: column;
-                gap: 24px;
-            }
-        }
-    }
-    &.style-no-border {
-        background-color: var(--White);
-        border: unset;
-    }
-
-    @include res(lg, min) {
-        &:not(&.style-2, &.style-1) {
-            max-width: 380px;
-            margin-left: auto;
-        }
-    }
     @include res(md) {
         padding: 24px 15px !important;
     }
 }
 
-
-
-
+.date-item {
+    flex-grow: 1;
+    text-align: center;
+    padding: 11px;
+    border-radius: 8px;
+    border: 1px solid var(--Line);
+}
 
 
 

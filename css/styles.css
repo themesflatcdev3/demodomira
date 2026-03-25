@@ -1657,6 +1657,10 @@ a:focus, a:hover {
   font-size: 24px;
 }
 
+.fs-28 {
+  font-size: 28px;
+}
+
 .fs-40 {
   font-size: 40px !important;
 }
@@ -1669,6 +1673,11 @@ a:focus, a:hover {
   .lg-mb_30 {
     margin-bottom: 30px;
   }
+}
+
+.py-30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 /*------------ Components ---------------- */
@@ -2612,6 +2621,39 @@ a:focus, a:hover {
   z-index: 1;
 }
 
+.nav-tab-form.type-1 {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid var(--Line);
+}
+.nav-tab-form.type-1 .nav-tab-item {
+  width: 100%;
+}
+.nav-tab-form.type-1 .nav-link-item {
+  position: relative;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+.nav-tab-form.type-1 .nav-link-item::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--Text-primary);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.nav-tab-form.type-1 .nav-link-item.active::after {
+  opacity: 1;
+}
+
 /*------------ button ---------------- */
 /* ---------------------------------------------------------
     * Name: Domira - Real Estate HTML Template
@@ -3131,6 +3173,7 @@ form input[type=color].style-1 {
   border-radius: 0;
   border: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1019607843);
+  color: var(--White);
 }
 form button,
 form input[type=button],
@@ -3141,7 +3184,7 @@ form input[type=submit] {
   padding: 0;
 }
 form textarea {
-  height: 112px;
+  height: 113px;
 }
 
 .form-search {
@@ -6395,89 +6438,18 @@ input.tf-check::before {
 .box-sellers .tf-btn i {
   font-size: 20px;
 }
-.box-sellers.style-1 {
-  border-radius: 16px;
-  background-color: var(--Bg-light);
-  border: none;
-  padding: 28px;
-  max-width: unset;
-  margin-left: unset;
-}
-.box-sellers.style-1 .author .avatar {
-  text-align: center;
-  border-radius: unset;
-}
-.box-sellers.style-1 .author .avatar img {
-  border-radius: 12px;
-}
-.box-sellers.style-2 {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  border: unset;
-  background-color: var(--Bg-light);
-  padding: 28px 28px 28px;
-}
-.box-sellers.style-2 .wrap-author {
-  display: flex;
-  gap: 40px;
-}
-.box-sellers.style-2 .info {
-  display: flex;
-  align-self: start;
-  gap: 68px;
-}
-.box-sellers.style-2 .info .item:last-child .icon {
-  margin-top: 6px;
-}
-.box-sellers.style-2 .author .author-info {
-  padding-top: 6px;
-}
-.box-sellers.style-2 .info {
-  padding-top: 6px;
-}
-.box-sellers.style-2 .tf-btn {
-  min-width: 240px;
-}
-@media (max-width: 1199px) {
-  .box-sellers.style-2 {
-    align-items: center;
-  }
-  .box-sellers.style-2 .wrap-author {
-    flex-direction: column;
-    gap: 24px;
-  }
-}
-@media (max-width: 991px) {
-  .box-sellers.style-2 {
-    flex-direction: column;
-    align-items: start;
-    gap: 24px;
-  }
-  .box-sellers.style-2 .wrap-btn {
-    width: 100%;
-  }
-}
-@media (max-width: 575px) {
-  .box-sellers.style-2 .info {
-    flex-direction: column;
-    gap: 24px;
-  }
-}
-.box-sellers.style-no-border {
-  background-color: var(--White);
-  border: unset;
-}
-@media (min-width: 992px) {
-  .box-sellers:not(.box-sellers.style-2, .box-sellers.style-1) {
-    max-width: 380px;
-    margin-left: auto;
-  }
-}
 @media (max-width: 767px) {
   .box-sellers {
     padding: 24px 15px !important;
   }
+}
+
+.date-item {
+  flex-grow: 1;
+  text-align: center;
+  padding: 11px;
+  border-radius: 8px;
+  border: 1px solid var(--Line);
 }
 
 .tf-sidebar {
@@ -7776,6 +7748,9 @@ input.tf-check::before {
     width: 100%;
   }
 }
+.page-title.style-details {
+  padding: 100px 0 100px;
+}
 .page-title.style-details .tag-item {
   display: flex;
   padding: 3px 11px;
@@ -7961,15 +7936,21 @@ input.tf-check::before {
   margin-bottom: 60px;
 }
 .properties-details .images .list-image {
+  overflow-x: auto;
+}
+.properties-details .images .list-image::-webkit-scrollbar {
+  height: 0px;
+}
+.properties-details .images .wrap {
+  width: max-content;
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
 }
-.properties-details .images .list-image .item {
+.properties-details .images .wrap .item {
   width: 160px;
   height: 120px;
 }
-.properties-details .images .list-image .item-photo {
+.properties-details .images .wrap .item-photo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7977,10 +7958,10 @@ input.tf-check::before {
   border-radius: 8px;
   border: 1px solid var(--Line);
 }
-.properties-details .images .list-image .item-photo .icon {
+.properties-details .images .wrap .item-photo .icon {
   font-size: 48px;
 }
-.properties-details .properties-details-item {
+.properties-details .properties-details-item:not(:last-child) {
   margin-bottom: 60px;
 }
 .properties-details .properties-details-item .top {
@@ -8045,22 +8026,20 @@ input.tf-check::before {
   border: 1px solid var(--Line);
   border-radius: 16px;
 }
-.sidebar-right .sidebar-filter .nav-tab-form {
-  display: flex;
-  gap: 8px;
-  border-bottom: 1px solid var(--Line);
-}
-.sidebar-right .sidebar-filter .nav-tab-form .nav-tab-item {
-  display: flex;
-  width: 100%;
-  padding: 10px;
-  justify-content: center;
-}
 @media (min-width: 1441px) {
   .sidebar-right {
     max-width: 380px;
     margin-left: auto;
   }
+}
+
+.search-results-empty {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .banner-2 .parallaxie {

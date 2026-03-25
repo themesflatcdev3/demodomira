@@ -1545,6 +1545,10 @@ a {
     font-size: 24px;
 }
 
+.fs-28 {
+    font-size: 28px;
+}
+
 .fs-40 {
     font-size: 40px !important;
 }
@@ -1557,4 +1561,9 @@ a {
     @include res(lg,min) {
         margin-bottom: 30px;
     }
+}
+
+.py-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
