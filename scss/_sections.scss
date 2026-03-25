@@ -177,8 +177,28 @@
             }
         }
     }
+    &.style-details {
+        .tag-item {
+            display: flex;
+            padding: 3px 11px;
+            border-radius: 4px;
+            border: 1px solid var(--Line);
+            background-color: var(--Text-light);
+            color: var(--Text-primary);
+            &:hover {
+                color: var(--Text-light);
+                background-color: var(--Primary);
+                border-color: var(--Primary);
+            }
+        }
+        .line {
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+    }
     @include res(lg) {
         padding: 75px 0 40px;
+        &.style-details,
         &.style-inner,
         &.style-inner-2 {
             padding: 0;
@@ -293,19 +313,169 @@
 }
 
 .form-top-filter {
+    padding: 24px 0;
     .flat-tab-form {
         display: flex;
         gap: 20px;
-        padding: 24px 0;
+        .nav-tab-form {
+            flex-shrink: 0;
+            padding: 7px 8px;
+            border: 1px solid var(--Line);
+            border-radius: 8px;
+            gap: 0;
+            margin: 0;
+        }
+        .nav-link-item {
+            padding: 4px 16px;
+            border-radius: 8px;
+        }
+    }
+    .wg-filter {
+        flex-grow: 1;
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+        .form-title {
+            background-color: transparent;
+            .wrap-fill > * {
+                width: 100% !important;
+            }
+        }
+        .wd-search-form {
+            max-width: 1060px;
+            left: unset;
+            top: calc(100% + 24px);
+        }
+    }
+    @include res(xxl) {
+        .flat-tab-form {
+            flex-direction: column;
+        }
+        .form-title {
+            flex-direction: column;
+            >* {
+                width: 100%;
+            }
+        }
+        .wg-filter {
+            .wd-search-form {
+                left: 0;
+                right: unset;
+            }
+        }
     }
 }
 
+.properties-details {
+    .images {
+        margin-bottom: 60px;
+        .list-image {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            .item {
+                width: 160px;
+                height: 120px;
+            }
+            .item-photo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+                border: 1px solid var(--Line);
+                .icon {
+                    font-size: 48px;
+                }
+            }
+        }
+    }
+    .properties-details-item {
+        margin-bottom: 60px;
+        .top {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            .space {
+                display: flex;
+                width: 1px;
+                height: 24px;
+                background-color: var(--Line);
+            }
+        }
+    }
+    .properties-utility {
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px 100px;
+        }
+        .utility-item {
+            width: 243px;
+        }
+    }
+    .properties-nearby {
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 144px;
+        }
+        .nearby-item {
+            width: 214px;
+        }
+    }
+}
 
+.calculator-wrap {
+    display: flex;
+    gap: 30px 60px;
+    padding: 32px;
+    border-radius: 16px;
+    background-color: var(--Bg-light);
 
+    .name {
+        text-align: center;
+    }
+    .box {
+        display: grid;
+        padding: 11px 15px;
+        border-radius: 8px;
+        border: 1px solid var(--Line);
+        background-color: var(--Text-light);
+    }
+    @include res(xl) {
+       flex-direction: column;
+    }
+}
 
-
-
-
+.sidebar-right {
+    display: grid;
+    gap: 30px;
+    .sidebar-item {
+        display: grid;
+        gap: 24px;
+        padding: 23px;
+        border: 1px solid var(--Line);
+        border-radius: 16px;
+    }
+    .sidebar-filter {
+        .nav-tab-form {
+            display: flex;
+            gap: 8px;
+            border-bottom: 1px solid var(--Line);
+            .nav-tab-item {
+                display: flex;
+                width: 100%;
+                padding: 10px;
+                justify-content: center;
+            }
+        }
+    }
+    @include res(xxl,min) {
+        max-width: 380px;
+        margin-left: auto;
+    }
+}
 
 
 

@@ -20,11 +20,11 @@
 }
 
 .office-marker {
-    height: 40px;
-    width: 40px;
-    background-color: var(--White);
-    color: var(--Text-primary);
-    border: 1px solid var(--Text-primary);
+    height: 47px;
+    width: 47px;
+    background-color: var(--Bg-light);
+    color: var(--Primary);
+    border: 4px solid var(--White);
     border-radius: 50%;
     font-size: 20px;
     display: flex;
@@ -32,8 +32,7 @@
     align-items: center;
     cursor: pointer;
     &.active {
-        background-color: var(--Text-primary);
-        color: var(--White);
+        border-color: var(--Primary);
     }
 }
 .mapboxgl-popup-content {
@@ -54,7 +53,7 @@
 }
 
 .mapboxgl-popup {
-    max-width: 452px !important;
+    max-width: 515px !important;
 }
 
 .mapbox-1 {

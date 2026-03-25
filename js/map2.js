@@ -2,7 +2,7 @@
     "use strict";
 
     mapboxgl.accessToken = "pk.eyJ1IjoiaG9hbmdoYW5kbiIsImEiOiJjbTdsbTkydm8wZGpiMmxxcTdvdzVqbHd3In0.HUUli-jvI1ALTBuzSeKTpw";
-    
+
     const map = new mapboxgl.Map({
         container: "map",
         style: "mapbox://styles/mapbox/light-v10",
@@ -20,7 +20,87 @@
             Bathss: 2,
             sqft: 1600,
             coordinates: [-122.4194, 37.7749],
-            image: "/images/home/popup-property-1.jpg",
+            image: "images/house/house-1.jpg",
+        },
+        {
+            id: 2,
+            address: "72 Sunset Avenue, Los Angeles, California",
+            title: "Villa del Mar Retreat, Malibu",
+            beds: 4,
+            Bathss: 2,
+            sqft: 2400,
+            coordinates: [-122.4094, 37.7849],
+            image: "images/house/house-2.jpg",
+        },
+        {
+            id: 3,
+            address: "245 Elm Street, San Francisco, CA 94102",
+            title: "Sunset Heights Estate",
+            beds: 3,
+            Bathss: 2,
+            sqft: 1600,
+            coordinates: [-122.4294, 37.7649],
+            image: "images/house/house-3.jpg",
+        },
+        {
+            id: 4,
+            address: "918 Maple Avenue, Brooklyn, NY 11215",
+            title: "Coastal Serenity Cottage",
+            beds: 4,
+            Bathss: 2,
+            sqft: 2600,
+            coordinates: [-122.4154, 37.7929],
+            image: "images/house/house-4.jpg",
+        },
+        {
+            id: 5,
+            address: "456 Pacific Heights, San Francisco, CA 94115",
+            title: "Elegant Townhouse",
+            beds: 5,
+            Bathss: 4,
+            sqft: 2800,
+            coordinates: [-122.4394, 37.7889],
+            image: "images/house/house-5.jpg",
+        },
+        {
+            id: 6,
+            address: "77 Lakeview Court, Orlando, FL 32801",
+            title: "Rancho Vista Verde",
+            beds: 2,
+            Bathss: 1,
+            sqft: 900,
+            coordinates: [-122.4494, 37.7719],
+            image: "images/house/house-6.jpg",
+        },
+        {
+            id: 7,
+            address: "1422 Sunset Avenue, Los Angeles, CA 90026",
+            title: "Palmcrest Residences",
+            beds: 3,
+            Bathss: 3,
+            sqft: 1200,
+            coordinates: [-122.4044, 37.7699],
+            image: "images/house/house-7.jpg",
+        },
+        {
+            id: 8,
+            address: "456 Pacific Heights, San Francisco, CA 94115",
+            title: "Elegant Townhouse",
+            beds: 5,
+            Bathss: 4,
+            sqft: 2800,
+            coordinates: [-122.4394, 37.7611],
+            image: "images/house/house-8.jpg",
+        },
+        {
+            id: 9,
+            address: "91 Coastal Breeze Drive, San Diego, CA 92101",
+            title: "Oceanview Heights",
+            beds: 4,
+            Bathss: 2,
+            sqft: 2200,
+            coordinates: [-122.4494, 37.7511],
+            image: "images/house/house-9.jpg",
         },
     ];
 
@@ -53,9 +133,9 @@
         markerElement.addEventListener("click", () => {
             if (currentPopup) currentPopup.remove();
 
-            document
-                .querySelectorAll(".office-marker")
-                .forEach((m) => m.classList.remove("active"));
+            document.querySelectorAll(".office-marker").forEach((m) =>
+                m.classList.remove("active")
+            );
             markerElement.classList.add("active");
 
             const popupContent = `
@@ -67,24 +147,33 @@
                     <p class="text-caption-1 mb_4">${property.address}</p>
                     <h6 class="mb_12">${property.title}</h6>
                     <ul class="info d-flex">
-                        <li class="d-flex align-items-center gap_8 text_primary-color fw-6">
+                        <li class="d-flex align-items-center gap_8 text-cl-primary">
                             <i class="icon-Bed"></i>${property.beds} Bed
                         </li>
-                        <li class="d-flex align-items-center gap_8 text_primary-color fw-6">
+                        <li class="d-flex align-items-center gap_8 text-cl-primary">
                             <i class="icon-Bathstub"></i>${property.Bathss} Baths
                         </li>
-                        <li class="d-flex align-items-center gap_8 text_primary-color fw-6">
+                        <li class="d-flex align-items-center gap_8 text-cl-primary">
                             <i class="icon-Ruler"></i>${property.sqft} sqft
                         </li>
                     </ul>
                 </div>
             </div>`;
 
+            // 👉 Fly to property location
+            map.flyTo({
+                center: property.coordinates,
+                zoom: 14,
+                speed: 1.2,
+                curve: 1,
+                easing: (t) => t,
+            });
+
             currentPopup = new mapboxgl.Popup({
                 closeButton: false,
                 closeOnClick: false,
-                anchor: "bottom",
-                offset: [0, -50],
+                anchor: "left",
+                offset: [40, 0],
             })
                 .setLngLat(property.coordinates)
                 .setHTML(popupContent)
@@ -109,13 +198,13 @@
                 <p class="text-caption-1 mb_4">${prop.address}</p>
                 <h6 class="mb_12">${prop.title}</h6>
                 <ul class="info d-flex">
-                    <li class="d-flex align-items-center gap_8 text_primary-color fw-6">
+                    <li class="d-flex align-items-center gap_8 text-cl-primary">
                         <i class="icon-Bed"></i>${prop.beds} Bed
                     </li>
-                    <li class="d-flex align-items-center gap_8 text_primary-color fw-6">
+                    <li class="d-flex align-items-center gap_8 text-cl-primary">
                         <i class="icon-Bathstub"></i>${prop.Bathss} Baths
                     </li>
-                    <li class="d-flex align-items-center gap_8 text_primary-color fw-6">
+                    <li class="d-flex align-items-center gap_8 text-cl-primary">
                         <i class="icon-Ruler"></i>${prop.sqft} sqft
                     </li>
                 </ul>
@@ -127,8 +216,8 @@
         currentPopup = new mapboxgl.Popup({
             closeButton: false,
             closeOnClick: false,
-            anchor: "bottom",
-            offset: [0, -50],
+            anchor: "left",
+            offset: [40, 0],
         })
             .setLngLat(feature.geometry.coordinates)
             .setHTML(popupContent)
@@ -148,7 +237,6 @@
     }
 
     map.on("load", function () {
-        map.resize(); 
         mouseoverPropertyMapBox(map, geoData);
     });
 

@@ -316,33 +316,6 @@ input.tf-check {
     }
 }
 
-.form-calculator {
-    gap: 12px;
-    align-items: end;
-    display: flex;
-
-    .tf-grid-layout {
-        column-gap: 11px;
-        align-items: end;
-    }
-    @include res(xl, min) {
-        .tf-btn {
-            max-width: 149px !important;
-        }
-        &.style-1 {
-            .tf-btn {
-                max-width: 237.2px !important;
-            }
-        }
-    }
-    @include res(xl) {
-        flex-direction: column;
-        .tf-grid-layout {
-            width: 100%;
-        }
-    }
-}
-
 .sib-form {
     .entry__field {
         input {
@@ -408,5 +381,21 @@ input.tf-check {
     }
     .tf-grid-layout {
         gap: 20px 32px;
+    }
+}
+
+.has-icon-pre {
+    position: relative;
+    >.icon {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        z-index: 2;
+    }
+    .nice-select,
+    input {
+        padding-left: 47px !important;
     }
 }

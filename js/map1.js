@@ -14,11 +14,11 @@
     map.on("load", () => {
         const markerElement = document.createElement("div");
         markerElement.className = "office-marker";
-        markerElement.innerHTML = `<i class="icon-HouseLine"></i>`;
+        markerElement.innerHTML = `<i class="icon-House"></i>`;
 
         const popupContent = `
             <div class="office-popup">
-                <div class="text-title text_primary-color fw-6 mb_4">My Office</div>
+                <div class="text-title text-cl-primary mb_4">My Office</div>
                 <p>101 E 129th St, East Chicago, 2nd Floor, NY</p>
             </div>
         `;
