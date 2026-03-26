@@ -57,6 +57,14 @@
     }
 }
 
+.icon-close {
+    cursor: pointer;
+    @include transition3;
+    &:hover {
+        color: var(--Primary);
+    }
+}
+
 .offcanvas-backdrop,
 .modal-backdrop {
     background: rgba(0, 0, 0, 0.7);
@@ -149,6 +157,7 @@
     .modal-content {
         position: relative;
         flex-direction: row;
+        border: 0;
         >.icon {
             position: absolute;
             top: 20px;

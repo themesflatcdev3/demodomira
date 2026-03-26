@@ -6,7 +6,7 @@
 
     const map = new mapboxgl.Map({
         container: "map",
-        style: "mapbox://styles/mapbox/light-v11",
+        style: "mapbox://styles/mapbox/streets-v12",
         center: officeCoordinates,
         zoom: 14,
     });
@@ -25,7 +25,7 @@
 
         const popup = new mapboxgl.Popup({
             closeButton: true,
-            closeOnClick: false,
+            closeOnClick: true,
             offset: [0, -50],
         }).setHTML(popupContent);
 
@@ -37,7 +37,7 @@
         .setPopup(popup)
         .addTo(map);
 
-        
+        popup.addTo(map); 
 
         map.addControl(new mapboxgl.NavigationControl(), "top-right");
         map.addControl(new mapboxgl.FullscreenControl(), "top-right");

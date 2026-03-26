@@ -111,3 +111,9 @@
         color: var(--White);
     }
 }
+
+.swiper-auto {
+    .swiper-slide {
+        width: max-content;
+    }
+}

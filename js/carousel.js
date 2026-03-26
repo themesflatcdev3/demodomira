@@ -187,26 +187,14 @@ if ($(".flat-thumbs-tes").length > 0) {
 if ($(".thumbs-sw-pagi").length > 0) {
     var preview = $(".thumbs-sw-pagi").data("preview");
     var spacing = $(".thumbs-sw-pagi").data("space");
-    var mobile = $(".thumbs-sw-pagi").data("mobile");
-    var mobileSm = $(".thumbs-sw-pagi").data("mobile-sm");
     var pagithumbs = new Swiper(".thumbs-sw-pagi", {
         spaceBetween: spacing,
-        slidesPerView: preview,
+        slidesPerView: 2,
         freeMode: true,
         watchSlidesProgress: true,
-        direction: "vertical",
-        navigation: {
-            clickable: true,
-            nextEl: ".sw-pagi-next",
-            prevEl: ".sw-pagi-prev",
-        },
         breakpoints: {
-            375: {
-                slidesPerView: 3,
-                spaceBetween: spacing,
-            },
-            500: {
-                slidesPerView: mobileSm,
+            767: {
+                slidesPerView: preview,
             },
         },
     });
@@ -227,11 +215,6 @@ if ($(".sw-single").length > 0) {
         },
         thumbs: {
             swiper: pagithumbs,
-        },
-        navigation: {
-            clickable: true,
-            nextEl: ".sw-thumbs-next",
-            prevEl: ".sw-thumbs-prev",
-        },
+        }
     });
 }

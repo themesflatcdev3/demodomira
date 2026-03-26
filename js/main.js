@@ -719,8 +719,23 @@
 
     };
 
+    // check_map
+    var check_map = function () {
+        $(document).ready(function () {
+            if ($('#check-map').is(':checked')) {
+                $('.wg-map').show();
+            } else {
+                $('.wg-map').hide();
+            }
+        });
+        $('#check-map').on('change', function () {
+            $('.wg-map').toggle(this.checked);
+        });
+    }
+
     // Dom Ready
     $(function () {
+        check_map();
         preventDefault();
         headerFixed();
         headerFixed2();

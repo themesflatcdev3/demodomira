@@ -101,9 +101,13 @@ form {
         top: 50%;
         transform: translateY(-50%);
         right: 0px;
+        @include transition3;
         i {
             font-size: 24px;
             color: var(--Text-primary);
+        }
+        &:hover {
+            color: var(--Primary) !important;
         }
     }
 }

@@ -5,7 +5,7 @@
 
     const map = new mapboxgl.Map({
         container: "map",
-        style: "mapbox://styles/mapbox/light-v10",
+        style: "mapbox://styles/mapbox/streets-v12",
         center: [-122.4194, 37.7749],
         zoom: 13,
         cooperativeGestures: true,
@@ -166,6 +166,7 @@
                 zoom: 14,
                 speed: 1.2,
                 curve: 1,
+                offset: [-150, 0],
                 easing: (t) => t,
             });
 
@@ -238,6 +239,59 @@
 
     map.on("load", function () {
         mouseoverPropertyMapBox(map, geoData);
+
+         // 👉 Lấy property id = 1
+    const defaultProperty = properties.find(p => p.id === 1);
+
+    if (defaultProperty) {
+        // active marker UI
+        const markers = document.querySelectorAll(".office-marker");
+        markers.forEach((m, index) => {
+            if (properties[index].id === 1) {
+                m.classList.add("active");
+            }
+        });
+
+        // 👉 fly + show popup
+        map.flyTo({
+            center: defaultProperty.coordinates,
+            zoom: 14,
+            speed: 1.2,
+            offset: [-150, 0]
+        });
+
+        const popupContent = `
+        <div class="popup-property">
+            <div class="img-style">
+                <img src="${defaultProperty.image}" width="120" height="120" alt="popup-property">
+            </div>
+            <div class="content">
+                <p class="text-caption-1 mb_4">${defaultProperty.address}</p>
+                <h6 class="mb_12">${defaultProperty.title}</h6>
+                <ul class="info d-flex">
+                    <li class="d-flex align-items-center gap_8 text-cl-primary">
+                        <i class="icon-Bed"></i>${defaultProperty.beds} Bed
+                    </li>
+                    <li class="d-flex align-items-center gap_8 text-cl-primary">
+                        <i class="icon-Bathstub"></i>${defaultProperty.Bathss} Baths
+                    </li>
+                    <li class="d-flex align-items-center gap_8 text-cl-primary">
+                        <i class="icon-Ruler"></i>${defaultProperty.sqft} sqft
+                    </li>
+                </ul>
+            </div>
+        </div>`;
+
+        currentPopup = new mapboxgl.Popup({
+            closeButton: false,
+            closeOnClick: false,
+            anchor: "left",
+            offset: [40, 0],
+        })
+            .setLngLat(defaultProperty.coordinates)
+            .setHTML(popupContent)
+            .addTo(map);
+        }
     });
 
     map.on("click", (e) => {

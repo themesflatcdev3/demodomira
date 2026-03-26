@@ -24,6 +24,7 @@
 }
 
 .tabs-hover-wrap {
+    position: relative;
     .tab-content-wrap {
         position: relative;
         overflow: hidden;
@@ -50,6 +51,25 @@
             visibility: visible;
             transform: none;
             transition: 0.35s ease-in-out 0.35s;
+        }
+    }
+    .tab-content-wrap {
+        position: absolute;
+        right: 40px;
+        top: 50%;
+        height: 520px;
+        width: 693px;
+        transform: rotate(0) scale(1) translateY(-50%);
+        transition: opacity 0.35s, transform 0.5s ease-out;
+        pointer-events: none;
+        border-radius: 16px;
+        z-index: 2;
+        @include res(xl) {
+            width: 500px;
+            height: unset;
+        }
+        @include res(lg) {
+            display: none;
         }
     }
 }
