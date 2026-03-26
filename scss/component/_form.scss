@@ -49,6 +49,14 @@ form {
             border-bottom: 1px solid #FFFFFF1A;
             color: var(--White);
         }
+        &.style-2 {
+            padding: 8px 0 7px;
+            background-color: transparent;
+            border-radius: 0;
+            border: 0;
+            border-bottom: 1px solid var(--Line);
+            color: var(--Text-primary);
+        }
     }
     button,
     input[type="button"],
@@ -85,6 +93,7 @@ form {
     }
 }
 
+.form-newsletter-2,
 .form-newsletter-1 {
     position: relative;
     .button-submit {

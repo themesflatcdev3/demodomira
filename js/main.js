@@ -700,6 +700,25 @@
         }
     };
 
+    /* auto popup
+    ------------------------------------------------------------------------------------- */
+    var autoPopup = function () {
+        if($("body").hasClass("popup-loader")){
+        if ($(".auto-popup").length > 0) {
+            let showPopup = sessionStorage.getItem("showPopup");
+            if (!JSON.parse(showPopup)) {
+            setTimeout(function () {
+                $(".auto-popup").modal('show');
+            }, 3000);
+            }
+        }
+        $(".btn-hide-popup").on("click", function () {
+            sessionStorage.setItem("showPopup", true);
+        });
+        };
+
+    };
+
     // Dom Ready
     $(function () {
         preventDefault();
@@ -725,5 +744,6 @@
         datePicker();
         deleteImg();
         showHideDashboard();
+        autoPopup();
     });
 })(jQuery);

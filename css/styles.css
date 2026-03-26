@@ -3175,6 +3175,28 @@ form input[type=color].style-1 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1019607843);
   color: var(--White);
 }
+form textarea.style-2,
+form input[type=text].style-2,
+form input[type=password].style-2,
+form input[type=datetime].style-2,
+form input[type=datetime-local].style-2,
+form input[type=date].style-2,
+form input[type=month].style-2,
+form input[type=time].style-2,
+form input[type=week].style-2,
+form input[type=number].style-2,
+form input[type=email].style-2,
+form input[type=url].style-2,
+form input[type=search].style-2,
+form input[type=tel].style-2,
+form input[type=color].style-2 {
+  padding: 8px 0 7px;
+  background-color: transparent;
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid var(--Line);
+  color: var(--Text-primary);
+}
 form button,
 form input[type=button],
 form input[type=reset],
@@ -3207,15 +3229,18 @@ form textarea {
   left: 16px;
 }
 
+.form-newsletter-2,
 .form-newsletter-1 {
   position: relative;
 }
+.form-newsletter-2 .button-submit,
 .form-newsletter-1 .button-submit {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 0px;
 }
+.form-newsletter-2 .button-submit i,
 .form-newsletter-1 .button-submit i {
   font-size: 24px;
   color: var(--Text-primary);
@@ -3831,6 +3856,46 @@ input.tf-check::before {
 }
 .canvas-filter .canvas-body::-webkit-scrollbar {
   width: 0px;
+}
+
+.modal-newleter .modal-dialog {
+  max-width: 840px;
+}
+@media (max-width: 767px) {
+  .modal-newleter .modal-dialog {
+    max-width: 440px;
+  }
+}
+.modal-newleter .modal-content {
+  position: relative;
+  flex-direction: row;
+}
+.modal-newleter .modal-content > .icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+}
+.modal-newleter .modal-content .modal-left {
+  width: 360px;
+  flex-shrink: 0;
+}
+.modal-newleter .modal-content .modal-right {
+  display: grid;
+  gap: 62px;
+  padding: 32px;
+}
+@media (max-width: 767px) {
+  .modal-newleter .modal-content {
+    flex-direction: column;
+  }
+  .modal-newleter .modal-content .modal-left {
+    width: 100%;
+    height: 360px;
+  }
+  .modal-newleter .modal-content .modal-right {
+    gap: 30px;
+  }
 }
 
 /*------------ nice-select ---------------- */
