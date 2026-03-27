@@ -1433,7 +1433,12 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!card.dataset.garages) card.dataset.garages = '1';
     }
 
-    allItems.forEach(hydrate);
+    allItems.forEach((card, index) => {
+        hydrate(card);
+        if (!card.dataset.originalIndex) card.dataset.originalIndex = String(index);
+    });
+
+    const sortSelect = document.querySelector('.nice-select.list-sort');
 
     function getNiceSelectValue(key) {
         const select = filterBox.querySelector(`.nice-select[data-filter-key="${key}"]`);
@@ -1493,6 +1498,36 @@ document.addEventListener("DOMContentLoaded", function () {
         if (listCountWrap) listCountWrap.style.display = listActive ? '' : 'none';
     }
 
+    function getSortValue() {
+        if (!sortSelect) return 'default';
+        const selected = sortSelect.querySelector('.option.selected');
+        return normalizeText(selected ? (selected.dataset.value || 'default') : 'default');
+    }
+
+    function compareItems(a, b, sortValue) {
+        if (sortValue === 'name') {
+            return normalizeText(a.dataset.title).localeCompare(normalizeText(b.dataset.title));
+        }
+        if (sortValue === 'price') {
+            return parseFloat(a.dataset.price || '0') - parseFloat(b.dataset.price || '0');
+        }
+        return parseInt(a.dataset.originalIndex || '0', 10) - parseInt(b.dataset.originalIndex || '0', 10);
+    }
+
+    function sortContainerItems(items) {
+        if (!items.length) return;
+        const sortValue = getSortValue();
+        const parent = items[0].parentNode;
+        if (!parent) return;
+        const sorted = items.slice().sort((a, b) => compareItems(a, b, sortValue));
+        sorted.forEach(item => parent.appendChild(item));
+    }
+
+    function sortVisibleItems() {
+        sortContainerItems(gridItems);
+        sortContainerItems(listItems);
+    }
+
     function titleCase(s) { return (s || '').replace(/-/g,' ').replace(/\b\w/g, c => c.toUpperCase()); }
 
     function renderAppliedFilters(filters) {
@@ -1513,6 +1548,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const filters = getFilters();
         gridItems.forEach(item => item.style.display = matches(item, filters) ? '' : 'none');
         listItems.forEach(item => item.style.display = matches(item, filters) ? '' : 'none');
+        sortVisibleItems();
         updateCounts();
         renderAppliedFilters(filters);
     }
@@ -1557,6 +1593,18 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     });
+
+    if (sortSelect) {
+        sortSelect.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', function () {
+                sortSelect.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+                const current = sortSelect.querySelector('.current');
+                if (current) current.textContent = this.textContent.trim();
+                applyFilters();
+            });
+        });
+    }
 
     if (searchInput) searchInput.addEventListener('input', applyFilters);
     if (searchForm) searchForm.addEventListener('submit', function (e) { e.preventDefault(); applyFilters(); });
