@@ -10,7 +10,7 @@
       ];
 
       noUiSlider.create(skipSlider, {
-        start: [100, 400],
+        start: [0, 1000],
         connect: true,
         step: 1,
         range: {
@@ -42,7 +42,7 @@
       ];
 
       noUiSlider.create(skipSlider, {
-        start: [100, 400],
+        start: [0, 1000],
         connect: true,
         step: 1,
         range: {
