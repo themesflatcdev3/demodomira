@@ -224,218 +224,222 @@
         <!-- End page-title -->
 
         <!-- main-content -->
-        <div class="main-content">
+        <main class="main-content">
 
-            <div class="tf-section">
+            <!-- filter-sidebar -->
+            <section class="tf-section">
                 <div class="tf-container">
                     <div class="row rg-30">
-                        <div class="col-lg-4">
-                            <div class="tf-filter-sidebar">
-                                <div class="form-sl">
-                                    <div>
-                                        <div class="wd-filter-select">
-                                            <div class="inner-group d-grid gap_28">
-                                                <fieldset>
-                                                    <label class="text-title text-cl-primary mb_12">
-                                                        Looking For
-                                                    </label>
-                                                    <form action="#" class="form-search style-left">
-                                                        <fieldset>
-                                                            <input class="" type="text" placeholder="Search keyword" name="text" tabindex="2" value=""  required>
-                                                        </fieldset>
-                                                        <button type="submit" class="button-submit">
-                                                            <i class="icon-search"></i>
-                                                        </button>
-                                                    </form>
-                                                </fieldset>
-                                                <div>
-                                                    <div class="text-title text-cl-primary mb_12">
-                                                        Listing Status
-                                                    </div>
-                                                    <div class="d-grid gap_8">
-                                                        <fieldset class="checkbox-item style-1">
-                                                            <label>
-                                                                <input type="radio" name="status" checked>
-                                                                <span class="btn-checkbox style-radio"></span>
-                                                                <span class="text-body-default">All</span>
-                                                            </label>
-                                                        </fieldset>
-                                                        <fieldset class="checkbox-item style-1">
-                                                            <label>
-                                                                <input type="radio" name="status">
-                                                                <span class="btn-checkbox style-radio"></span>
-                                                                <span class="text-body-default">Buy</span>
-                                                            </label>
-                                                        </fieldset>
-                                                        <fieldset class="checkbox-item style-1">
-                                                            <label>
-                                                                <input type="radio" name="status">
-                                                                <span class="btn-checkbox style-radio"></span>
-                                                                <span class="text-body-default">Rent</span>
-                                                            </label>
-                                                        </fieldset>
-                                                    </div>
+                        <div class="col-xl-4">
+                            <div class="overlay-filter d-xl-none" id="overlay-filter"></div>
+                            <div class="tf-filter-sidebar filter_canvas">
+                                <div class="canvas-header d-flex align-items-center d-xl-none">
+                                    <div class="h5 text-cl-primary flex-grow-1">Filters</div>
+                                    <span class="icon icon-close close-canvas-filter"></span>
+                                </div>
+                                <div class="canvas-body">
+                                    <div class="wd-filter-select">
+                                        <div class="inner-group d-grid gap_28">
+                                            <fieldset>
+                                                <label class="text-title text-cl-primary mb_12">
+                                                    Looking For
+                                                </label>
+                                                <form action="#" class="form-search style-left">
+                                                    <fieldset>
+                                                        <input class="" type="text" placeholder="Search keyword" name="text" tabindex="2" value=""  required>
+                                                    </fieldset>
+                                                    <button type="submit" class="button-submit">
+                                                        <i class="icon-search"></i>
+                                                    </button>
+                                                </form>
+                                            </fieldset>
+                                            <div>
+                                                <div class="text-title text-cl-primary mb_12">
+                                                    Listing Status
                                                 </div>
-                                                <div>
-                                                    <div class="text-title text-cl-primary mb_12">
-                                                        Property Type
-                                                    </div>
-                                                    <div class="d-grid gap_8">
-                                                        <fieldset class="checkbox-item style-1">
-                                                            <label>
-                                                                <input type="checkbox" checked>
-                                                                <span class="btn-checkbox"></span>
-                                                                <span class="text-body-default">All</span>
-                                                            </label>
-                                                        </fieldset>
-                                                        <fieldset class="checkbox-item style-1">
-                                                            <label>
-                                                                <input type="checkbox">
-                                                                <span class="btn-checkbox"></span>
-                                                                <span class="text-body-default">Villa</span>
-                                                            </label>
-                                                        </fieldset>
-                                                        <fieldset class="checkbox-item style-1">
-                                                            <label>
-                                                                <input type="checkbox">
-                                                                <span class="btn-checkbox"></span>
-                                                                <span class="text-body-default">Apartments</span>
-                                                            </label>
-                                                        </fieldset>
-                                                        <fieldset class="checkbox-item style-1">
-                                                            <label>
-                                                                <input type="checkbox">
-                                                                <span class="btn-checkbox"></span>
-                                                                <span class="text-body-default">Townhouse</span>
-                                                            </label>
-                                                        </fieldset>
-                                                    </div>
+                                                <div class="d-grid gap_8">
+                                                    <fieldset class="checkbox-item style-1">
+                                                        <label>
+                                                            <input type="radio" name="status" checked>
+                                                            <span class="btn-checkbox style-radio"></span>
+                                                            <span class="text-body-default">All</span>
+                                                        </label>
+                                                    </fieldset>
+                                                    <fieldset class="checkbox-item style-1">
+                                                        <label>
+                                                            <input type="radio" name="status">
+                                                            <span class="btn-checkbox style-radio"></span>
+                                                            <span class="text-body-default">Buy</span>
+                                                        </label>
+                                                    </fieldset>
+                                                    <fieldset class="checkbox-item style-1">
+                                                        <label>
+                                                            <input type="radio" name="status">
+                                                            <span class="btn-checkbox style-radio"></span>
+                                                            <span class="text-body-default">Rent</span>
+                                                        </label>
+                                                    </fieldset>
                                                 </div>
-                                                <div>
-                                                    <div class="text-title text-cl-primary mb_12">
-                                                        Location
-                                                    </div>
-                                                    <div class="nice-select" tabindex="0">
-                                                        <span class="current">All Cities</span>
-                                                        <ul class="list">
-                                                            <li data-value="1" class="option">All Cities</li>
-                                                            <li data-value="2" class="option selected">Chicago</li>
-                                                            <li data-value="3" class="option">Los Angeles</li>
-                                                            <li data-value="4" class="option">Miami</li>
-                                                            <li data-value="5" class="option">New York</li>
-                                                        </ul>
-                                                    </div>
+                                            </div>
+                                            <div>
+                                                <div class="text-title text-cl-primary mb_12">
+                                                    Property Type
                                                 </div>
-                                                <div>
-                                                    <div class="text-title text-cl-primary mb_12">
-                                                        Bedrooms
-                                                    </div>
-                                                    <div class="nice-select" tabindex="0">
-                                                        <span class="current">Any Bedrooms</span>
-                                                        <ul class="list">
-                                                            <li data-value="1" class="option">Any Bedrooms</li>
-                                                            <li data-value="2" class="option selected">1</li>
-                                                            <li data-value="3" class="option">2</li>
-                                                            <li data-value="4" class="option">3</li>
-                                                            <li data-value="5" class="option">4</li>
-                                                        </ul>
-                                                    </div>
+                                                <div class="d-grid gap_8">
+                                                    <fieldset class="checkbox-item style-1">
+                                                        <label>
+                                                            <input type="checkbox" checked>
+                                                            <span class="btn-checkbox"></span>
+                                                            <span class="text-body-default">All</span>
+                                                        </label>
+                                                    </fieldset>
+                                                    <fieldset class="checkbox-item style-1">
+                                                        <label>
+                                                            <input type="checkbox">
+                                                            <span class="btn-checkbox"></span>
+                                                            <span class="text-body-default">Villa</span>
+                                                        </label>
+                                                    </fieldset>
+                                                    <fieldset class="checkbox-item style-1">
+                                                        <label>
+                                                            <input type="checkbox">
+                                                            <span class="btn-checkbox"></span>
+                                                            <span class="text-body-default">Apartments</span>
+                                                        </label>
+                                                    </fieldset>
+                                                    <fieldset class="checkbox-item style-1">
+                                                        <label>
+                                                            <input type="checkbox">
+                                                            <span class="btn-checkbox"></span>
+                                                            <span class="text-body-default">Townhouse</span>
+                                                        </label>
+                                                    </fieldset>
                                                 </div>
-                                                <div>
-                                                    <div class="text-title text-cl-primary mb_12">
-                                                        Baths
-                                                    </div>
-                                                    <div class="nice-select" tabindex="0">
-                                                        <span class="current">All Baths</span>
-                                                        <ul class="list">
-                                                            <li data-value="1" class="option">All Baths</li>
-                                                            <li data-value="2" class="option selected">1</li>
-                                                            <li data-value="3" class="option">2</li>
-                                                            <li data-value="4" class="option">3</li>
-                                                            <li data-value="5" class="option">4</li>
-                                                        </ul>
-                                                    </div>
+                                            </div>
+                                            <div>
+                                                <div class="text-title text-cl-primary mb_12">
+                                                    Location
                                                 </div>
-                                                <div>
-                                                    <div class="text-title text-cl-primary mb_12">
-                                                        Garages
-                                                    </div>
-                                                    <div class="nice-select" tabindex="0">
-                                                        <span class="current">All Garages</span>
-                                                        <ul class="list">
-                                                            <li data-value="1" class="option">All Garages</li>
-                                                            <li data-value="2" class="option selected">1</li>
-                                                            <li data-value="3" class="option">2</li>
-                                                            <li data-value="4" class="option">3</li>
-                                                            <li data-value="5" class="option">4</li>
-                                                        </ul>
-                                                    </div>
+                                                <div class="nice-select" tabindex="0">
+                                                    <span class="current">All Cities</span>
+                                                    <ul class="list">
+                                                        <li data-value="1" class="option">All Cities</li>
+                                                        <li data-value="2" class="option selected">Chicago</li>
+                                                        <li data-value="3" class="option">Los Angeles</li>
+                                                        <li data-value="4" class="option">Miami</li>
+                                                        <li data-value="5" class="option">New York</li>
+                                                    </ul>
                                                 </div>
-                                                <div>
-                                                    <div class="text-title text-cl-primary mb_12">
-                                                        Price Range:
+                                            </div>
+                                            <div>
+                                                <div class="text-title text-cl-primary mb_12">
+                                                    Bedrooms
+                                                </div>
+                                                <div class="nice-select" tabindex="0">
+                                                    <span class="current">Any Bedrooms</span>
+                                                    <ul class="list">
+                                                        <li data-value="1" class="option">Any Bedrooms</li>
+                                                        <li data-value="2" class="option selected">1</li>
+                                                        <li data-value="3" class="option">2</li>
+                                                        <li data-value="4" class="option">3</li>
+                                                        <li data-value="5" class="option">4</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="text-title text-cl-primary mb_12">
+                                                    Baths
+                                                </div>
+                                                <div class="nice-select" tabindex="0">
+                                                    <span class="current">All Baths</span>
+                                                    <ul class="list">
+                                                        <li data-value="1" class="option">All Baths</li>
+                                                        <li data-value="2" class="option selected">1</li>
+                                                        <li data-value="3" class="option">2</li>
+                                                        <li data-value="4" class="option">3</li>
+                                                        <li data-value="5" class="option">4</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="text-title text-cl-primary mb_12">
+                                                    Garages
+                                                </div>
+                                                <div class="nice-select" tabindex="0">
+                                                    <span class="current">All Garages</span>
+                                                    <ul class="list">
+                                                        <li data-value="1" class="option">All Garages</li>
+                                                        <li data-value="2" class="option selected">1</li>
+                                                        <li data-value="3" class="option">2</li>
+                                                        <li data-value="4" class="option">3</li>
+                                                        <li data-value="5" class="option">4</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="text-title text-cl-primary mb_12">
+                                                    Price Range:
+                                                </div>
+                                                <div class="range-price-1">
+                                                    <div class="range">
+                                                        <div class="price-value-range" id="price-value-range"></div>
                                                     </div>
-                                                    <div class="range-price-1">
-                                                        <div class="range">
-                                                            <div class="price-value-range" id="price-value-range"></div>
+                                                    <div class="value-wrap">
+                                                        <div class="value">
+                                                            <div id="price-min-value"></div>
+                                                            <span>$</span>
                                                         </div>
-                                                        <div class="value-wrap">
-                                                            <div class="value">
-                                                                <div id="price-min-value"></div>
-                                                                <span>$</span>
-                                                            </div>
-                                                            To
-                                                            <div class="value">
-                                                                <div id="price-max-value"></div>
-                                                                <span>$</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <div class="text-title text-cl-primary mb_12">
-                                                        Square Feet:
-                                                    </div>
-                                                    <div class="range-price-1">
-                                                        <div class="range">
-                                                            <div class="price-value-range" id="price-value-range-2"></div>
-                                                        </div>
-                                                        <div class="value-wrap">
-                                                            <div class="value">
-                                                                <div id="price-min-value-2"></div>
-                                                                <span>sqft</span>
-                                                            </div>
-                                                            To
-                                                            <div class="value">
-                                                                <div id="price-max-value-2"></div>
-                                                                <span>sqft</span>
-                                                            </div>
+                                                        To
+                                                        <div class="value">
+                                                            <div id="price-max-value"></div>
+                                                            <span>$</span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <a class="show-avanced d-flex gap_8 align-items-center text-cl-primary text-title"
-                                                    data-bs-toggle="modal" href="#modalFilter" role="button">
-                                                    <i class="icon icon-filter"></i>
-                                                    Other Features 
-                                                </a>
-                                                <div>
-                                                    <div class="form-style mb_12">
-                                                        <button type="submit" class="tf-btn w-full">
-                                                            <i class="icon-search"></i>
-                                                            <span>Search</span>
-                                                            <span class="bg-effect"></span>
-                                                        </button>
+                                            </div>
+                                            <div>
+                                                <div class="text-title text-cl-primary mb_12">
+                                                    Square Feet:
+                                                </div>
+                                                <div class="range-price-1">
+                                                    <div class="range">
+                                                        <div class="price-value-range" id="price-value-range-2"></div>
                                                     </div>
-                                                    <div class="bot-btn d-flex justify-content-between">
-                                                        <a href="#" class="d-flex gap_8 align-items-center text-cl-primary">
-                                                            <i class="icon icon-ArrowCounterClockwise"></i>
-                                                            <span>Reset all filters</span>
-                                                        </a>
-                                                        <a href="#" class="d-flex gap_8 align-items-center text-cl-primary">
-                                                            <i class="icon icon-Star"></i>
-                                                            <span>Save search</span>
-                                                        </a>
+                                                    <div class="value-wrap">
+                                                        <div class="value">
+                                                            <div id="price-min-value-2"></div>
+                                                            <span>sqft</span>
+                                                        </div>
+                                                        To
+                                                        <div class="value">
+                                                            <div id="price-max-value-2"></div>
+                                                            <span>sqft</span>
+                                                        </div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <a class="show-avanced d-flex gap_8 align-items-center text-cl-primary text-title"
+                                                data-bs-toggle="modal" href="#modalFilter" role="button">
+                                                <i class="icon icon-filter"></i>
+                                                Other Features 
+                                            </a>
+                                            <div>
+                                                <div class="form-style mb_12">
+                                                    <button type="submit" class="tf-btn w-full">
+                                                        <i class="icon-search"></i>
+                                                        <span>Search</span>
+                                                        <span class="bg-effect"></span>
+                                                    </button>
+                                                </div>
+                                                <div class="bot-btn d-flex justify-content-between">
+                                                    <a href="#" class="d-flex gap_8 align-items-center text-cl-primary">
+                                                        <i class="icon icon-ArrowCounterClockwise"></i>
+                                                        <span>Reset all filters</span>
+                                                    </a>
+                                                    <a href="#" class="d-flex gap_8 align-items-center text-cl-primary">
+                                                        <i class="icon icon-Star"></i>
+                                                        <span>Save search</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -443,77 +447,82 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-8">
-                            <div class="top-filter mb_12">
-                                <div class="left">
-                                    <div class="btn-filter text-button">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.125 6.876H5.70312C5.84081 7.41376 6.15356 7.89039 6.59207 8.23077C7.03057 8.57115 7.56989 8.7559 8.125 8.7559C8.68011 8.7559 9.21943 8.57115 9.65793 8.23077C10.0964 7.89039 10.4092 7.41376 10.5469 6.876H16.875C17.0408 6.876 17.1997 6.81015 17.3169 6.69294C17.4342 6.57573 17.5 6.41676 17.5 6.251C17.5 6.08524 17.4342 5.92626 17.3169 5.80905C17.1997 5.69184 17.0408 5.626 16.875 5.626H10.5469C10.4092 5.08824 10.0964 4.6116 9.65793 4.27122C9.21943 3.93085 8.68011 3.74609 8.125 3.74609C7.56989 3.74609 7.03057 3.93085 6.59207 4.27122C6.15356 4.6116 5.84081 5.08824 5.70312 5.626H3.125C2.95924 5.626 2.80027 5.69184 2.68306 5.80905C2.56585 5.92626 2.5 6.08524 2.5 6.251C2.5 6.41676 2.56585 6.57573 2.68306 6.69294C2.80027 6.81015 2.95924 6.876 3.125 6.876ZM8.125 5.001C8.37223 5.001 8.6139 5.07431 8.81946 5.21166C9.02502 5.34901 9.18524 5.54423 9.27985 5.77264C9.37446 6.00105 9.39921 6.25238 9.35098 6.49486C9.30275 6.73733 9.1837 6.96006 9.00888 7.13488C8.83407 7.30969 8.61134 7.42875 8.36886 7.47698C8.12639 7.52521 7.87505 7.50045 7.64665 7.40585C7.41824 7.31124 7.22301 7.15102 7.08566 6.94546C6.94831 6.7399 6.875 6.49822 6.875 6.251C6.875 5.91948 7.0067 5.60153 7.24112 5.36711C7.47554 5.13269 7.79348 5.001 8.125 5.001ZM16.875 13.126H15.5469C15.4092 12.5882 15.0964 12.1116 14.6579 11.7712C14.2194 11.4308 13.6801 11.2461 13.125 11.2461C12.5699 11.2461 12.0306 11.4308 11.5921 11.7712C11.1536 12.1116 10.8408 12.5882 10.7031 13.126H3.125C2.95924 13.126 2.80027 13.1918 2.68306 13.3091C2.56585 13.4263 2.5 13.5852 2.5 13.751C2.5 13.9168 2.56585 14.0757 2.68306 14.1929C2.80027 14.3101 2.95924 14.376 3.125 14.376H10.7031C10.8408 14.9138 11.1536 15.3904 11.5921 15.7308C12.0306 16.0711 12.5699 16.2559 13.125 16.2559C13.6801 16.2559 14.2194 16.0711 14.6579 15.7308C15.0964 15.3904 15.4092 14.9138 15.5469 14.376H16.875C17.0408 14.376 17.1997 14.3101 17.3169 14.1929C17.4342 14.0757 17.5 13.9168 17.5 13.751C17.5 13.5852 17.4342 13.4263 17.3169 13.3091C17.1997 13.1918 17.0408 13.126 16.875 13.126ZM13.125 15.001C12.8778 15.001 12.6361 14.9277 12.4305 14.7903C12.225 14.653 12.0648 14.4578 11.9701 14.2294C11.8755 14.0009 11.8508 13.7496 11.899 13.5071C11.9472 13.2647 12.0663 13.0419 12.2411 12.8671C12.4159 12.6923 12.6387 12.5732 12.8811 12.525C13.1236 12.4768 13.3749 12.5015 13.6034 12.5961C13.8318 12.6908 14.027 12.851 14.1643 13.0565C14.3017 13.2621 14.375 13.5038 14.375 13.751C14.375 14.0825 14.2433 14.4005 14.0089 14.6349C13.7745 14.8693 13.4565 15.001 13.125 15.001Z" fill="white"/>
-                                        </svg>
-                                        Filters
-                                    </div>
-                                    <div class="number-results">1 - 20 of 52 Results</div>
-                                </div>
-                                <div class="right">
-                                    <div class="d-flex gap_8 align-items-center">
-                                        <div class="text-cl-primary">Compare:</div>
-                                        <input type="checkbox" id="Compare" class="tf-switch-check">
-                                    </div>
-                                    <div class="d-flex gap_8 align-items-center">
-                                        <div class="text-cl-primary flex-shrink-0">Sort by:</div>
-                                        <div class="nice-select select-filter list-sort style-1" tabindex="0">
-                                            <span class="current text-button">
-                                                Best Selling
-                                            </span>
-                                            <ul class="list">
-                                                <li data-value="default" class="option selected">Best Selling</li>
-                                                <li data-value="Rent" class="option">Rent</li>
-                                                <li data-value="Sale" class="option">Sale</li>
-                                            </ul>
+                        <div class="col-xl-8">
+                            <div class="meta-filter-shop">
+                                <div class="top-filter mb_12">
+                                    <div class="left">
+                                        <div class="btn-filter text-button d-xl-none filterShop">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.125 6.876H5.70312C5.84081 7.41376 6.15356 7.89039 6.59207 8.23077C7.03057 8.57115 7.56989 8.7559 8.125 8.7559C8.68011 8.7559 9.21943 8.57115 9.65793 8.23077C10.0964 7.89039 10.4092 7.41376 10.5469 6.876H16.875C17.0408 6.876 17.1997 6.81015 17.3169 6.69294C17.4342 6.57573 17.5 6.41676 17.5 6.251C17.5 6.08524 17.4342 5.92626 17.3169 5.80905C17.1997 5.69184 17.0408 5.626 16.875 5.626H10.5469C10.4092 5.08824 10.0964 4.6116 9.65793 4.27122C9.21943 3.93085 8.68011 3.74609 8.125 3.74609C7.56989 3.74609 7.03057 3.93085 6.59207 4.27122C6.15356 4.6116 5.84081 5.08824 5.70312 5.626H3.125C2.95924 5.626 2.80027 5.69184 2.68306 5.80905C2.56585 5.92626 2.5 6.08524 2.5 6.251C2.5 6.41676 2.56585 6.57573 2.68306 6.69294C2.80027 6.81015 2.95924 6.876 3.125 6.876ZM8.125 5.001C8.37223 5.001 8.6139 5.07431 8.81946 5.21166C9.02502 5.34901 9.18524 5.54423 9.27985 5.77264C9.37446 6.00105 9.39921 6.25238 9.35098 6.49486C9.30275 6.73733 9.1837 6.96006 9.00888 7.13488C8.83407 7.30969 8.61134 7.42875 8.36886 7.47698C8.12639 7.52521 7.87505 7.50045 7.64665 7.40585C7.41824 7.31124 7.22301 7.15102 7.08566 6.94546C6.94831 6.7399 6.875 6.49822 6.875 6.251C6.875 5.91948 7.0067 5.60153 7.24112 5.36711C7.47554 5.13269 7.79348 5.001 8.125 5.001ZM16.875 13.126H15.5469C15.4092 12.5882 15.0964 12.1116 14.6579 11.7712C14.2194 11.4308 13.6801 11.2461 13.125 11.2461C12.5699 11.2461 12.0306 11.4308 11.5921 11.7712C11.1536 12.1116 10.8408 12.5882 10.7031 13.126H3.125C2.95924 13.126 2.80027 13.1918 2.68306 13.3091C2.56585 13.4263 2.5 13.5852 2.5 13.751C2.5 13.9168 2.56585 14.0757 2.68306 14.1929C2.80027 14.3101 2.95924 14.376 3.125 14.376H10.7031C10.8408 14.9138 11.1536 15.3904 11.5921 15.7308C12.0306 16.0711 12.5699 16.2559 13.125 16.2559C13.6801 16.2559 14.2194 16.0711 14.6579 15.7308C15.0964 15.3904 15.4092 14.9138 15.5469 14.376H16.875C17.0408 14.376 17.1997 14.3101 17.3169 14.1929C17.4342 14.0757 17.5 13.9168 17.5 13.751C17.5 13.5852 17.4342 13.4263 17.3169 13.3091C17.1997 13.1918 17.0408 13.126 16.875 13.126ZM13.125 15.001C12.8778 15.001 12.6361 14.9277 12.4305 14.7903C12.225 14.653 12.0648 14.4578 11.9701 14.2294C11.8755 14.0009 11.8508 13.7496 11.899 13.5071C11.9472 13.2647 12.0663 13.0419 12.2411 12.8671C12.4159 12.6923 12.6387 12.5732 12.8811 12.525C13.1236 12.4768 13.3749 12.5015 13.6034 12.5961C13.8318 12.6908 14.027 12.851 14.1643 13.0565C14.3017 13.2621 14.375 13.5038 14.375 13.751C14.375 14.0825 14.2433 14.4005 14.0089 14.6349C13.7745 14.8693 13.4565 15.001 13.125 15.001Z" fill="white"/>
+                                            </svg>
+                                            Filters
+                                        </div>
+                                        <div class="number-results">
+                                            <div id="product-count-grid" class="count-text">
+                                                <span class="count">10</span> Results
+                                            </div>
+                                            <div id="product-count-list" class="count-text">
+                                                <span class="count">6</span> Results
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex gap_8 align-items-center">
-                                        <div class="text-cl-primary">View as:</div>
-                                        <ul class="nav-tab-filter group-layout d-flex gap_12 align-items-center" role="tablist">
-                                            <li class="nav-tab-item" role="presentation">
-                                                <a href="#gridLayout" class=" btn-layout grid nav-link-item active"
-                                                    data-bs-toggle="tab">
-                                                    <i class="icon-GridFour"></i>
-                                                </a>
-                                            </li>
-                                            <li class="nav-tab-item" role="presentation">
-                                                <a href="#listLayout" class="nav-link-item btn-layout list " data-bs-toggle="tab">
-                                                    <i class="icon-ListDashes"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
+                                    <div class="right">
+                                        <div class="d-flex gap_8 align-items-center">
+                                            <div class="text-cl-primary">Compare:</div>
+                                            <input type="checkbox" id="Compare" class="tf-switch-check">
+                                        </div>
+                                        <div class="d-flex gap_8 align-items-center">
+                                            <div class="text-cl-primary flex-shrink-0">Sort by:</div>
+                                            <div class="nice-select select-filter list-sort style-1" tabindex="0">
+                                                <span class="current text-button">
+                                                    Best Selling
+                                                </span>
+                                                <ul class="list">
+                                                    <li data-value="default" class="option selected">Best Selling</li>
+                                                    <li data-value="Rent" class="option">Rent</li>
+                                                    <li data-value="Sale" class="option">Sale</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex gap_8 align-items-center">
+                                            <div class="text-cl-primary">View as:</div>
+                                            <ul class="nav-tab-filter group-layout d-flex gap_12 align-items-center" role="tablist">
+                                                <li class="nav-tab-item" role="presentation">
+                                                    <a href="#gridLayout" class=" btn-layout grid nav-link-item active"
+                                                        data-bs-toggle="tab">
+                                                        <i class="icon-GridFour"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-tab-item" role="presentation">
+                                                    <a href="#listLayout" class="nav-link-item btn-layout list " data-bs-toggle="tab">
+                                                        <i class="icon-ListDashes"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+    
+    
+                                        
                                     </div>
-
-
-                                    
+                                </div>
+                                <div class="list-filter mb_40">
+                                    <div class="d-flex gap_12 align-items-center flex-wrap" id="applied-filters">
+                                        <span class="filter-tag">All Status<span class="remove-tag icon-close" data-filter="status"></span></span>
+                                        <span class="filter-tag">Apartments<span class="remove-tag icon-close" data-filter="apartments"></span></span>
+                                        <span class="filter-tag">All Cities<span class="remove-tag icon-close" data-filter="cities"></span></span>
+                                    </div>
+                                    <button id="remove-all" class="remove-all-filters text-label">Clear All</button>
                                 </div>
                             </div>
-                            <div class="list-filter mb_40">
-                                <div class="item">
-                                    All Status
-                                    <i class="icon icon-close"></i>
-                                </div>
-                                <div class="item">
-                                    Apartments
-                                    <i class="icon icon-close"></i>
-                                </div>
-                                <div class="item">
-                                    All Cities
-                                    <i class="icon icon-close"></i>
-                                </div>
-                                <div class="text-label clear-all">CLEAR ALL</div>
 
-                            </div>
+                          
+
+
                             <div class="flat-animate-tab">
                                 <div class="tab-content">
                                     <div class="tab-pane active show" id="gridLayout" role="tabpanel">
                                         <div class="tf-grid-layout md-col-2">
-                                            <div class="card-house style-default hover-image item-fillter apartment wow fadeInUp animated">
+                                            <div class="card-house style-default hover-image item-fillter apartment wow fadeInUp">
                                                 <div class="img-style mb_20">
                                                     <img loading="lazy" decoding="async" src="images/house/house-1.jpg"
                                                         srcset="images/house/house-1.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
@@ -564,7 +573,7 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="card-house style-default hover-image item-fillter villa wow fadeInUp animated" data-wow-delay=".1s">
+                                            <div class="card-house style-default hover-image item-fillter villa wow fadeInUp" data-wow-delay=".1s">
                                                 <div class="img-style mb_20">
                                                     <img loading="lazy" decoding="async" src="images/house/house-2.jpg"
                                                         srcset="images/house/house-2.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
@@ -615,7 +624,7 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="card-house style-default hover-image item-fillter studio wow fadeInUp animated">
+                                            <div class="card-house style-default hover-image item-fillter studio wow fadeInUp">
                                                 <div class="img-style mb_20">
                                                     <img loading="lazy" decoding="async" src="images/house/house-3.jpg"
                                                         srcset="images/house/house-3.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
@@ -666,7 +675,7 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="card-house style-default hover-image item-fillter apartment wow fadeInUp animated"  data-wow-delay=".1s">
+                                            <div class="card-house style-default hover-image item-fillter apartment wow fadeInUp"  data-wow-delay=".1s">
                                                 <div class="img-style mb_20">
                                                     <img loading="lazy" decoding="async" src="images/house/house-4.jpg"
                                                         srcset="images/house/house-4.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
@@ -717,7 +726,7 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="card-house style-default hover-image item-fillter house wow fadeInUp animated">
+                                            <div class="card-house style-default hover-image item-fillter house wow fadeInUp">
                                                 <div class="img-style mb_20">
                                                     <img loading="lazy" decoding="async" src="images/house/house-5.jpg"
                                                         srcset="images/house/house-5.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
@@ -768,7 +777,7 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="card-house style-default hover-image item-fillter office wow fadeInUp animated" data-wow-delay=".1s">
+                                            <div class="card-house style-default hover-image item-fillter office wow fadeInUp" data-wow-delay=".1s">
                                                 <div class="img-style mb_20">
                                                     <img loading="lazy" decoding="async" src="images/house/house-6.jpg"
                                                         srcset="images/house/house-6.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
@@ -1094,9 +1103,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+            <!-- End filter-sidebar -->
 
-        </div>
+        </main>
         <!-- End main-content -->
 
         <!-- Footer -->
@@ -1188,7 +1198,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="footer-image wow fadeInUp animated">
+                    <div class="footer-image wow fadeInUp">
                         <img src="images/logo/logo-1.svg" alt="">
                     </div>
                 </div>
@@ -1475,6 +1485,7 @@
     <script src="js/gsap.min.js"></script>
     <script src="js/handleGsap.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/filter.js"></script>
     <script src="js/main.js"></script>
     <!-- /Javascript -->
 

@@ -543,3 +543,15 @@
 .section-categories {
     background-color: var(--Bg-light);
 }
+
+.wrap-layout-map.hide-map {
+    max-width: 1470px;
+    margin-left: auto;
+    margin-right: auto;
+    >* {
+        width: 100% !important;
+    }
+    .wrap-left {
+        padding-right: 30px;
+    }
+}

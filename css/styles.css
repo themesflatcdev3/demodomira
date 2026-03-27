@@ -484,6 +484,7 @@ textarea {
   line-height: inherit;
   margin: 0;
   vertical-align: baseline;
+  background: unset;
 }
 
 textarea {
@@ -1719,7 +1720,7 @@ a:focus, a:hover {
 ============================================================================*/
 .header {
   position: relative;
-  z-index: 99999;
+  z-index: 9999;
 }
 .header .header-inner {
   display: flex;
@@ -2348,11 +2349,11 @@ a:focus, a:hover {
 .footer .footer-logo {
   margin-bottom: 24px;
 }
-.footer .footer-image wow fadeInUp animated {
+.footer .footer-image {
   padding-top: 51px;
   position: relative;
 }
-.footer .footer-image wow fadeInUp animated::after {
+.footer .footer-image::after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -6187,19 +6188,82 @@ input.tf-check::before {
 .tf-filter-sidebar {
   padding: 32px;
   border-radius: 12px;
-  background-color: var(--Bg-light);
+  width: 100%;
+  max-width: 400px;
 }
 @media (min-width: 1200px) {
   .tf-filter-sidebar {
-    max-width: 400px;
+    background-color: var(--Bg-light);
   }
 }
 @media (max-width: 1199px) {
   .tf-filter-sidebar {
-    padding: 24px 15px;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    z-index: 3000;
+    display: flex;
+    flex-direction: column;
+    background-clip: padding-box;
+    border-radius: 0;
+    background-color: var(--Text-light);
+    outline: 0;
+    padding: 0;
+    transform: translateX(-100%);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .tf-filter-sidebar .canvas-header {
+    padding: 15px 15px;
+    background-color: var(--Bg-light);
+  }
+  .tf-filter-sidebar .canvas-header .icon {
+    font-size: 24px;
+  }
+  .tf-filter-sidebar .canvas-body {
+    padding: 20px 15px;
+    overscroll-behavior-y: contain;
+    overflow-y: auto;
+  }
+  .tf-filter-sidebar .canvas-body::-webkit-scrollbar {
+    width: 4px;
+    background-color: var(--Line);
+  }
+  .tf-filter-sidebar .canvas-body::-webkit-scrollbar-thumb {
+    background: var(--Text-secondary);
+    border-radius: 0;
+  }
+  .tf-filter-sidebar.show {
+    transform: none;
   }
 }
 
+@media (max-width: 1199px) {
+  .overlay-filter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .overlay-filter.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 .wd-filter-select .nice-select {
   padding: 11px 15px;
 }
@@ -6306,7 +6370,7 @@ input.tf-check::before {
   align-items: center;
   flex-wrap: wrap;
 }
-.list-filter .item {
+.list-filter .filter-tag {
   display: flex;
   gap: 4px;
   align-items: center;
@@ -6321,10 +6385,14 @@ input.tf-check::before {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.list-filter .item .icon {
+.list-filter .filter-tag .icon {
   font-size: 16px;
 }
-.list-filter .clear-all {
+.list-filter .filter-tag:hover {
+  color: var(--Primary);
+}
+.list-filter .remove-all-filters {
+  text-transform: uppercase;
   text-decoration: underline;
   color: var(--Text-primary);
   cursor: pointer;
@@ -7219,6 +7287,18 @@ input.tf-check::before {
 
 .section-categories {
   background-color: var(--Bg-light);
+}
+
+.wrap-layout-map.hide-map {
+  max-width: 1470px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wrap-layout-map.hide-map > * {
+  width: 100% !important;
+}
+.wrap-layout-map.hide-map .wrap-left {
+  padding-right: 30px;
 }
 
 /*# sourceMappingURL=styles.css.map */

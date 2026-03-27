@@ -719,7 +719,8 @@
 
     };
 
-    // check_map
+    /* check_map 
+    -------------------------------------------------------------------------------------*/ 
     var check_map = function () {
         $(document).ready(function () {
             if ($('#check-map').is(':checked')) {
@@ -730,8 +731,22 @@
         });
         $('#check-map').on('change', function () {
             $('.wg-map').toggle(this.checked);
+            $('.wrap-layout-map').toggleClass("hide-map");
         });
     }
+
+    /* Handle Sidebar Filter 
+    -------------------------------------------------------------------------------------*/ 
+    var handleSidebarFilter = function () {
+        $(".filterShop").click(function () {
+        if ($(window).width() < 1200) {
+            $(".filter_canvas,.overlay-filter").addClass("show");
+        }
+        });
+        $(".close-canvas-filter ,.overlay-filter").click(function () {
+            $(".filter_canvas,.overlay-filter").removeClass("show");
+        });
+    };
 
     // Dom Ready
     $(function () {
@@ -760,5 +775,6 @@
         deleteImg();
         showHideDashboard();
         autoPopup();
+        handleSidebarFilter();
     });
 })(jQuery);

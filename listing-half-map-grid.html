@@ -202,10 +202,10 @@
         <!-- End header -->
         
         <!-- main-content -->
-        <div class="main-content">
+        <main class="main-content">
             
             <!-- filter -->
-            <div class="bg-light">
+            <section class="bg-light">
                 <div class="tf-container w-1770">
                     <div class="form-top-filter">
                         <div class="flat-tab-form">
@@ -497,803 +497,807 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- End filter -->
 
-            <div class="wrapper-layout xl-column-reverse">
-                <div class="wrap-right overflow-hidden wg-map">
-                    <div id="map"></div>
-                </div>
-                <div class="wrap-left">
-                    <div class="top-filter align-items-end mb_40">
-                        <div>
-                            <ul class="breadcrumb mb_4">
-                                <li>
-                                    <a class="text-cl-primary link" href="index.html">Homepage</a>
-                                </li>
-                                <li>
-                                    <div class="dot"></div>
-                                </li>
-                                <li>
-                                    Buy/Rent
-                                </li>
-                            </ul>
-                            <div class="h4 text-cl-primary">Explore Properties</div>
-                        </div>
-                        <div class="right type-1">
-                            <div class="number-results text-cl-primary">1 - 20 of 52 Results</div>
-                            <div class="d-flex gap_8 align-items-center">
-                                <div class="text-cl-primary">Compare:</div>
-                                <input type="checkbox" id="Compare" class="tf-switch-check">
+            <!-- half-map-grid -->
+            <section>
+                <div class="wrapper-layout xl-column-reverse wrap-layout-map">
+                    <div class="wrap-right overflow-hidden wg-map">
+                        <div id="map"></div>
+                    </div>
+                    <div class="wrap-left">
+                        <div class="top-filter align-items-end mb_40">
+                            <div>
+                                <ul class="breadcrumb mb_4">
+                                    <li>
+                                        <a class="text-cl-primary link" href="index.html">Homepage</a>
+                                    </li>
+                                    <li>
+                                        <div class="dot"></div>
+                                    </li>
+                                    <li>
+                                        Buy/Rent
+                                    </li>
+                                </ul>
+                                <div class="h4 text-cl-primary">Explore Properties</div>
                             </div>
-                            <div class="d-flex gap_8 align-items-center">
-                                <div class="nice-select select-filter list-sort style-1" tabindex="0">
-                                    <span class="current text-button">
-                                        Best Selling
-                                    </span>
-                                    <ul class="list">
-                                        <li data-value="default" class="option selected">Best Selling</li>
-                                        <li data-value="Rent" class="option">Rent</li>
-                                        <li data-value="Sale" class="option">Sale</li>
+                            <div class="right type-1">
+                                <div class="number-results text-cl-primary">1 - 20 of 52 Results</div>
+                                <div class="d-flex gap_8 align-items-center">
+                                    <div class="text-cl-primary">Compare:</div>
+                                    <input type="checkbox" id="Compare" class="tf-switch-check">
+                                </div>
+                                <div class="d-flex gap_8 align-items-center">
+                                    <div class="nice-select select-filter list-sort style-1" tabindex="0">
+                                        <span class="current text-button">
+                                            Best Selling
+                                        </span>
+                                        <ul class="list">
+                                            <li data-value="default" class="option selected">Best Selling</li>
+                                            <li data-value="Rent" class="option">Rent</li>
+                                            <li data-value="Sale" class="option">Sale</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap_8 align-items-center">
+                                    <ul class="nav-tab-filter group-layout d-flex gap_8 align-items-center" role="tablist">
+                                        <li class="nav-tab-item" role="presentation">
+                                            <a href="#gridLayout" class=" btn-layout grid nav-link-item active"
+                                                data-bs-toggle="tab">
+                                                <i class="icon-GridFour"></i>
+                                            </a>
+                                        </li>
+                                        <li class="nav-tab-item" role="presentation">
+                                            <a href="#listLayout" class="nav-link-item btn-layout list " data-bs-toggle="tab">
+                                                <i class="icon-ListDashes"></i>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="d-flex gap_8 align-items-center">
-                                <ul class="nav-tab-filter group-layout d-flex gap_8 align-items-center" role="tablist">
-                                    <li class="nav-tab-item" role="presentation">
-                                        <a href="#gridLayout" class=" btn-layout grid nav-link-item active"
-                                            data-bs-toggle="tab">
-                                            <i class="icon-GridFour"></i>
-                                        </a>
-                                    </li>
-                                    <li class="nav-tab-item" role="presentation">
-                                        <a href="#listLayout" class="nav-link-item btn-layout list " data-bs-toggle="tab">
-                                            <i class="icon-ListDashes"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
-                    </div>
-                    <div class="flat-animate-tab">
-                        <div class="tab-content">
-                            <div class="tab-pane active show" id="gridLayout" role="tabpanel">
-                                <div class="tf-grid-layout md-col-2">
-                                    <div class="card-house style-default hover-image item-fillter apartment" data-id="1">
-                                        <div class="img-style mb_20">
-                                            <img loading="lazy" decoding="async" src="images/house/house-1.jpg"
-                                                srcset="images/house/house-1.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                width="450" height="337" alt="home">
-                                            <div class="wrap-tag d-flex gap_8 mb_12">
-                                                <div class="tag text-label text-cl-primary">
-                                                    For Rent
-                                                </div>
-                                                <div class="tag text-label text-cl-primary">
-                                                    apartment
-                                                </div>
-                                            </div>
-                                            <a href="property-details.html" class="overlay-link"></a>
-                                            <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
-                                                    <span>Quick View</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                                <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
-                                                    <span>Compare</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex justify-content-between gap_12">
-                                                <div>
-                                                    <a href="property-details.html" class="title h6 link text-cl-primary">
-                                                        Modern Apartment in Downtown
-                                                    </a>
-                                                    <div class="place">125 Grand Avenue, Los Angeles, California</div>
-                                                </div>
-                                                <div class="flex-shrink-0 text-end">
-                                                    <div class="h6 price text-cl-primary">$250,00</div>
-                                                    <div class="per">/month</div>
-                                                </div>
-                                            </div>
-                                            <ul class="info d-flex">
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bed"></i>2 Bed
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bathtub"></i>2 Bath
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Ruler"></i>1,150 Sqft
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="card-house style-default hover-image item-fillter villa" data-id="2">
-                                        <div class="img-style mb_20">
-                                            <img loading="lazy" decoding="async" src="images/house/house-2.jpg"
-                                                srcset="images/house/house-2.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                width="450" height="337" alt="home">
-                                            <div class="wrap-tag d-flex gap_8 mb_12">
-                                                <div class="tag text-label text-cl-primary">
-                                                    For Rent
-                                                </div>
-                                                <div class="tag text-label text-cl-primary">
-                                                    Villa
-                                                </div>
-                                            </div>
-                                            <a href="property-details.html" class="overlay-link"></a>
-                                            <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
-                                                    <span>Quick View</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                                <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
-                                                    <span>Compare</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex justify-content-between gap_12">
-                                                <div>
-                                                    <a href="property-details.html" class="title h6 link text-cl-primary">
-                                                        Luxury Beachfront Villa
-                                                    </a>
-                                                    <div>18 Ocean Crest Drive, Malibu, California</div>
-                                                </div>
-                                                <div class="flex-shrink-0 text-end">
-                                                    <div class="h6 price text-cl-primary">$6640,00</div>
-                                                    <div class="per">/sqft</div>
-                                                </div>
-                                            </div>
-                                            <ul class="info d-flex">
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bed"></i>2 Bed
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bathtub"></i>2 Bath
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Ruler"></i>1,150 Sqft
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="card-house style-default hover-image item-fillter studio" data-id="3">
-                                        <div class="img-style mb_20">
-                                            <img loading="lazy" decoding="async" src="images/house/house-3.jpg"
-                                                srcset="images/house/house-3.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                width="450" height="337" alt="home">
-                                            <div class="wrap-tag d-flex gap_8 mb_12">
-                                                <div class="tag text-label text-cl-primary">
-                                                    For Rent
-                                                </div>
-                                                <div class="tag text-label text-cl-primary">
-                                                    studio
-                                                </div>
-                                            </div>
-                                            <a href="property-details.html" class="overlay-link"></a>
-                                            <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
-                                                    <span>Quick View</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                                <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
-                                                    <span>Compare</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex justify-content-between gap_12">
-                                                <div>
-                                                    <a href="property-details.html" class="title h6 link text-cl-primary">
-                                                        Cozy Family House in Pasadena
-                                                    </a>
-                                                    <div class="place">742 Maple Street, Pasadena, California</div>
-                                                </div>
-                                                <div class="flex-shrink-0 text-end">
-                                                    <div class="h6 price text-cl-primary">$250,00</div>
-                                                    <div class="per">/month</div>
-                                                </div>
-                                            </div>
-                                            <ul class="info d-flex">
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bed"></i>3 Bed
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bathtub"></i>2 Bath
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Ruler"></i>1,950 Sqft
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="card-house style-default hover-image item-fillter apartment" data-id="4">
-                                        <div class="img-style mb_20">
-                                            <img loading="lazy" decoding="async" src="images/house/house-4.jpg"
-                                                srcset="images/house/house-4.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                width="450" height="337" alt="home">
-                                            <div class="wrap-tag d-flex gap_8 mb_12">
-                                                <div class="tag text-label text-cl-primary">
-                                                    For Rent
-                                                </div>
-                                                <div class="tag text-label text-cl-primary">
-                                                    apartment
-                                                </div>
-                                            </div>
-                                            <a href="property-details.html" class="overlay-link"></a>
-                                            <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
-                                                    <span>Quick View</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                                <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
-                                                    <span>Compare</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex justify-content-between gap_12">
-                                                <div>
-                                                    <a href="property-details.html" class="title h6 link text-cl-primary">
-                                                        Contemporary Loft in Arts District
-                                                    </a>
-                                                    <div class="place">560 Industrial Street, Los Angeles, California</div>
-                                                </div>
-                                                <div class="flex-shrink-0 text-end">
-                                                    <div class="h6 price text-cl-primary">$6640,00</div>
-                                                    <div class="per">/month</div>
-                                                </div>
-                                            </div>
-                                            <ul class="info d-flex">
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bed"></i>1 Bed
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bathtub"></i>2 Bath
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Ruler"></i>980 Sqft
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="card-house style-default hover-image item-fillter house" data-id="5">
-                                        <div class="img-style mb_20">
-                                            <img loading="lazy" decoding="async" src="images/house/house-5.jpg"
-                                                srcset="images/house/house-5.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                width="450" height="337" alt="home">
-                                            <div class="wrap-tag d-flex gap_8 mb_12">
-                                                <div class="tag text-label text-cl-primary">
-                                                    For Rent
-                                                </div>
-                                                <div class="tag text-label text-cl-primary">
-                                                    Villa
-                                                </div>
-                                            </div>
-                                            <a href="property-details.html" class="overlay-link"></a>
-                                            <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
-                                                    <span>Quick View</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                                <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
-                                                    <span>Compare</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex justify-content-between gap_12">
-                                                <div>
-                                                    <a href="property-details.html" class="title h6 link text-cl-primary">
-                                                        Elegant Townhouse in Beverly Hills
-                                                    </a>
-                                                    <div class="place">233 Linden Drive, Beverly Hills, California</div>
-                                                </div>
-                                                <div class="flex-shrink-0 text-end">
-                                                    <div class="h6 price text-cl-primary">$250,00</div>
-                                                    <div class="per">/month</div>
-                                                </div>
-                                            </div>
-                                            <ul class="info d-flex">
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bed"></i>4 Bed
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bathtub"></i>3 Bath
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Ruler"></i>2,600 Sqft
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="card-house style-default hover-image item-fillter office" data-id="6">
-                                        <div class="img-style mb_20">
-                                            <img loading="lazy" decoding="async" src="images/house/house-6.jpg"
-                                                srcset="images/house/house-6.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                width="450" height="337" alt="home">
-                                            <div class="wrap-tag d-flex gap_8 mb_12">
-                                                <div class="tag text-label text-cl-primary">
-                                                    For Rent
-                                                </div>
-                                                <div class="tag text-label text-cl-primary">
-                                                    Villa
-                                                </div>
-                                            </div>
-                                            <a href="property-details.html" class="overlay-link"></a>
-                                            <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
-                                                    <span>Quick View</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                                <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
-                                                    <span>Compare</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex justify-content-between gap_12">
-                                                <div>
-                                                    <a href="property-details.html" class="title h6 link text-cl-primary">
-                                                        Modern Condo with City View
-                                                    </a>
-                                                    <div class="place">889 Wilshire Boulevard, Los Angeles, California</div>
-                                                </div>
-                                                <div class="flex-shrink-0 text-end">
-                                                    <div class="h6 price text-cl-primary">$6640,00</div>
-                                                    <div class="per">/month</div>
-                                                </div>
-                                            </div>
-                                            <ul class="info d-flex">
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bed"></i>2 Bed
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bathtub"></i>2 Bath
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Ruler"></i>1,320 Sqft
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="card-house style-default hover-image item-fillter apartment" data-id="7">
-                                        <div class="img-style mb_20">
-                                            <img loading="lazy" decoding="async" src="images/house/house-7.jpg"
-                                                srcset="images/house/house-7.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                width="450" height="337" alt="home">
-                                            <div class="wrap-tag d-flex gap_8 mb_12">
-                                                <div class="tag text-label text-cl-primary">
-                                                    For Rent
-                                                </div>
-                                                <div class="tag text-label text-cl-primary">
-                                                    apartment
-                                                </div>
-                                            </div>
-                                            <a href="property-details.html" class="overlay-link"></a>
-                                            <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
-                                                    <span>Quick View</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                                <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
-                                                    <span>Compare</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex justify-content-between gap_12">
-                                                <div>
-                                                    <a href="property-details.html" class="title h6 link text-cl-primary">
-                                                        Apartment Near Santa Monica
-                                                    </a>
-                                                    <div class="place">560 Industrial Street, Los Angeles, California</div>
-                                                </div>
-                                                <div class="flex-shrink-0 text-end">
-                                                    <div class="h6 price text-cl-primary">$6640,00</div>
-                                                    <div class="per">/month</div>
-                                                </div>
-                                            </div>
-                                            <ul class="info d-flex">
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bed"></i>1 Bed
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bathtub"></i>2 Bath
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Ruler"></i>980 Sqft
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="card-house style-default hover-image item-fillter house" data-id="8">
-                                        <div class="img-style mb_20">
-                                            <img loading="lazy" decoding="async" src="images/house/house-8.jpg"
-                                                srcset="images/house/house-8.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                width="450" height="337" alt="home">
-                                            <div class="wrap-tag d-flex gap_8 mb_12">
-                                                <div class="tag text-label text-cl-primary">
-                                                    For Rent
-                                                </div>
-                                                <div class="tag text-label text-cl-primary">
-                                                    Villa
-                                                </div>
-                                            </div>
-                                            <a href="property-details.html" class="overlay-link"></a>
-                                            <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
-                                                    <span>Quick View</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                                <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
-                                                    <span>Compare</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex justify-content-between gap_12">
-                                                <div>
-                                                    <a href="property-details.html" class="title h6 link text-cl-primary">
-                                                        Luxury Penthouse Hollywood
-                                                    </a>
-                                                    <div class="place">233 Linden Drive, Beverly Hills, California</div>
-                                                </div>
-                                                <div class="flex-shrink-0 text-end">
-                                                    <div class="h6 price text-cl-primary">$250,00</div>
-                                                    <div class="per">/month</div>
-                                                </div>
-                                            </div>
-                                            <ul class="info d-flex">
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bed"></i>4 Bed
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bathtub"></i>3 Bath
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Ruler"></i>2,600 Sqft
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="card-house style-default hover-image item-fillter office" data-id="9">
-                                        <div class="img-style mb_20">
-                                            <img loading="lazy" decoding="async" src="images/house/house-9.jpg"
-                                                srcset="images/house/house-9.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                width="450" height="337" alt="home">
-                                            <div class="wrap-tag d-flex gap_8 mb_12">
-                                                <div class="tag text-label text-cl-primary">
-                                                    For Rent
-                                                </div>
-                                                <div class="tag text-label text-cl-primary">
-                                                    Villa
-                                                </div>
-                                            </div>
-                                            <a href="property-details.html" class="overlay-link"></a>
-                                            <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
-                                                    <span>Quick View</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                                <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
-                                                    <span>Compare</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex justify-content-between gap_12">
-                                                <div>
-                                                    <a href="property-details.html" class="title h6 link text-cl-primary">
-                                                        Charming Bungalow in Silver Lake
-                                                    </a>
-                                                    <div class="place">889 Wilshire Boulevard, Los Angeles, California</div>
-                                                </div>
-                                                <div class="flex-shrink-0 text-end">
-                                                    <div class="h6 price text-cl-primary">$6640,00</div>
-                                                    <div class="per">/month</div>
-                                                </div>
-                                            </div>
-                                            <ul class="info d-flex">
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bed"></i>2 Bed
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bathtub"></i>2 Bath
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Ruler"></i>1,320 Sqft
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <ul class="wg-pagination justify-content-center">
-                                    <li>
-                                        <a href="#">1</a>
-                                    </li>
-                                    <li class="active">
-                                        <a href="#">2</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">3</a>
-                                    </li>
-                                    <li class="arrow">
-                                        <a href="#"><i class="icon-CaretRight"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane" id="listLayout" role="tabpanel">
-                                <div class="wrap-list d-grid gap_40">
-                                    <div class="card-house style-list" data-id="1">
-                                        <div class="wrap-img">
-                                            <a href="property-details.html" class="img-style">
-                                                <img loading="lazy" decoding="async" src="images/house/house-10.jpg"
-                                                    srcset="images/house/house-10.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
+                        <div class="flat-animate-tab">
+                            <div class="tab-content">
+                                <div class="tab-pane active show" id="gridLayout" role="tabpanel">
+                                    <div class="tf-grid-layout md-col-2">
+                                        <div class="card-house style-default hover-image item-fillter apartment" data-id="1">
+                                            <div class="img-style mb_20">
+                                                <img loading="lazy" decoding="async" src="images/house/house-1.jpg"
+                                                    srcset="images/house/house-1.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
                                                     width="450" height="337" alt="home">
-                                            </a>
-                                        </div>
-                                        <div class="wrap-img">
-                                            <a href="property-details.html" class="img-style">
-                                                <img loading="lazy" decoding="async" src="images/house/house-11.jpg"
-                                                    srcset="images/house/house-11.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                    width="450" height="337" alt="home">
-                                            </a>
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex justify-content-between gap_16 flex-wrap mb_16">
-                                                <div class="pricing d-flex align-items-end">
-                                                    <h4 class="price text-cl-primary">$250,00</h4>
-                                                    <div class="per">/SqFT</div>
-                                                </div>
-                                                <div class="wrap-tag d-flex gap_8 align-items-center">
-                                                    <div class="tag text-label text-cl-primary">
-                                                        For Sale
-                                                    </div>
-                                                    <div class="tag text-label text-cl-primary">
-                                                        Apartment
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <a href="property-details.html" class="title h5 link text-cl-primary">
-                                                    Luxury Beachfront Villa
-                                                </a>
-                                                <div class="place">18 Ocean Crest Drive, Malibu, California</div>
-                                            </div>
-                                            <ul class="info d-flex">
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bed"></i>2 Bed
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bathtub"></i>2 Bath
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Ruler"></i>1,320 Sqft
-                                                </li>
-                                            </ul>
-                                            <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
-                                                    <span>Quick View</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                                <a href="#" class="tf-btn btn-border w-100 rounded-8 compare">
-                                                    <span>Compare</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-house style-list" data-id="2">
-                                        <div class="wrap-img">
-                                            <a href="property-details.html" class="img-style">
-                                                <img loading="lazy" decoding="async" src="images/house/house-12.jpg"
-                                                    srcset="images/house/house-12.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                    width="450" height="337" alt="home">
-                                            </a>
-                                        </div>
-                                        <div class="wrap-img">
-                                            <a href="property-details.html" class="img-style">
-                                                <img loading="lazy" decoding="async" src="images/house/house-13.jpg"
-                                                    srcset="images/house/house-13.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                    width="450" height="337" alt="home">
-                                            </a>
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex justify-content-between gap_16 flex-wrap mb_16">
-                                                <div class="pricing d-flex align-items-end">
-                                                    <h4 class="price text-cl-primary">$6640,00</h4>
-                                                    <div class="per">/SqFT</div>
-                                                </div>
-                                                <div class="wrap-tag d-flex gap_8 align-items-center">
-                                                    <div class="tag text-label text-cl-primary">
-                                                        For Sale
-                                                    </div>
-                                                    <div class="tag text-label text-cl-primary">
-                                                        Apartment
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <a href="property-details.html" class="title h5 link text-cl-primary">
-                                                    Luxury Beachfront Villa
-                                                </a>
-                                                <div class="place">18 Ocean Crest Drive, Malibu, California</div>
-                                            </div>
-                                            <ul class="info d-flex">
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bed"></i>5 Bed
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bathtub"></i>4 Bath
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Ruler"></i>3,800 Sqft
-                                                </li>
-                                            </ul>
-                                            <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
-                                                    <span>Quick View</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                                <a href="#" class="tf-btn btn-border w-100 rounded-8 compare">
-                                                    <span>Compare</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-house style-list" data-id="3">
-                                        <div class="wrap-img">
-                                            <a href="property-details.html" class="img-style">
-                                                <img loading="lazy" decoding="async" src="images/house/house-14.jpg"
-                                                    srcset="images/house/house-14.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                    width="450" height="337" alt="home">
-                                            </a>
-                                        </div>
-                                        <div class="wrap-img">
-                                            <a href="property-details.html" class="img-style">
-                                                <img loading="lazy" decoding="async" src="images/house/house-15.jpg"
-                                                    srcset="images/house/house-15.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                    width="450" height="337" alt="home">
-                                            </a>
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex justify-content-between gap_16 flex-wrap mb_16">
-                                                <div class="pricing d-flex align-items-end">
-                                                    <h4 class="price text-cl-primary">$250,00</h4>
-                                                    <div class="per">/SqFT</div>
-                                                </div>
-                                                <div class="wrap-tag d-flex gap_8 align-items-center">
+                                                <div class="wrap-tag d-flex gap_8 mb_12">
                                                     <div class="tag text-label text-cl-primary">
                                                         For Rent
                                                     </div>
                                                     <div class="tag text-label text-cl-primary">
-                                                        Apartment
+                                                        apartment
                                                     </div>
                                                 </div>
+                                                <a href="property-details.html" class="overlay-link"></a>
+                                                <div class="wrap-btn">
+                                                    <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                        <span>Quick View</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                    <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
+                                                        <span>Compare</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                </div>
                                             </div>
-                                            <div>
-                                                <a href="property-details.html" class="title h5 link text-cl-primary">
-                                                    Cozy Family House in Pasadena
-                                                </a>
-                                                <div class="place">742 Maple Street, Pasadena, California</div>
+                                            <div class="content">
+                                                <div class="d-flex justify-content-between gap_12">
+                                                    <div>
+                                                        <a href="property-details.html" class="title h6 link text-cl-primary">
+                                                            Modern Apartment in Downtown
+                                                        </a>
+                                                        <div class="place">125 Grand Avenue, Los Angeles, California</div>
+                                                    </div>
+                                                    <div class="flex-shrink-0 text-end">
+                                                        <div class="h6 price text-cl-primary">$250,00</div>
+                                                        <div class="per">/month</div>
+                                                    </div>
+                                                </div>
+                                                <ul class="info d-flex">
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bed"></i>2 Bed
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bathtub"></i>2 Bath
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Ruler"></i>1,150 Sqft
+                                                    </li>
+                                                </ul>
                                             </div>
-                                            <ul class="info d-flex">
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bed"></i>3 Bed
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bathtub"></i>2 Bath
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Ruler"></i>1,950 Sqft
-                                                </li>
-                                            </ul>
-                                            <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
-                                                    <span>Quick View</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                                <a href="#" class="tf-btn btn-border w-100 rounded-8 compare">
-                                                    <span>Compare</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
+                                        </div>
+                                        <div class="card-house style-default hover-image item-fillter villa" data-id="2">
+                                            <div class="img-style mb_20">
+                                                <img loading="lazy" decoding="async" src="images/house/house-2.jpg"
+                                                    srcset="images/house/house-2.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
+                                                    width="450" height="337" alt="home">
+                                                <div class="wrap-tag d-flex gap_8 mb_12">
+                                                    <div class="tag text-label text-cl-primary">
+                                                        For Rent
+                                                    </div>
+                                                    <div class="tag text-label text-cl-primary">
+                                                        Villa
+                                                    </div>
+                                                </div>
+                                                <a href="property-details.html" class="overlay-link"></a>
+                                                <div class="wrap-btn">
+                                                    <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                        <span>Quick View</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                    <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
+                                                        <span>Compare</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <div class="d-flex justify-content-between gap_12">
+                                                    <div>
+                                                        <a href="property-details.html" class="title h6 link text-cl-primary">
+                                                            Luxury Beachfront Villa
+                                                        </a>
+                                                        <div>18 Ocean Crest Drive, Malibu, California</div>
+                                                    </div>
+                                                    <div class="flex-shrink-0 text-end">
+                                                        <div class="h6 price text-cl-primary">$6640,00</div>
+                                                        <div class="per">/sqft</div>
+                                                    </div>
+                                                </div>
+                                                <ul class="info d-flex">
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bed"></i>2 Bed
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bathtub"></i>2 Bath
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Ruler"></i>1,150 Sqft
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-house style-default hover-image item-fillter studio" data-id="3">
+                                            <div class="img-style mb_20">
+                                                <img loading="lazy" decoding="async" src="images/house/house-3.jpg"
+                                                    srcset="images/house/house-3.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
+                                                    width="450" height="337" alt="home">
+                                                <div class="wrap-tag d-flex gap_8 mb_12">
+                                                    <div class="tag text-label text-cl-primary">
+                                                        For Rent
+                                                    </div>
+                                                    <div class="tag text-label text-cl-primary">
+                                                        studio
+                                                    </div>
+                                                </div>
+                                                <a href="property-details.html" class="overlay-link"></a>
+                                                <div class="wrap-btn">
+                                                    <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                        <span>Quick View</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                    <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
+                                                        <span>Compare</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <div class="d-flex justify-content-between gap_12">
+                                                    <div>
+                                                        <a href="property-details.html" class="title h6 link text-cl-primary">
+                                                            Cozy Family House in Pasadena
+                                                        </a>
+                                                        <div class="place">742 Maple Street, Pasadena, California</div>
+                                                    </div>
+                                                    <div class="flex-shrink-0 text-end">
+                                                        <div class="h6 price text-cl-primary">$250,00</div>
+                                                        <div class="per">/month</div>
+                                                    </div>
+                                                </div>
+                                                <ul class="info d-flex">
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bed"></i>3 Bed
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bathtub"></i>2 Bath
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Ruler"></i>1,950 Sqft
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-house style-default hover-image item-fillter apartment" data-id="4">
+                                            <div class="img-style mb_20">
+                                                <img loading="lazy" decoding="async" src="images/house/house-4.jpg"
+                                                    srcset="images/house/house-4.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
+                                                    width="450" height="337" alt="home">
+                                                <div class="wrap-tag d-flex gap_8 mb_12">
+                                                    <div class="tag text-label text-cl-primary">
+                                                        For Rent
+                                                    </div>
+                                                    <div class="tag text-label text-cl-primary">
+                                                        apartment
+                                                    </div>
+                                                </div>
+                                                <a href="property-details.html" class="overlay-link"></a>
+                                                <div class="wrap-btn">
+                                                    <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                        <span>Quick View</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                    <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
+                                                        <span>Compare</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <div class="d-flex justify-content-between gap_12">
+                                                    <div>
+                                                        <a href="property-details.html" class="title h6 link text-cl-primary">
+                                                            Contemporary Loft in Arts District
+                                                        </a>
+                                                        <div class="place">560 Industrial Street, Los Angeles, California</div>
+                                                    </div>
+                                                    <div class="flex-shrink-0 text-end">
+                                                        <div class="h6 price text-cl-primary">$6640,00</div>
+                                                        <div class="per">/month</div>
+                                                    </div>
+                                                </div>
+                                                <ul class="info d-flex">
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bed"></i>1 Bed
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bathtub"></i>2 Bath
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Ruler"></i>980 Sqft
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-house style-default hover-image item-fillter house" data-id="5">
+                                            <div class="img-style mb_20">
+                                                <img loading="lazy" decoding="async" src="images/house/house-5.jpg"
+                                                    srcset="images/house/house-5.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
+                                                    width="450" height="337" alt="home">
+                                                <div class="wrap-tag d-flex gap_8 mb_12">
+                                                    <div class="tag text-label text-cl-primary">
+                                                        For Rent
+                                                    </div>
+                                                    <div class="tag text-label text-cl-primary">
+                                                        Villa
+                                                    </div>
+                                                </div>
+                                                <a href="property-details.html" class="overlay-link"></a>
+                                                <div class="wrap-btn">
+                                                    <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                        <span>Quick View</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                    <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
+                                                        <span>Compare</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <div class="d-flex justify-content-between gap_12">
+                                                    <div>
+                                                        <a href="property-details.html" class="title h6 link text-cl-primary">
+                                                            Elegant Townhouse in Beverly Hills
+                                                        </a>
+                                                        <div class="place">233 Linden Drive, Beverly Hills, California</div>
+                                                    </div>
+                                                    <div class="flex-shrink-0 text-end">
+                                                        <div class="h6 price text-cl-primary">$250,00</div>
+                                                        <div class="per">/month</div>
+                                                    </div>
+                                                </div>
+                                                <ul class="info d-flex">
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bed"></i>4 Bed
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bathtub"></i>3 Bath
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Ruler"></i>2,600 Sqft
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-house style-default hover-image item-fillter office" data-id="6">
+                                            <div class="img-style mb_20">
+                                                <img loading="lazy" decoding="async" src="images/house/house-6.jpg"
+                                                    srcset="images/house/house-6.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
+                                                    width="450" height="337" alt="home">
+                                                <div class="wrap-tag d-flex gap_8 mb_12">
+                                                    <div class="tag text-label text-cl-primary">
+                                                        For Rent
+                                                    </div>
+                                                    <div class="tag text-label text-cl-primary">
+                                                        Villa
+                                                    </div>
+                                                </div>
+                                                <a href="property-details.html" class="overlay-link"></a>
+                                                <div class="wrap-btn">
+                                                    <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                        <span>Quick View</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                    <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
+                                                        <span>Compare</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <div class="d-flex justify-content-between gap_12">
+                                                    <div>
+                                                        <a href="property-details.html" class="title h6 link text-cl-primary">
+                                                            Modern Condo with City View
+                                                        </a>
+                                                        <div class="place">889 Wilshire Boulevard, Los Angeles, California</div>
+                                                    </div>
+                                                    <div class="flex-shrink-0 text-end">
+                                                        <div class="h6 price text-cl-primary">$6640,00</div>
+                                                        <div class="per">/month</div>
+                                                    </div>
+                                                </div>
+                                                <ul class="info d-flex">
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bed"></i>2 Bed
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bathtub"></i>2 Bath
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Ruler"></i>1,320 Sqft
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-house style-default hover-image item-fillter apartment" data-id="7">
+                                            <div class="img-style mb_20">
+                                                <img loading="lazy" decoding="async" src="images/house/house-7.jpg"
+                                                    srcset="images/house/house-7.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
+                                                    width="450" height="337" alt="home">
+                                                <div class="wrap-tag d-flex gap_8 mb_12">
+                                                    <div class="tag text-label text-cl-primary">
+                                                        For Rent
+                                                    </div>
+                                                    <div class="tag text-label text-cl-primary">
+                                                        apartment
+                                                    </div>
+                                                </div>
+                                                <a href="property-details.html" class="overlay-link"></a>
+                                                <div class="wrap-btn">
+                                                    <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                        <span>Quick View</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                    <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
+                                                        <span>Compare</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <div class="d-flex justify-content-between gap_12">
+                                                    <div>
+                                                        <a href="property-details.html" class="title h6 link text-cl-primary">
+                                                            Apartment Near Santa Monica
+                                                        </a>
+                                                        <div class="place">560 Industrial Street, Los Angeles, California</div>
+                                                    </div>
+                                                    <div class="flex-shrink-0 text-end">
+                                                        <div class="h6 price text-cl-primary">$6640,00</div>
+                                                        <div class="per">/month</div>
+                                                    </div>
+                                                </div>
+                                                <ul class="info d-flex">
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bed"></i>1 Bed
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bathtub"></i>2 Bath
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Ruler"></i>980 Sqft
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-house style-default hover-image item-fillter house" data-id="8">
+                                            <div class="img-style mb_20">
+                                                <img loading="lazy" decoding="async" src="images/house/house-8.jpg"
+                                                    srcset="images/house/house-8.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
+                                                    width="450" height="337" alt="home">
+                                                <div class="wrap-tag d-flex gap_8 mb_12">
+                                                    <div class="tag text-label text-cl-primary">
+                                                        For Rent
+                                                    </div>
+                                                    <div class="tag text-label text-cl-primary">
+                                                        Villa
+                                                    </div>
+                                                </div>
+                                                <a href="property-details.html" class="overlay-link"></a>
+                                                <div class="wrap-btn">
+                                                    <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                        <span>Quick View</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                    <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
+                                                        <span>Compare</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <div class="d-flex justify-content-between gap_12">
+                                                    <div>
+                                                        <a href="property-details.html" class="title h6 link text-cl-primary">
+                                                            Luxury Penthouse Hollywood
+                                                        </a>
+                                                        <div class="place">233 Linden Drive, Beverly Hills, California</div>
+                                                    </div>
+                                                    <div class="flex-shrink-0 text-end">
+                                                        <div class="h6 price text-cl-primary">$250,00</div>
+                                                        <div class="per">/month</div>
+                                                    </div>
+                                                </div>
+                                                <ul class="info d-flex">
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bed"></i>4 Bed
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bathtub"></i>3 Bath
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Ruler"></i>2,600 Sqft
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-house style-default hover-image item-fillter office" data-id="9">
+                                            <div class="img-style mb_20">
+                                                <img loading="lazy" decoding="async" src="images/house/house-9.jpg"
+                                                    srcset="images/house/house-9.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
+                                                    width="450" height="337" alt="home">
+                                                <div class="wrap-tag d-flex gap_8 mb_12">
+                                                    <div class="tag text-label text-cl-primary">
+                                                        For Rent
+                                                    </div>
+                                                    <div class="tag text-label text-cl-primary">
+                                                        Villa
+                                                    </div>
+                                                </div>
+                                                <a href="property-details.html" class="overlay-link"></a>
+                                                <div class="wrap-btn">
+                                                    <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                        <span>Quick View</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                    <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
+                                                        <span>Compare</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <div class="d-flex justify-content-between gap_12">
+                                                    <div>
+                                                        <a href="property-details.html" class="title h6 link text-cl-primary">
+                                                            Charming Bungalow in Silver Lake
+                                                        </a>
+                                                        <div class="place">889 Wilshire Boulevard, Los Angeles, California</div>
+                                                    </div>
+                                                    <div class="flex-shrink-0 text-end">
+                                                        <div class="h6 price text-cl-primary">$6640,00</div>
+                                                        <div class="per">/month</div>
+                                                    </div>
+                                                </div>
+                                                <ul class="info d-flex">
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bed"></i>2 Bed
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bathtub"></i>2 Bath
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Ruler"></i>1,320 Sqft
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-house style-list" data-id="4">
-                                        <div class="wrap-img">
-                                            <a href="property-details.html" class="img-style">
-                                                <img loading="lazy" decoding="async" src="images/house/house-16.jpg"
-                                                    srcset="images/house/house-16.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                    width="450" height="337" alt="home">
-                                            </a>
-                                        </div>
-                                        <div class="wrap-img">
-                                            <a href="property-details.html" class="img-style">
-                                                <img loading="lazy" decoding="async" src="images/house/house-17.jpg"
-                                                    srcset="images/house/house-17.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                    width="450" height="337" alt="home">
-                                            </a>
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex justify-content-between gap_16 flex-wrap mb_16">
-                                                <div class="pricing d-flex align-items-end">
-                                                    <h4 class="price text-cl-primary">$6640,00</h4>
-                                                    <div class="per">/SqFT</div>
-                                                </div>
-                                                <div class="wrap-tag d-flex gap_8 align-items-center">
-                                                    <div class="tag text-label text-cl-primary">
-                                                        For Sale
-                                                    </div>
-                                                    <div class="tag text-label text-cl-primary">
-                                                        Apartment
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <a href="property-details.html" class="title h5 link text-cl-primary">
-                                                    Contemporary Loft in  District
-                                                </a>
-                                                <div class="place">560 Industrial Street, Los Angeles, California</div>
-                                            </div>
-                                            <ul class="info d-flex">
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bed"></i>1 Bed 
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bathtub"></i>2 Bath
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Ruler"></i>980 Sqft
-                                                </li>
-                                            </ul>
-                                            <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
-                                                    <span>Quick View</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                                <a href="#" class="tf-btn btn-border w-100 rounded-8 compare">
-                                                    <span>Compare</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <ul class="wg-pagination justify-content-center">
+                                        <li>
+                                            <a href="#">1</a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3</a>
+                                        </li>
+                                        <li class="arrow">
+                                            <a href="#"><i class="icon-CaretRight"></i></a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <ul class="wg-pagination justify-content-center">
-                                    <li>
-                                        <a href="#">1</a>
-                                    </li>
-                                    <li class="active">
-                                        <a href="#">2</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">3</a>
-                                    </li>
-                                    <li class="arrow">
-                                        <a href="#"><i class="icon-CaretRight"></i></a>
-                                    </li>
-                                </ul>
+                                <div class="tab-pane" id="listLayout" role="tabpanel">
+                                    <div class="wrap-list d-grid gap_40">
+                                        <div class="card-house style-list" data-id="1">
+                                            <div class="wrap-img">
+                                                <a href="property-details.html" class="img-style">
+                                                    <img loading="lazy" decoding="async" src="images/house/house-10.jpg"
+                                                        srcset="images/house/house-10.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
+                                                        width="450" height="337" alt="home">
+                                                </a>
+                                            </div>
+                                            <div class="wrap-img">
+                                                <a href="property-details.html" class="img-style">
+                                                    <img loading="lazy" decoding="async" src="images/house/house-11.jpg"
+                                                        srcset="images/house/house-11.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
+                                                        width="450" height="337" alt="home">
+                                                </a>
+                                            </div>
+                                            <div class="content">
+                                                <div class="d-flex justify-content-between gap_16 flex-wrap mb_16">
+                                                    <div class="pricing d-flex align-items-end">
+                                                        <h4 class="price text-cl-primary">$250,00</h4>
+                                                        <div class="per">/SqFT</div>
+                                                    </div>
+                                                    <div class="wrap-tag d-flex gap_8 align-items-center">
+                                                        <div class="tag text-label text-cl-primary">
+                                                            For Sale
+                                                        </div>
+                                                        <div class="tag text-label text-cl-primary">
+                                                            Apartment
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <a href="property-details.html" class="title h5 link text-cl-primary">
+                                                        Luxury Beachfront Villa
+                                                    </a>
+                                                    <div class="place">18 Ocean Crest Drive, Malibu, California</div>
+                                                </div>
+                                                <ul class="info d-flex">
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bed"></i>2 Bed
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bathtub"></i>2 Bath
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Ruler"></i>1,320 Sqft
+                                                    </li>
+                                                </ul>
+                                                <div class="wrap-btn">
+                                                    <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                        <span>Quick View</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                    <a href="#" class="tf-btn btn-border w-100 rounded-8 compare">
+                                                        <span>Compare</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-house style-list" data-id="2">
+                                            <div class="wrap-img">
+                                                <a href="property-details.html" class="img-style">
+                                                    <img loading="lazy" decoding="async" src="images/house/house-12.jpg"
+                                                        srcset="images/house/house-12.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
+                                                        width="450" height="337" alt="home">
+                                                </a>
+                                            </div>
+                                            <div class="wrap-img">
+                                                <a href="property-details.html" class="img-style">
+                                                    <img loading="lazy" decoding="async" src="images/house/house-13.jpg"
+                                                        srcset="images/house/house-13.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
+                                                        width="450" height="337" alt="home">
+                                                </a>
+                                            </div>
+                                            <div class="content">
+                                                <div class="d-flex justify-content-between gap_16 flex-wrap mb_16">
+                                                    <div class="pricing d-flex align-items-end">
+                                                        <h4 class="price text-cl-primary">$6640,00</h4>
+                                                        <div class="per">/SqFT</div>
+                                                    </div>
+                                                    <div class="wrap-tag d-flex gap_8 align-items-center">
+                                                        <div class="tag text-label text-cl-primary">
+                                                            For Sale
+                                                        </div>
+                                                        <div class="tag text-label text-cl-primary">
+                                                            Apartment
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <a href="property-details.html" class="title h5 link text-cl-primary">
+                                                        Luxury Beachfront Villa
+                                                    </a>
+                                                    <div class="place">18 Ocean Crest Drive, Malibu, California</div>
+                                                </div>
+                                                <ul class="info d-flex">
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bed"></i>5 Bed
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bathtub"></i>4 Bath
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Ruler"></i>3,800 Sqft
+                                                    </li>
+                                                </ul>
+                                                <div class="wrap-btn">
+                                                    <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                        <span>Quick View</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                    <a href="#" class="tf-btn btn-border w-100 rounded-8 compare">
+                                                        <span>Compare</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-house style-list" data-id="3">
+                                            <div class="wrap-img">
+                                                <a href="property-details.html" class="img-style">
+                                                    <img loading="lazy" decoding="async" src="images/house/house-14.jpg"
+                                                        srcset="images/house/house-14.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
+                                                        width="450" height="337" alt="home">
+                                                </a>
+                                            </div>
+                                            <div class="wrap-img">
+                                                <a href="property-details.html" class="img-style">
+                                                    <img loading="lazy" decoding="async" src="images/house/house-15.jpg"
+                                                        srcset="images/house/house-15.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
+                                                        width="450" height="337" alt="home">
+                                                </a>
+                                            </div>
+                                            <div class="content">
+                                                <div class="d-flex justify-content-between gap_16 flex-wrap mb_16">
+                                                    <div class="pricing d-flex align-items-end">
+                                                        <h4 class="price text-cl-primary">$250,00</h4>
+                                                        <div class="per">/SqFT</div>
+                                                    </div>
+                                                    <div class="wrap-tag d-flex gap_8 align-items-center">
+                                                        <div class="tag text-label text-cl-primary">
+                                                            For Rent
+                                                        </div>
+                                                        <div class="tag text-label text-cl-primary">
+                                                            Apartment
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <a href="property-details.html" class="title h5 link text-cl-primary">
+                                                        Cozy Family House in Pasadena
+                                                    </a>
+                                                    <div class="place">742 Maple Street, Pasadena, California</div>
+                                                </div>
+                                                <ul class="info d-flex">
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bed"></i>3 Bed
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bathtub"></i>2 Bath
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Ruler"></i>1,950 Sqft
+                                                    </li>
+                                                </ul>
+                                                <div class="wrap-btn">
+                                                    <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                        <span>Quick View</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                    <a href="#" class="tf-btn btn-border w-100 rounded-8 compare">
+                                                        <span>Compare</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-house style-list" data-id="4">
+                                            <div class="wrap-img">
+                                                <a href="property-details.html" class="img-style">
+                                                    <img loading="lazy" decoding="async" src="images/house/house-16.jpg"
+                                                        srcset="images/house/house-16.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
+                                                        width="450" height="337" alt="home">
+                                                </a>
+                                            </div>
+                                            <div class="wrap-img">
+                                                <a href="property-details.html" class="img-style">
+                                                    <img loading="lazy" decoding="async" src="images/house/house-17.jpg"
+                                                        srcset="images/house/house-17.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
+                                                        width="450" height="337" alt="home">
+                                                </a>
+                                            </div>
+                                            <div class="content">
+                                                <div class="d-flex justify-content-between gap_16 flex-wrap mb_16">
+                                                    <div class="pricing d-flex align-items-end">
+                                                        <h4 class="price text-cl-primary">$6640,00</h4>
+                                                        <div class="per">/SqFT</div>
+                                                    </div>
+                                                    <div class="wrap-tag d-flex gap_8 align-items-center">
+                                                        <div class="tag text-label text-cl-primary">
+                                                            For Sale
+                                                        </div>
+                                                        <div class="tag text-label text-cl-primary">
+                                                            Apartment
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <a href="property-details.html" class="title h5 link text-cl-primary">
+                                                        Contemporary Loft in  District
+                                                    </a>
+                                                    <div class="place">560 Industrial Street, Los Angeles, California</div>
+                                                </div>
+                                                <ul class="info d-flex">
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bed"></i>1 Bed 
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Bathtub"></i>2 Bath
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap_8">
+                                                        <i class="icon-Ruler"></i>980 Sqft
+                                                    </li>
+                                                </ul>
+                                                <div class="wrap-btn">
+                                                    <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                        <span>Quick View</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                    <a href="#" class="tf-btn btn-border w-100 rounded-8 compare">
+                                                        <span>Compare</span>
+                                                        <span class="bg-effect"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="wg-pagination justify-content-center">
+                                        <li>
+                                            <a href="#">1</a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3</a>
+                                        </li>
+                                        <li class="arrow">
+                                            <a href="#"><i class="icon-CaretRight"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+            <!-- End half-map-grid -->
 
-        </div>
+        </main>
         <!-- End main-content -->
 
     </div>

@@ -202,7 +202,7 @@
         <!-- End header -->
         
         <!-- main-content -->
-        <div class="main-content">
+        <main class="main-content">
             
             <!-- filter -->
             <div class="bg-light">
@@ -500,73 +500,77 @@
             </div>
             <!-- End filter -->
 
-            <div class="wrapper-layout xl-column-reverse">
-                <div class="wrap-right overflow-hidden wg-map">
-                    <div id="map"></div>
-                </div>
-                <div class="wrap-left">
-                    <div class="top-filter align-items-end mb_40">
-                        <div>
-                            <ul class="breadcrumb mb_4">
-                                <li>
-                                    <a class="text-cl-primary link" href="index.html">Homepage</a>
-                                </li>
-                                <li>
-                                    <div class="dot"></div>
-                                </li>
-                                <li>
-                                    Buy/Rent
-                                </li>
-                            </ul>
-                            <div class="h4 text-cl-primary">Explore Properties</div>
-                        </div>
-                        <div class="right type-1">
-                            <div class="number-results text-cl-primary">1 - 20 of 52 Results</div>
-                            <div class="d-flex gap_8 align-items-center">
-                                <div class="text-cl-primary">Compare:</div>
-                                <input type="checkbox" id="Compare" class="tf-switch-check">
+            <!-- search-results -->
+            <section>
+                <div class="wrapper-layout xl-column-reverse wrap-layout-map">
+                    <div class="wrap-right overflow-hidden wg-map">
+                        <div id="map"></div>
+                    </div>
+                    <div class="wrap-left">
+                        <div class="top-filter align-items-end mb_40">
+                            <div>
+                                <ul class="breadcrumb mb_4">
+                                    <li>
+                                        <a class="text-cl-primary link" href="index.html">Homepage</a>
+                                    </li>
+                                    <li>
+                                        <div class="dot"></div>
+                                    </li>
+                                    <li>
+                                        Buy/Rent
+                                    </li>
+                                </ul>
+                                <div class="h4 text-cl-primary">Explore Properties</div>
                             </div>
-                            <div class="d-flex gap_8 align-items-center">
-                                <div class="nice-select select-filter list-sort style-1" tabindex="0">
-                                    <span class="current text-button">
-                                        Best Selling
-                                    </span>
-                                    <ul class="list">
-                                        <li data-value="default" class="option selected">Best Selling</li>
-                                        <li data-value="Rent" class="option">Rent</li>
-                                        <li data-value="Sale" class="option">Sale</li>
+                            <div class="right type-1">
+                                <div class="number-results text-cl-primary">1 - 20 of 52 Results</div>
+                                <div class="d-flex gap_8 align-items-center">
+                                    <div class="text-cl-primary">Compare:</div>
+                                    <input type="checkbox" id="Compare" class="tf-switch-check">
+                                </div>
+                                <div class="d-flex gap_8 align-items-center">
+                                    <div class="nice-select select-filter list-sort style-1" tabindex="0">
+                                        <span class="current text-button">
+                                            Best Selling
+                                        </span>
+                                        <ul class="list">
+                                            <li data-value="default" class="option selected">Best Selling</li>
+                                            <li data-value="Rent" class="option">Rent</li>
+                                            <li data-value="Sale" class="option">Sale</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap_8 align-items-center">
+                                    <ul class="nav-tab-filter group-layout d-flex gap_8 align-items-center" role="tablist">
+                                        <li class="nav-tab-item" role="presentation">
+                                            <a href="#gridLayout" class=" btn-layout grid nav-link-item active"
+                                                data-bs-toggle="tab">
+                                                <i class="icon-GridFour"></i>
+                                            </a>
+                                        </li>
+                                        <li class="nav-tab-item" role="presentation">
+                                            <a href="#listLayout" class="nav-link-item btn-layout list " data-bs-toggle="tab">
+                                                <i class="icon-ListDashes"></i>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="d-flex gap_8 align-items-center">
-                                <ul class="nav-tab-filter group-layout d-flex gap_8 align-items-center" role="tablist">
-                                    <li class="nav-tab-item" role="presentation">
-                                        <a href="#gridLayout" class=" btn-layout grid nav-link-item active"
-                                            data-bs-toggle="tab">
-                                            <i class="icon-GridFour"></i>
-                                        </a>
-                                    </li>
-                                    <li class="nav-tab-item" role="presentation">
-                                        <a href="#listLayout" class="nav-link-item btn-layout list " data-bs-toggle="tab">
-                                            <i class="icon-ListDashes"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                        </div>
+                        <div class="search-results-empty">
+                            <div class="h4 mb_8">Not found & properties based on your filter</div>
+                            <div class="text-body-2 mb_28">Try another filter, location or keywords.</div>
+                            <a href="listing-half-map-grid.html" class="tf-btn btn-px-28 btn-bg-1">
+                                <span>Reset Filters</span>
+                                <span class="bg-effect"></span>
+                            </a>
                         </div>
                     </div>
-                    <div class="search-results-empty">
-                        <div class="h4 mb_8">Not found & properties based on your filter</div>
-                        <div class="text-body-2 mb_28">Try another filter, location or keywords.</div>
-                        <a href="listing-half-map-grid.html" class="tf-btn btn-px-28 btn-bg-1">
-                            <span>Reset Filters</span>
-                            <span class="bg-effect"></span>
-                        </a>
-                    </div>
                 </div>
-            </div>
+            </section>
+            <!-- End search-results -->
 
-        </div>
+        </main>
         <!-- End main-content -->
 
     </div>
