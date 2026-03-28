@@ -42,7 +42,7 @@
         box-sizing: border-box;
         opacity: 0;
         visibility: hidden;
-        transform: translateY(40px);
+        transform: translateY(5px);
         @include transition3();
         &.active {
             position: relative;
@@ -50,7 +50,7 @@
             opacity: 1;
             visibility: visible;
             transform: none;
-            transition: 0.35s ease-in-out 0.35s;
+            transition: 0.3s ease-in-out 0.3s;
         }
     }
     .tab-content-wrap {
@@ -60,7 +60,7 @@
         height: 520px;
         width: 693px;
         transform: rotate(0) scale(1) translateY(-50%);
-        transition: opacity 0.35s, transform 0.5s ease-out;
+        transition: opacity 0.3s, transform 0.3s linear;
         pointer-events: none;
         border-radius: 16px;
         z-index: 2;

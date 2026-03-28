@@ -10,12 +10,12 @@
       ];
 
       noUiSlider.create(skipSlider, {
-        start: [0, 1000],
+        start: [0, 10000],
         connect: true,
         step: 1,
         range: {
           min: 0,
-          max: 1000,
+          max: 10000,
         },
         format: {
           from: function (value) {
@@ -42,12 +42,12 @@
       ];
 
       noUiSlider.create(skipSlider, {
-        start: [0, 1000],
+        start: [0, 10000],
         connect: true,
         step: 1,
         range: {
           min: 0,
-          max: 1000,
+          max: 10000,
         },
         format: {
           from: function (value) {

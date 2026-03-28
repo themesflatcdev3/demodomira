@@ -17,6 +17,9 @@
         background-color: var(--Text-light);
         border: 2px solid var(--Text-primary);
         cursor: pointer;
+        &.noUi-handle-upper {
+            right: -4px !important;
+        }
         &::after {
             display: none;
         }

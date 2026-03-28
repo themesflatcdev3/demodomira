@@ -184,37 +184,25 @@ if ($(".flat-thumbs-tes").length > 0) {
     swTesMain.controller.control = swThumb;
 }
 
-if ($(".thumbs-sw-pagi").length > 0) {
-    var preview = $(".thumbs-sw-pagi").data("preview");
-    var spacing = $(".thumbs-sw-pagi").data("space");
-    var pagithumbs = new Swiper(".thumbs-sw-pagi", {
-        spaceBetween: spacing,
-        slidesPerView: 2,
-        freeMode: true,
-        watchSlidesProgress: true,
-        breakpoints: {
-            767: {
-                slidesPerView: preview,
-            },
-        },
-    });
-}
-
-if ($(".sw-single").length > 0) {
-    var loop = $(".sw-single").data("loop") || false;
-    var swiperSingle = new Swiper(".sw-single", {
-        spaceBetween: 16,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        speed: 500,
-        effect: "fade",
-        fadeEffect: {
-            crossFade: true,
-        },
-        thumbs: {
-            swiper: pagithumbs,
-        }
-    });
-}
+var pagithumbs = new Swiper(".gallery-sw-thumbs", {
+    spaceBetween: 20,
+    slidesPerView: "auto",
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  
+  var swiperSingle = new Swiper(".gallery-sw-single", {
+    spaceBetween: 20,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    speed: 500,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    thumbs: {
+      swiper: pagithumbs,
+    },
+  });

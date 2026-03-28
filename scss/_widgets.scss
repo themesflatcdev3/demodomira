@@ -248,6 +248,12 @@
             display: flex;
             gap: 20px;
             flex: 10%;
+            @include res(sm) {
+                flex-direction: column;
+                >* {
+                    width: 100% !important;
+                }
+            }
         }
         .tf-btn {
             height: 50px;
@@ -274,6 +280,18 @@
                 .icon::before {
                     content: '\e90d';
                     color: var(--Text-light);
+                }
+            }
+            &.no-text {
+                .text {
+                    display: none;
+                }
+                @include res(sm) {
+                    gap: 8px;
+                    border-radius: 99px;
+                    .text {
+                        display: unset;
+                    }
                 }
             }
         }
@@ -840,11 +858,11 @@
         background-color: var(--Bg-light);
     }
     @include res(xl) {
-        position: fixed;
+        position: fixed !important;
         bottom: 0;
         top: 0;
         left: 0;
-        z-index: 3000;
+        z-index: 10000;
         display: flex;
         flex-direction: column;
         background-clip: padding-box;
@@ -864,6 +882,7 @@
         .canvas-body {
             padding: 20px 15px;
             overscroll-behavior-y: contain;
+            overflow-x: hidden;
             overflow-y: auto;
             &::-webkit-scrollbar {
                 width: 4px;
