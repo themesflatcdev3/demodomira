@@ -4993,6 +4993,9 @@ input.tf-check::before {
   .wg-filter .form-title .wrap-btn {
     flex-direction: column;
   }
+  .wg-filter .form-title .wrap-btn .btn-filter {
+    border-radius: 99px !important;
+  }
   .wg-filter .form-title .wrap-btn > * {
     width: 100% !important;
   }

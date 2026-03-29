@@ -201,30 +201,28 @@
         </header>
         <!-- End header -->
 
-        <!-- main-content -->
-        <main class="main-content">
-      
-            <!-- map -->
-            <div class="mapbox-3 wg-map">
-                <div id="map"></div>
-            </div>
-            <div class="bg-light">
-                <div class="tf-container w-1770">
-                    <div class="form-top-filter">
-                        <div class="flat-tab-form">
-                            <ul class="nav-tab-form justify-content-center" role="tablist">
-                                <li class="nav-tab-item text-button fw-6" role="presentation">
-                                    <a href="#forRent" class="nav-link-item active" data-bs-toggle="tab">All</a>
-                                </li>
-                                <li class="nav-tab-item text-button fw-6" role="presentation">
-                                    <a href="#forSale" class="nav-link-item" data-bs-toggle="tab">For Rent</a>
-                                </li>
-                                <li class="nav-tab-item text-button fw-6" role="presentation">
-                                    <a href="#forSale" class="nav-link-item" data-bs-toggle="tab">For Sale</a>
-                                </li>
-                            </ul>
-                            <div class="wg-filter">
-                                <div class="widget-content-inner active">
+        <!-- page-title -->
+        <div class="mapbox-3 wg-map">
+            <div id="map"></div>
+        </div>
+        <div class="bg-light">
+            <div class="tf-container w-1770">
+                <div class="form-top-filter">
+                    <div class="flat-tab-form">
+                        <ul class="nav-tab-form justify-content-center" role="tablist">
+                            <li class="nav-tab-item text-button fw-6" role="presentation">
+                                <a href="#forRent" class="nav-link-item active" data-bs-toggle="tab">All</a>
+                            </li>
+                            <li class="nav-tab-item text-button fw-6" role="presentation">
+                                <a href="#forSale" class="nav-link-item" data-bs-toggle="tab">For Rent</a>
+                            </li>
+                            <li class="nav-tab-item text-button fw-6" role="presentation">
+                                <a href="#forSale" class="nav-link-item" data-bs-toggle="tab">For Sale</a>
+                            </li>
+                        </ul>
+                        <div class="wg-filter">
+                            <div class="widget-content-inner active">
+                                <div class="wd-filter-select">
                                     <div class="form-title">
                                         <div class="wrap-fill tf-grid-layout lg-col-4 md-col-2">
                                             <form class="">
@@ -233,25 +231,26 @@
                                                 </fieldset>
                                             </form>
                                             <div>
-                                                <div class="nice-select" tabindex="0">
+                                                <div class="nice-select" data-filter-key="city" tabindex="0">
                                                     <span class="current">All Cities</span>
                                                     <ul class="list">
-                                                        <li data-value="1" class="option">All Cities</li>
-                                                        <li data-value="2" class="option selected">Chicago</li>
-                                                        <li data-value="3" class="option">Los Angeles</li>
-                                                        <li data-value="4" class="option">Miami</li>
-                                                        <li data-value="5" class="option">New York</li>
+                                                        <li class="option selected" data-value="all">All Cities</li>
+                                                        <li class="option" data-value="chicago">Chicago</li>
+                                                        <li class="option" data-value="los-angeles">Los Angeles</li>
+                                                        <li class="option" data-value="miami">Miami</li>
+                                                        <li class="option" data-value="new-york">New York</li>
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div>
-                                                <div class="nice-select" tabindex="0">
-                                                    <span class="current">All Types</span>
+                                                <div class="nice-select" data-filter-key="baths" tabindex="0">
+                                                    <span class="current">All Baths</span>
                                                     <ul class="list">
-                                                        <li data-value class="option selected">All Types</li>
-                                                        <li data-value="1 Bedroom" class="option">1 Bedroom</li>
-                                                        <li data-value="2 Bedrooms" class="option">2 Bedrooms</li>
-                                                        <li data-value="3+ Bedrooms" class="option">3+ Bedrooms</li>
+                                                        <li class="option selected" data-value="all">All Baths</li>
+                                                        <li class="option" data-value="1">1</li>
+                                                        <li class="option" data-value="2">2</li>
+                                                        <li class="option" data-value="3">3</li>
+                                                        <li class="option" data-value="4">4</li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -269,10 +268,10 @@
                                         </div>
                                         <div class="wrap-btn">
                                             <div class="d-flex gap_8 align-items-center">
-                                                <input type="checkbox" id="check-map" class="tf-switch-check" checked>
+                                                <input type="checkbox" id="check-map" class="tf-switch-check">
                                                 <div class="text-cl-primary text-button">Map</div>
                                             </div>
-                                            <div class="btn-filter show-form">
+                                            <div class="btn-filter show-form no-text">
                                                 <i class="icon icon-filter"></i>
                                             </div>
                                             <a href="search-results.html" class="tf-btn btn-px-28 btn-bg-1">
@@ -282,218 +281,218 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="wd-search-form">
-                                    <div class="group-select">
-                                        <div class="tf-grid-layout sm-col-2">
-                                            <div class="box-select">
-                                                <div class="nice-select" tabindex="0">
-                                                    <span class="current">All Baths</span>
-                                                    <ul class="list">
-                                                        <li data-value="1" class="option">All Baths</li>
-                                                        <li data-value="1 Baths" class="option">1 Baths</li>
-                                                        <li data-value="2 Baths" class="option selected">2 Baths
-                                                        </li>
-                                                        <li data-value="3+ Baths" class="option">3+ Baths </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="box-select">
-                                                <div class="nice-select" tabindex="0">
-                                                    <span class="current">All Garages</span>
-                                                    <ul class="list">
-                                                        <li data-value="1" class="option">All Garages</li>
-                                                        <li data-value="1 Garages" class="option">1 Garages</li>
-                                                        <li data-value="2 Garages" class="option selected">2 Garages</li>
-                                                        <li data-value="3+ Garages" class="option">3+ Garages </li>
-                                                    </ul>
-                                                </div>
+                            </div>
+                            <div class="wd-search-form">
+                                <div class="group-select">
+                                    <div class="tf-grid-layout sm-col-2">
+                                        <div class="box-select">
+                                            <div class="nice-select" tabindex="0">
+                                                <span class="current">All Types</span>
+                                                <ul class="list">
+                                                    <li data-value class="option selected">All Types</li>
+                                                    <li data-value="Villa" class="option">Villa</li>
+                                                    <li data-value="Apartments" class="option">Apartments</li>
+                                                    <li data-value="Townhouse" class="option">Townhouse</li>
+                                                </ul>
                                             </div>
                                         </div>
-                                        <div class="tf-grid-layout sm-col-2">
-                                            <div class="box-select">
-                                                <div class="nice-select" tabindex="0">
-                                                    <span class="current">All Beds</span>
-                                                    <ul class="list">
-                                                        <li data-value="1" class="option">All Beds</li>
-                                                        <li data-value="1 Beds" class="option">1 Beds</li>
-                                                        <li data-value="2 Beds" class="option selected">2 Beds
-                                                        </li>
-                                                        <li data-value="3+ Beds" class="option">3+ Beds </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="text-cl-primary d-flex gap_4 align-items-center mb_8">
-                                                    <span>Area:</span>
-                                                    <span>
-                                                        <span id="price-min-value-2"></span> - <span id="price-max-value-2"></span> Sqft
-                                                    </span>
-                                                </div>
-                                                <div class="">
-                                                    <div class="price-value-range" id="price-value-range-2"></div>
-                                                </div>
+                                        <div class="box-select">
+                                            <div class="nice-select" data-filter-key="garages" tabindex="0">
+                                                <span class="current">All Garages</span>
+                                                <ul class="list">
+                                                    <li class="option selected" data-value="all">All Garages</li>
+                                                    <li class="option" data-value="1">1</li>
+                                                    <li class="option" data-value="2">2</li>
+                                                    <li class="option" data-value="3">3</li>
+                                                    <li class="option" data-value="4">4</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="group-checkbox">
-                                        <div class=" text-title text-cl-primary mb_12 fw-6">Amenities:</div>
-                                        <div class="group-amenities ">
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox" checked>
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Air Condition</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Disabled Access</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Floor</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Heating</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Renovation</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Window Type</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Cable TV</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Elevator</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Furnishing</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Intercom</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Security</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Search property</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Ceiling Height</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Fence</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Garage</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Parking</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Swimming Pool</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Construction Year</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Fireplace</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Garden</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">Pet Friendly</span>
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox-item style-1  ">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="btn-checkbox"></span>
-                                                    <span class="text-body-default">WiFi</span>
-                                                </label>
-                                            </fieldset>
-        
+                                    <div class="tf-grid-layout sm-col-2">
+                                        <div class="box-select">
+                                            <div class="nice-select" data-filter-key="bedrooms" tabindex="0">
+                                                <span class="current">All Beds</span>
+                                                <ul class="list">
+                                                    <li class="option selected" data-value="any">All Beds</li>
+                                                    <li class="option" data-value="1">1</li>
+                                                    <li class="option" data-value="2">2</li>
+                                                    <li class="option" data-value="3">3</li>
+                                                    <li class="option" data-value="4">4</li>
+                                                </ul>
+                                            </div>
                                         </div>
+                                        <div>
+                                            <div class="text-cl-primary d-flex gap_4 align-items-center mb_8">
+                                                <span>Area:</span>
+                                                <span>
+                                                    <span id="price-min-value-2"></span> - <span id="price-max-value-2"></span> Sqft
+                                                </span>
+                                            </div>
+                                            <div class="">
+                                                <div class="price-value-range" id="price-value-range-2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group-checkbox">
+                                    <div class=" text-title text-cl-primary mb_12 fw-6">Amenities:</div>
+                                    <div class="group-amenities ">
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox" checked>
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Air Condition</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Disabled Access</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Floor</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Heating</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Renovation</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Window Type</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Cable TV</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Elevator</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Furnishing</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Intercom</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Security</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Search property</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Ceiling Height</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Fence</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Garage</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Parking</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Swimming Pool</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Construction Year</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Fireplace</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Garden</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">Pet Friendly</span>
+                                            </label>
+                                        </fieldset>
+                                        <fieldset class="checkbox-item style-1  ">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="btn-checkbox"></span>
+                                                <span class="text-body-default">WiFi</span>
+                                            </label>
+                                        </fieldset>
+    
                                     </div>
                                 </div>
                             </div>
@@ -501,12 +500,16 @@
                     </div>
                 </div>
             </div>
-            <!-- End map -->
+        </div>
+        <!-- End page-title -->
+
+        <!-- main-content -->
+        <main class="main-content">
             
-            <!-- top-map -->
+            <!-- top-filter -->
             <section class="tf-section">
                 <div class="tf-container">
-                    <div class="top-filter align-items-end mb_40">
+                    <div class="top-filter align-items-end mb_12">
                         <div>
                             <ul class="breadcrumb mb_4">
                                 <li>
@@ -521,8 +524,15 @@
                             </ul>
                             <div class="h4 text-cl-primary">Explore Properties</div>
                         </div>
-                        <div class="right">
-                            <div class="number-results">1 - 20 of 52 Results</div>
+                        <div class="right type-1">
+                            <div class="number-results">
+                                <div class="count-text" id="product-count-grid">
+                                    <span class="count">6</span> Results
+                                </div>
+                                <div class="count-text" id="product-count-list" style="display:none;">
+                                    <span class="count">4</span> Results
+                                </div>
+                            </div>
                             <div class="d-flex gap_8 align-items-center">
                                 <div class="text-cl-primary">Compare:</div>
                                 <input type="checkbox" id="Compare" class="tf-switch-check">
@@ -534,15 +544,15 @@
                                         Best Selling
                                     </span>
                                     <ul class="list">
-                                        <li data-value="default" class="option selected">Best Selling</li>
-                                        <li data-value="Rent" class="option">Rent</li>
-                                        <li data-value="Sale" class="option">Sale</li>
+                                        <li class="option selected" data-value="default">Best Selling</li>
+                                        <li class="option" data-value="Name">Name</li>
+                                        <li class="option" data-value="Price">Price</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="d-flex gap_8 align-items-center">
                                 <div class="text-cl-primary">View as:</div>
-                                <ul class="nav-tab-filter group-layout d-flex gap_12 align-items-center" role="tablist">
+                                <ul class="nav-tab-filter group-layout d-flex gap_8 align-items-center" role="tablist">
                                     <li class="nav-tab-item" role="presentation">
                                         <a href="#gridLayout" class=" btn-layout grid nav-link-item active"
                                             data-bs-toggle="tab">
@@ -558,15 +568,25 @@
                             </div>
                         </div>
                     </div>
+                    <div class="list-filter mb_40">
+                        <div class="d-flex gap_12 align-items-center flex-wrap" id="applied-filters"></div>
+                        <button class="remove-all-filters text-label remove-all"
+                            style="display:none;">Clear All</button>
+                    </div>
                     <div class="flat-animate-tab">
                         <div class="tab-content">
                             <div class="tab-pane active show" id="gridLayout" role="tabpanel">
                                 <div class="tf-grid-layout lg-col-3 md-col-2">
-                                    <div class="card-house style-default hover-image item-fillter apartment wow fadeInUp">
+                                    <div class="card-house style-default hover-image item-fillter"
+                                        data-baths="2" data-bedrooms="2" data-city="los-angeles"
+                                        data-garages="1" data-place="125 Grand Avenue, Los Angeles, California"
+                                        data-price="250" data-sqft="1150" data-status="buy"
+                                        data-title="Modern Apartment in Downtown" data-type="apartment">
                                         <div class="img-style mb_20">
-                                            <img loading="lazy" decoding="async" src="images/house/house-1.jpg"
-                                                srcset="images/house/house-1.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                width="450" height="337" alt="home">
+                                            <img alt="home" decoding="async" height="337" loading="lazy"
+                                                sizes="(max-width: 450px) 100vw, 450px"
+                                                src="images/house/house-1.jpg"
+                                                srcset="images/house/house-1.jpg 450w" width="450" >
                                             <div class="wrap-tag d-flex gap_8 mb_12">
                                                 <div class="tag text-label text-cl-primary">
                                                     For Rent
@@ -575,13 +595,14 @@
                                                     apartment
                                                 </div>
                                             </div>
-                                            <a href="property-details.html" class="overlay-link"></a>
+                                            <a class="overlay-link" href="property-details.html"></a>
                                             <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                <a class="tf-btn btn-bg-1 rounded-8 w-100 quick-view"
+                                                    href="property-details.html">
                                                     <span>Quick View</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
-                                                <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
+                                                <a class="tf-btn btn-bg-white w-100 rounded-8 compare" href="#">
                                                     <span>Compare</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
@@ -590,10 +611,12 @@
                                         <div class="content">
                                             <div class="d-flex justify-content-between gap_12">
                                                 <div>
-                                                    <a href="property-details.html" class="title h6 link text-cl-primary">
+                                                    <a class="title h6 link text-cl-primary"
+                                                        href="property-details.html">
                                                         Modern Apartment in Downtown
                                                     </a>
-                                                    <div class="place">125 Grand Avenue, Los Angeles, California</div>
+                                                    <div class="place">125 Grand Avenue, Los Angeles, California
+                                                    </div>
                                                 </div>
                                                 <div class="flex-shrink-0 text-end">
                                                     <div class="h6 price text-cl-primary">$250,00</div>
@@ -613,11 +636,16 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="card-house style-default hover-image item-fillter villa wow fadeInUp" data-wow-delay=".1s">
+                                    <div class="card-house style-default hover-image item-fillter"
+                                        data-baths="2" data-bedrooms="2" data-city="Miami"
+                                        data-garages="2" data-place="" data-price="6640" data-sqft="1150"
+                                        data-status="buy" data-title="Luxury Beachfront Villa" data-type="villa"
+                                        data-wow-delay=".1s">
                                         <div class="img-style mb_20">
-                                            <img loading="lazy" decoding="async" src="images/house/house-2.jpg"
-                                                srcset="images/house/house-2.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                width="450" height="337" alt="home">
+                                            <img alt="home" decoding="async" height="337" loading="lazy"
+                                                sizes="(max-width: 450px) 100vw, 450px"
+                                                src="images/house/house-2.jpg"
+                                                srcset="images/house/house-2.jpg 450w" width="450" >
                                             <div class="wrap-tag d-flex gap_8 mb_12">
                                                 <div class="tag text-label text-cl-primary">
                                                     For Rent
@@ -626,13 +654,14 @@
                                                     Villa
                                                 </div>
                                             </div>
-                                            <a href="property-details.html" class="overlay-link"></a>
+                                            <a class="overlay-link" href="property-details.html"></a>
                                             <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                <a class="tf-btn btn-bg-1 rounded-8 w-100 quick-view"
+                                                    href="property-details.html">
                                                     <span>Quick View</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
-                                                <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
+                                                <a class="tf-btn btn-bg-white w-100 rounded-8 compare" href="#">
                                                     <span>Compare</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
@@ -641,10 +670,11 @@
                                         <div class="content">
                                             <div class="d-flex justify-content-between gap_12">
                                                 <div>
-                                                    <a href="property-details.html" class="title h6 link text-cl-primary">
+                                                    <a class="title h6 link text-cl-primary"
+                                                        href="property-details.html">
                                                         Luxury Beachfront Villa
                                                     </a>
-                                                    <div>18 Ocean Crest Drive, Malibu, California</div>
+                                                    <div>18 Ocean Crest Drive, Miami</div>
                                                 </div>
                                                 <div class="flex-shrink-0 text-end">
                                                     <div class="h6 price text-cl-primary">$6640,00</div>
@@ -664,11 +694,16 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="card-house style-default hover-image item-fillter studio wow fadeInUp" data-wow-delay=".2s">
+                                    <div class="card-house style-default hover-image item-fillter"
+                                        data-baths="2" data-bedrooms="3" data-city="new-york"
+                                        data-garages="1" data-place="742 Maple Street, New York"
+                                        data-price="250" data-sqft="1950" data-status="rent"
+                                        data-title="Cozy Family House in Pasadena" data-type="townhouse">
                                         <div class="img-style mb_20">
-                                            <img loading="lazy" decoding="async" src="images/house/house-3.jpg"
-                                                srcset="images/house/house-3.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                width="450" height="337" alt="home">
+                                            <img alt="home" decoding="async" height="337" loading="lazy"
+                                                sizes="(max-width: 450px) 100vw, 450px"
+                                                src="images/house/house-3.jpg"
+                                                srcset="images/house/house-3.jpg 450w" width="450" >
                                             <div class="wrap-tag d-flex gap_8 mb_12">
                                                 <div class="tag text-label text-cl-primary">
                                                     For Rent
@@ -677,13 +712,14 @@
                                                     studio
                                                 </div>
                                             </div>
-                                            <a href="property-details.html" class="overlay-link"></a>
+                                            <a class="overlay-link" href="property-details.html"></a>
                                             <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                <a class="tf-btn btn-bg-1 rounded-8 w-100 quick-view"
+                                                    href="property-details.html">
                                                     <span>Quick View</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
-                                                <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
+                                                <a class="tf-btn btn-bg-white w-100 rounded-8 compare" href="#">
                                                     <span>Compare</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
@@ -692,10 +728,12 @@
                                         <div class="content">
                                             <div class="d-flex justify-content-between gap_12">
                                                 <div>
-                                                    <a href="property-details.html" class="title h6 link text-cl-primary">
+                                                    <a class="title h6 link text-cl-primary"
+                                                        href="property-details.html">
                                                         Cozy Family House in Pasadena
                                                     </a>
-                                                    <div class="place">742 Maple Street, Pasadena, California</div>
+                                                    <div class="place">742 Maple Street, New York
+                                                    </div>
                                                 </div>
                                                 <div class="flex-shrink-0 text-end">
                                                     <div class="h6 price text-cl-primary">$250,00</div>
@@ -715,11 +753,17 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="card-house style-default hover-image item-fillter apartment wow fadeInUp">
+                                    <div class="card-house style-default hover-image item-fillter"
+                                        data-baths="2" data-bedrooms="1" data-city="los-angeles"
+                                        data-garages="1"
+                                        data-place="560 Industrial Street, Los Angeles, California"
+                                        data-price="6640" data-sqft="980" data-status="buy"
+                                        data-title="Contemporary Loft in Arts District" data-type="apartment">
                                         <div class="img-style mb_20">
-                                            <img loading="lazy" decoding="async" src="images/house/house-4.jpg"
-                                                srcset="images/house/house-4.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                width="450" height="337" alt="home">
+                                            <img alt="home" decoding="async" height="337" loading="lazy"
+                                                sizes="(max-width: 450px) 100vw, 450px"
+                                                src="images/house/house-4.jpg"
+                                                srcset="images/house/house-4.jpg 450w" width="450" >
                                             <div class="wrap-tag d-flex gap_8 mb_12">
                                                 <div class="tag text-label text-cl-primary">
                                                     For Rent
@@ -728,13 +772,14 @@
                                                     apartment
                                                 </div>
                                             </div>
-                                            <a href="property-details.html" class="overlay-link"></a>
+                                            <a class="overlay-link" href="property-details.html"></a>
                                             <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                <a class="tf-btn btn-bg-1 rounded-8 w-100 quick-view"
+                                                    href="property-details.html">
                                                     <span>Quick View</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
-                                                <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
+                                                <a class="tf-btn btn-bg-white w-100 rounded-8 compare" href="#">
                                                     <span>Compare</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
@@ -743,10 +788,12 @@
                                         <div class="content">
                                             <div class="d-flex justify-content-between gap_12">
                                                 <div>
-                                                    <a href="property-details.html" class="title h6 link text-cl-primary">
+                                                    <a class="title h6 link text-cl-primary"
+                                                        href="property-details.html">
                                                         Contemporary Loft in Arts District
                                                     </a>
-                                                    <div class="place">560 Industrial Street, Los Angeles, California</div>
+                                                    <div class="place">560 Industrial Street, Los Angeles,
+                                                        California</div>
                                                 </div>
                                                 <div class="flex-shrink-0 text-end">
                                                     <div class="h6 price text-cl-primary">$6640,00</div>
@@ -766,11 +813,17 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="card-house style-default hover-image item-fillter house wow fadeInUp" data-wow-delay=".1s">
+                                    <div class="card-house style-default hover-image item-fillter"
+                                        data-baths="3" data-bedrooms="4" data-city="Miami"
+                                        data-garages="2"
+                                        data-place="233 Linden Drive, Miami"
+                                        data-price="250" data-sqft="2600" data-status="rent"
+                                        data-title="Elegant Townhouse in Beverly Hills" data-type="townhouse">
                                         <div class="img-style mb_20">
-                                            <img loading="lazy" decoding="async" src="images/house/house-5.jpg"
-                                                srcset="images/house/house-5.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                width="450" height="337" alt="home">
+                                            <img alt="home" decoding="async" height="337" loading="lazy"
+                                                sizes="(max-width: 450px) 100vw, 450px"
+                                                src="images/house/house-5.jpg"
+                                                srcset="images/house/house-5.jpg 450w" width="450" >
                                             <div class="wrap-tag d-flex gap_8 mb_12">
                                                 <div class="tag text-label text-cl-primary">
                                                     For Rent
@@ -779,13 +832,14 @@
                                                     Villa
                                                 </div>
                                             </div>
-                                            <a href="property-details.html" class="overlay-link"></a>
+                                            <a class="overlay-link" href="property-details.html"></a>
                                             <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                <a class="tf-btn btn-bg-1 rounded-8 w-100 quick-view"
+                                                    href="property-details.html">
                                                     <span>Quick View</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
-                                                <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
+                                                <a class="tf-btn btn-bg-white w-100 rounded-8 compare" href="#">
                                                     <span>Compare</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
@@ -794,10 +848,11 @@
                                         <div class="content">
                                             <div class="d-flex justify-content-between gap_12">
                                                 <div>
-                                                    <a href="property-details.html" class="title h6 link text-cl-primary">
+                                                    <a class="title h6 link text-cl-primary"
+                                                        href="property-details.html">
                                                         Elegant Townhouse in Beverly Hills
                                                     </a>
-                                                    <div class="place">233 Linden Drive, Beverly Hills, California</div>
+                                                    <div class="place">233 Linden Drive, Miami</div>
                                                 </div>
                                                 <div class="flex-shrink-0 text-end">
                                                     <div class="h6 price text-cl-primary">$250,00</div>
@@ -817,11 +872,17 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="card-house style-default hover-image item-fillter office wow fadeInUp" data-wow-delay=".2s">
+                                    <div class="card-house style-default hover-image item-fillter"
+                                        data-baths="2" data-bedrooms="2" data-city="Chicago"
+                                        data-garages="1"
+                                        data-place="889 Wilshire Boulevard, Chicago"
+                                        data-price="6640" data-sqft="1320" data-status="buy"
+                                        data-title="Modern Condo with City View" data-type="apartment">
                                         <div class="img-style mb_20">
-                                            <img loading="lazy" decoding="async" src="images/house/house-6.jpg"
-                                                srcset="images/house/house-6.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                width="450" height="337" alt="home">
+                                            <img alt="home" decoding="async" height="337" loading="lazy"
+                                                sizes="(max-width: 450px) 100vw, 450px"
+                                                src="images/house/house-6.jpg"
+                                                srcset="images/house/house-6.jpg 450w" width="450" >
                                             <div class="wrap-tag d-flex gap_8 mb_12">
                                                 <div class="tag text-label text-cl-primary">
                                                     For Rent
@@ -830,13 +891,14 @@
                                                     Villa
                                                 </div>
                                             </div>
-                                            <a href="property-details.html" class="overlay-link"></a>
+                                            <a class="overlay-link" href="property-details.html"></a>
                                             <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                <a class="tf-btn btn-bg-1 rounded-8 w-100 quick-view"
+                                                    href="property-details.html">
                                                     <span>Quick View</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
-                                                <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
+                                                <a class="tf-btn btn-bg-white w-100 rounded-8 compare" href="#">
                                                     <span>Compare</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
@@ -845,163 +907,11 @@
                                         <div class="content">
                                             <div class="d-flex justify-content-between gap_12">
                                                 <div>
-                                                    <a href="property-details.html" class="title h6 link text-cl-primary">
+                                                    <a class="title h6 link text-cl-primary"
+                                                        href="property-details.html">
                                                         Modern Condo with City View
                                                     </a>
-                                                    <div class="place">889 Wilshire Boulevard, Los Angeles, California</div>
-                                                </div>
-                                                <div class="flex-shrink-0 text-end">
-                                                    <div class="h6 price text-cl-primary">$6640,00</div>
-                                                    <div class="per">/month</div>
-                                                </div>
-                                            </div>
-                                            <ul class="info d-flex">
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bed"></i>2 Bed
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bathtub"></i>2 Bath
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Ruler"></i>1,320 Sqft
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="card-house style-default hover-image item-fillter apartment wow fadeInUp">
-                                        <div class="img-style mb_20">
-                                            <img loading="lazy" decoding="async" src="images/house/house-7.jpg"
-                                                srcset="images/house/house-7.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                width="450" height="337" alt="home">
-                                            <div class="wrap-tag d-flex gap_8 mb_12">
-                                                <div class="tag text-label text-cl-primary">
-                                                    For Rent
-                                                </div>
-                                                <div class="tag text-label text-cl-primary">
-                                                    apartment
-                                                </div>
-                                            </div>
-                                            <a href="property-details.html" class="overlay-link"></a>
-                                            <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
-                                                    <span>Quick View</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                                <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
-                                                    <span>Compare</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex justify-content-between gap_12">
-                                                <div>
-                                                    <a href="property-details.html" class="title h6 link text-cl-primary">
-                                                        Apartment Near Santa Monica
-                                                    </a>
-                                                    <div class="place">560 Industrial Street, Los Angeles, California</div>
-                                                </div>
-                                                <div class="flex-shrink-0 text-end">
-                                                    <div class="h6 price text-cl-primary">$6640,00</div>
-                                                    <div class="per">/month</div>
-                                                </div>
-                                            </div>
-                                            <ul class="info d-flex">
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bed"></i>1 Bed
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bathtub"></i>2 Bath
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Ruler"></i>980 Sqft
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="card-house style-default hover-image item-fillter house wow fadeInUp" data-wow-delay=".1s">
-                                        <div class="img-style mb_20">
-                                            <img loading="lazy" decoding="async" src="images/house/house-8.jpg"
-                                                srcset="images/house/house-8.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                width="450" height="337" alt="home">
-                                            <div class="wrap-tag d-flex gap_8 mb_12">
-                                                <div class="tag text-label text-cl-primary">
-                                                    For Rent
-                                                </div>
-                                                <div class="tag text-label text-cl-primary">
-                                                    Villa
-                                                </div>
-                                            </div>
-                                            <a href="property-details.html" class="overlay-link"></a>
-                                            <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
-                                                    <span>Quick View</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                                <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
-                                                    <span>Compare</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex justify-content-between gap_12">
-                                                <div>
-                                                    <a href="property-details.html" class="title h6 link text-cl-primary">
-                                                        Luxury Penthouse Hollywood
-                                                    </a>
-                                                    <div class="place">233 Linden Drive, Beverly Hills, California</div>
-                                                </div>
-                                                <div class="flex-shrink-0 text-end">
-                                                    <div class="h6 price text-cl-primary">$250,00</div>
-                                                    <div class="per">/month</div>
-                                                </div>
-                                            </div>
-                                            <ul class="info d-flex">
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bed"></i>4 Bed
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bathtub"></i>3 Bath
-                                                </li>
-                                                <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Ruler"></i>2,600 Sqft
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="card-house style-default hover-image item-fillter office wow fadeInUp" data-wow-delay=".2s">
-                                        <div class="img-style mb_20">
-                                            <img loading="lazy" decoding="async" src="images/house/house-9.jpg"
-                                                srcset="images/house/house-9.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                width="450" height="337" alt="home">
-                                            <div class="wrap-tag d-flex gap_8 mb_12">
-                                                <div class="tag text-label text-cl-primary">
-                                                    For Rent
-                                                </div>
-                                                <div class="tag text-label text-cl-primary">
-                                                    Villa
-                                                </div>
-                                            </div>
-                                            <a href="property-details.html" class="overlay-link"></a>
-                                            <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
-                                                    <span>Quick View</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                                <a href="#" class="tf-btn btn-bg-white rounded-8 w-100 compare">
-                                                    <span>Compare</span>
-                                                    <span class="bg-effect"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex justify-content-between gap_12">
-                                                <div>
-                                                    <a href="property-details.html" class="title h6 link text-cl-primary">
-                                                        Charming Bungalow in Silver Lake
-                                                    </a>
-                                                    <div class="place">889 Wilshire Boulevard, Los Angeles, California</div>
+                                                    <div class="place">889 Wilshire Boulevard, Chicago</div>
                                                 </div>
                                                 <div class="flex-shrink-0 text-end">
                                                     <div class="h6 price text-cl-primary">$6640,00</div>
@@ -1022,36 +932,28 @@
                                         </div>
                                     </div>
                                 </div>
-                                <ul class="wg-pagination justify-content-center">
-                                    <li>
-                                        <a href="#">1</a>
-                                    </li>
-                                    <li class="active">
-                                        <a href="#">2</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">3</a>
-                                    </li>
-                                    <li class="arrow">
-                                        <a href="#"><i class="icon-CaretRight"></i></a>
-                                    </li>
-                                </ul>
                             </div>
                             <div class="tab-pane" id="listLayout" role="tabpanel">
                                 <div class="wrap-list d-grid gap_40">
-                                    <div class="card-house style-list" data-id="1">
+                                    <div class="card-house style-list item-fillter" data-baths="2"
+                                        data-bedrooms="2" data-city="los-angeles" data-garages="2" data-id="1"
+                                        data-place="18 Ocean Crest Drive, Los Angeles" data-price="250"
+                                        data-sqft="1320" data-status="buy" data-title="Luxury Beachfront Villa"
+                                        data-type="villa">
                                         <div class="wrap-img">
-                                            <a href="property-details.html" class="img-style">
-                                                <img loading="lazy" decoding="async" src="images/house/house-10.jpg"
-                                                    srcset="images/house/house-10.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                    width="450" height="337" alt="home">
+                                            <a class="img-style" href="property-details.html">
+                                                <img alt="home" decoding="async" height="337" loading="lazy"
+                                                    sizes="(max-width: 450px) 100vw, 450px"
+                                                    src="images/house/house-10.jpg"
+                                                    srcset="images/house/house-10.jpg 450w" width="450" >
                                             </a>
                                         </div>
                                         <div class="wrap-img">
-                                            <a href="property-details.html" class="img-style">
-                                                <img loading="lazy" decoding="async" src="images/house/house-11.jpg"
-                                                    srcset="images/house/house-11.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                    width="450" height="337" alt="home">
+                                            <a class="img-style" href="property-details.html">
+                                                <img alt="home" decoding="async" height="337" loading="lazy"
+                                                    sizes="(max-width: 450px) 100vw, 450px"
+                                                    src="images/house/house-11.jpg"
+                                                    srcset="images/house/house-11.jpg 450w" width="450" >
                                             </a>
                                         </div>
                                         <div class="content">
@@ -1070,10 +972,12 @@
                                                 </div>
                                             </div>
                                             <div>
-                                                <a href="property-details.html" class="title h5 link text-cl-primary">
+                                                <a class="title h5 link text-cl-primary"
+                                                    href="property-details.html">
                                                     Luxury Beachfront Villa
                                                 </a>
-                                                <div class="place">18 Ocean Crest Drive, Malibu, California</div>
+                                                <div class="place">18 Ocean Crest Drive, Los Angeles
+                                                </div>
                                             </div>
                                             <ul class="info d-flex">
                                                 <li class="d-flex align-items-center gap_8">
@@ -1087,30 +991,37 @@
                                                 </li>
                                             </ul>
                                             <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                <a class="tf-btn btn-bg-1 rounded-8 w-100 quick-view"
+                                                    href="property-details.html">
                                                     <span>Quick View</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
-                                                <a href="#" class="tf-btn btn-border w-100 rounded-8 compare">
+                                                <a class="tf-btn btn-border w-100 rounded-8 compare" href="#">
                                                     <span>Compare</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-house style-list" data-id="2">
+                                    <div class="card-house style-list item-fillter" data-baths="4"
+                                        data-bedrooms="5" data-city="new-york" data-garages="2" data-id="2"
+                                        data-place="18 Ocean Crest Drive, New York" data-price="6640"
+                                        data-sqft="3800" data-status="buy" data-title="Luxury Beachfront Villa"
+                                        data-type="villa">
                                         <div class="wrap-img">
-                                            <a href="property-details.html" class="img-style">
-                                                <img loading="lazy" decoding="async" src="images/house/house-12.jpg"
-                                                    srcset="images/house/house-12.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                    width="450" height="337" alt="home">
+                                            <a class="img-style" href="property-details.html">
+                                                <img alt="home" decoding="async" height="337" loading="lazy"
+                                                    sizes="(max-width: 450px) 100vw, 450px"
+                                                    src="images/house/house-12.jpg"
+                                                    srcset="images/house/house-12.jpg 450w" width="450" >
                                             </a>
                                         </div>
                                         <div class="wrap-img">
-                                            <a href="property-details.html" class="img-style">
-                                                <img loading="lazy" decoding="async" src="images/house/house-13.jpg"
-                                                    srcset="images/house/house-13.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                    width="450" height="337" alt="home">
+                                            <a class="img-style" href="property-details.html">
+                                                <img alt="home" decoding="async" height="337" loading="lazy"
+                                                    sizes="(max-width: 450px) 100vw, 450px"
+                                                    src="images/house/house-13.jpg"
+                                                    srcset="images/house/house-13.jpg 450w" width="450" >
                                             </a>
                                         </div>
                                         <div class="content">
@@ -1129,10 +1040,12 @@
                                                 </div>
                                             </div>
                                             <div>
-                                                <a href="property-details.html" class="title h5 link text-cl-primary">
+                                                <a class="title h5 link text-cl-primary"
+                                                    href="property-details.html">
                                                     Luxury Beachfront Villa
                                                 </a>
-                                                <div class="place">18 Ocean Crest Drive, Malibu, California</div>
+                                                <div class="place">18 Ocean Crest Drive, New York
+                                                </div>
                                             </div>
                                             <ul class="info d-flex">
                                                 <li class="d-flex align-items-center gap_8">
@@ -1146,30 +1059,37 @@
                                                 </li>
                                             </ul>
                                             <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                <a class="tf-btn btn-bg-1 rounded-8 w-100 quick-view"
+                                                    href="property-details.html">
                                                     <span>Quick View</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
-                                                <a href="#" class="tf-btn btn-border w-100 rounded-8 compare">
+                                                <a class="tf-btn btn-border w-100 rounded-8 compare" href="#">
                                                     <span>Compare</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-house style-list" data-id="3">
+                                    <div class="card-house style-list item-fillter" data-baths="2"
+                                        data-bedrooms="3" data-city="Miami" data-garages="1" data-id="3"
+                                        data-place="742 Maple Street, Miami" data-price="250"
+                                        data-sqft="1950" data-status="rent"
+                                        data-title="Cozy Family House in Pasadena" data-type="townhouse">
                                         <div class="wrap-img">
-                                            <a href="property-details.html" class="img-style">
-                                                <img loading="lazy" decoding="async" src="images/house/house-14.jpg"
-                                                    srcset="images/house/house-14.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                    width="450" height="337" alt="home">
+                                            <a class="img-style" href="property-details.html">
+                                                <img alt="home" decoding="async" height="337" loading="lazy"
+                                                    sizes="(max-width: 450px) 100vw, 450px"
+                                                    src="images/house/house-14.jpg"
+                                                    srcset="images/house/house-14.jpg 450w" width="450" >
                                             </a>
                                         </div>
                                         <div class="wrap-img">
-                                            <a href="property-details.html" class="img-style">
-                                                <img loading="lazy" decoding="async" src="images/house/house-15.jpg"
-                                                    srcset="images/house/house-15.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                    width="450" height="337" alt="home">
+                                            <a class="img-style" href="property-details.html">
+                                                <img alt="home" decoding="async" height="337" loading="lazy"
+                                                    sizes="(max-width: 450px) 100vw, 450px"
+                                                    src="images/house/house-15.jpg"
+                                                    srcset="images/house/house-15.jpg 450w" width="450" >
                                             </a>
                                         </div>
                                         <div class="content">
@@ -1188,10 +1108,11 @@
                                                 </div>
                                             </div>
                                             <div>
-                                                <a href="property-details.html" class="title h5 link text-cl-primary">
+                                                <a class="title h5 link text-cl-primary"
+                                                    href="property-details.html">
                                                     Cozy Family House in Pasadena
                                                 </a>
-                                                <div class="place">742 Maple Street, Pasadena, California</div>
+                                                <div class="place">742 Maple Street, Miami</div>
                                             </div>
                                             <ul class="info d-flex">
                                                 <li class="d-flex align-items-center gap_8">
@@ -1205,30 +1126,37 @@
                                                 </li>
                                             </ul>
                                             <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                <a class="tf-btn btn-bg-1 rounded-8 w-100 quick-view"
+                                                    href="property-details.html">
                                                     <span>Quick View</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
-                                                <a href="#" class="tf-btn btn-border w-100 rounded-8 compare">
+                                                <a class="tf-btn btn-border w-100 rounded-8 compare" href="#">
                                                     <span>Compare</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-house style-list" data-id="4">
+                                    <div class="card-house style-list item-fillter" data-baths="2"
+                                        data-bedrooms="1" data-city="Chicago" data-garages="1" data-id="4"
+                                        data-place="560 Industrial Street, Chicago"
+                                        data-price="6640" data-sqft="980" data-status="buy"
+                                        data-title="Contemporary Loft in  District" data-type="apartment">
                                         <div class="wrap-img">
-                                            <a href="property-details.html" class="img-style">
-                                                <img loading="lazy" decoding="async" src="images/house/house-16.jpg"
-                                                    srcset="images/house/house-16.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                    width="450" height="337" alt="home">
+                                            <a class="img-style" href="property-details.html">
+                                                <img alt="home" decoding="async" height="337" loading="lazy"
+                                                    sizes="(max-width: 450px) 100vw, 450px"
+                                                    src="images/house/house-16.jpg"
+                                                    srcset="images/house/house-16.jpg 450w" width="450" >
                                             </a>
                                         </div>
                                         <div class="wrap-img">
-                                            <a href="property-details.html" class="img-style">
-                                                <img loading="lazy" decoding="async" src="images/house/house-17.jpg"
-                                                    srcset="images/house/house-17.jpg 450w" sizes="(max-width: 450px) 100vw, 450px"
-                                                    width="450" height="337" alt="home">
+                                            <a class="img-style" href="property-details.html">
+                                                <img alt="home" decoding="async" height="337" loading="lazy"
+                                                    sizes="(max-width: 450px) 100vw, 450px"
+                                                    src="images/house/house-17.jpg"
+                                                    srcset="images/house/house-17.jpg 450w" width="450" >
                                             </a>
                                         </div>
                                         <div class="content">
@@ -1247,14 +1175,15 @@
                                                 </div>
                                             </div>
                                             <div>
-                                                <a href="property-details.html" class="title h5 link text-cl-primary">
-                                                    Contemporary Loft in  District
+                                                <a class="title h5 link text-cl-primary"
+                                                    href="property-details.html">
+                                                    Contemporary Loft in District
                                                 </a>
-                                                <div class="place">560 Industrial Street, Los Angeles, California</div>
+                                                <div class="place">560 Industrial Street, Chicago</div>
                                             </div>
                                             <ul class="info d-flex">
                                                 <li class="d-flex align-items-center gap_8">
-                                                    <i class="icon-Bed"></i>1 Bed 
+                                                    <i class="icon-Bed"></i>1 Bed
                                                 </li>
                                                 <li class="d-flex align-items-center gap_8">
                                                     <i class="icon-Bathtub"></i>2 Bath
@@ -1264,11 +1193,12 @@
                                                 </li>
                                             </ul>
                                             <div class="wrap-btn">
-                                                <a href="property-details.html" class="tf-btn btn-bg-1 rounded-8 w-100 quick-view">
+                                                <a class="tf-btn btn-bg-1 rounded-8 w-100 quick-view"
+                                                    href="property-details.html">
                                                     <span>Quick View</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
-                                                <a href="#" class="tf-btn btn-border w-100 rounded-8 compare">
+                                                <a class="tf-btn btn-border w-100 rounded-8 compare" href="#">
                                                     <span>Compare</span>
                                                     <span class="bg-effect"></span>
                                                 </a>
@@ -1276,26 +1206,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <ul class="wg-pagination justify-content-center">
-                                    <li>
-                                        <a href="#">1</a>
-                                    </li>
-                                    <li class="active">
-                                        <a href="#">2</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">3</a>
-                                    </li>
-                                    <li class="arrow">
-                                        <a href="#"><i class="icon-CaretRight"></i></a>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- End top-map -->
+            <!-- End top-filter -->
 
         </main>
         <!-- End main-content -->
@@ -1560,6 +1476,7 @@
     <script src="js/wow.min.js"></script>
     <script src="js/map.min.js"></script>
     <script src="js/map.js"></script>
+    <script src="js/filter.js"></script>
     <script src="js/main.js"></script>
     <!-- /Javascript -->
 

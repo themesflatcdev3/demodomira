@@ -250,6 +250,9 @@
             flex: 10%;
             @include res(sm) {
                 flex-direction: column;
+                .btn-filter {
+                    border-radius: 99px !important;
+                }
                 >* {
                     width: 100% !important;
                 }
