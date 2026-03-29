@@ -1424,18 +1424,8 @@ a {
     transition: 0.6s cubic-bezier(0.24, 0.74, 0.58, 1);
 }
 
-.loadItem {
-    &.hidden {
-        display: none;
-    }
-}
-
 .fancybox-container {
     z-index: 99999;
-}
-
-.remove-file {
-    cursor: pointer;
 }
 
 .progress-wrap {

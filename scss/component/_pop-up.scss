@@ -78,44 +78,6 @@
     z-index: 100001;
 }
 
-.swal2-popup {
-    max-width: 400px;
-    width: 100%;
-
-    .swal2-actions {
-        gap: 20px;
-    }
-
-    .btn {
-        font-size: 16px;
-        line-height: 24px;
-        padding: 8px 24px;
-    }
-
-    .swal2-html-container {
-        font-size: 18px;
-        line-height: 26px;
-    }
-
-    .swal2-title {
-        font-size: 24px;
-        line-height: 32px;
-    }
-
-    .btn-success {
-        background-color: var(--Primary);
-        border: unset;
-        outline: none;
-        box-shadow: unset;
-        color: var(--Text-primary);
-        @include transition4();
-        &:hover {
-            background-color: var(--Text-primary);
-            color: var(--White);
-        }
-    }
-}
-
 .canvas-wrapper {
     padding: 0;
     isolation: isolate;

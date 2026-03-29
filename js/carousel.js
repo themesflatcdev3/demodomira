@@ -97,101 +97,14 @@ if ($(".sw-layout").length > 0) {
     });
 }
 
-if ($(".tf-sw-mobile").length > 0) {
-    $(".tf-sw-mobile").each(function () {
-        var swiperMb;
-        var $this = $(this);
-        var screenWidth = $this.data("screen");
-
-        function initSwiper() {
-            if (
-                matchMedia(`only screen and (max-width: ${screenWidth}px)`)
-                    .matches
-            ) {
-                if (!swiperMb) {
-                    var preview = $this.data("preview");
-                    var spacing = $this.data("space");
-
-                    swiperMb = new Swiper($this[0], {
-                        slidesPerView: preview,
-                        spaceBetween: spacing,
-                        speed: 1000,
-                        pagination: {
-                            el: $this.find(".sw-pagination-mb")[0],
-                            clickable: true,
-                        },
-                        navigation: {
-                            nextEl: $this.find(".nav-prev-mb")[0],
-                            prevEl: $this.find(".nav-next-mb")[0],
-                        },
-                    });
-                }
-            } else {
-                if (swiperMb) {
-                    swiperMb.destroy(true, true);
-                    swiperMb = null;
-                    $this.find(".swiper-wrapper").removeAttr("style");
-                    $this.find(".swiper-slide").removeAttr("style");
-                }
-            }
-        }
-
-        initSwiper();
-        window.addEventListener("resize", function () {
-            initSwiper();
-        });
-    });
-}
-
-if ($(".flat-thumbs-tes").length > 0) {
-    var spaceThumbLg = $(".tf-thumb-tes").data("space-lg");
-    var spaceThumb = $(".tf-thumb-tes").data("space");
-    var spaceTesLg = $(".tf-tes-main").data("space-lg");
-    var spaceTes = $(".tf-tes-main").data("space");
-    var effect = $(".flat-thumbs-tes").data("effect") || "slide";
-    const swThumb = new Swiper(".tf-thumb-tes", {
-        speed: 800,
-        spaceBetween: spaceThumb,
-        effect: effect,
-        fadeEffect: effect === "fade" ? { crossFade: true } : undefined,
-        breakpoints: {
-            768: {
-                spaceBetween: spaceThumbLg,
-            },
-        },
-    });
-    const swTesMain = new Swiper(".tf-tes-main", {
-        speed: 800,
-        navigation: {
-            nextEl: ".nav-next-tes",
-            prevEl: ".nav-prev-tes",
-        },
-        effect: effect,
-        fadeEffect: effect === "fade" ? { crossFade: true } : undefined,
-        pagination: {
-            el: ".sw-pagination-tes",
-            clickable: true,
-        },
-        spaceBetween: spaceTes,
-        breakpoints: {
-            768: {
-                spaceBetween: spaceTesLg,
-            },
-        },
-    });
-
-    swThumb.controller.control = swTesMain;
-    swTesMain.controller.control = swThumb;
-}
-
 var pagithumbs = new Swiper(".gallery-sw-thumbs", {
     spaceBetween: 20,
     slidesPerView: "auto",
     freeMode: true,
     watchSlidesProgress: true,
-  });
+});
   
-  var swiperSingle = new Swiper(".gallery-sw-single", {
+var swiperSingle = new Swiper(".gallery-sw-single", {
     spaceBetween: 20,
     autoplay: {
       delay: 3000,
@@ -205,4 +118,4 @@ var pagithumbs = new Swiper(".gallery-sw-thumbs", {
     thumbs: {
       swiper: pagithumbs,
     },
-  });
+});

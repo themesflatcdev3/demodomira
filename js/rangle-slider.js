@@ -70,6 +70,5 @@
   $(function () {
     rangeSliderTwo();
     rangeSliderTwo_2();
-    
   });
 })(jQuery);

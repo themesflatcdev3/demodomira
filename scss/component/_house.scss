@@ -108,13 +108,6 @@
             gap: 12px 22px;
         }
     }
-    &:hover {
-        .wishlist {
-            opacity: 1;
-            margin-left: 0;
-            transform: translateY(0);
-        }
-    }
     &.style-list {
         display: flex;
         gap: 32px;

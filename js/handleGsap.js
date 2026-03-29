@@ -2,7 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 (function ($) {
     /* animation_text
-  -------------------------------------------------------------------------*/
+    -------------------------------------------------------------------------*/
     var animation_text = function () {
         if ($(".split-text").length > 0) {
             var st = $(".split-text");
@@ -110,54 +110,6 @@ gsap.registerPlugin(ScrollTrigger);
         }
     };
 
-    /* scrolling_effect
-  -------------------------------------------------------------------------*/
-    var scrolling_effect = function () {
-        if ($(".scrolling-effect").length > 0) {
-            var st = $(".scrolling-effect");
-            st.each(function (index, el) {
-                var $el = $(el);
-                var delay = parseFloat($el.data("delay")) || 0;
-                var settings = {
-                    scrollTrigger: {
-                        trigger: el,
-                        scrub: 3,
-                        toggleActions: "play none none reverse",
-                        start: "30px bottom",
-                        end: "bottom bottom",
-                        once: true,
-                        delay: delay,
-                    },
-                    duration: 0.8,
-                    ease: "power3.out",
-                };
-
-                if ($el.hasClass("effectRight")) {
-                    settings.opacity = 0;
-                    settings.x = "80";
-                }
-                if ($el.hasClass("effectLeft")) {
-                    settings.opacity = 0;
-                    settings.x = "-80";
-                }
-                if ($el.hasClass("effectBottom")) {
-                    settings.opacity = 0;
-                    settings.y = "20%";
-                }
-                if ($el.hasClass("effectTop")) {
-                    settings.opacity = 0;
-                    settings.y = "-80";
-                }
-                if ($el.hasClass("effectZoomIn")) {
-                    settings.opacity = 0;
-                    settings.scale = 0.4;
-                }
-
-                gsap.from(el, settings);
-            });
-        }
-    };
-
     /* animateImgItem
     -------------------------------------------------------------------------------------*/
     var animateImgItem = function () {
@@ -212,50 +164,8 @@ gsap.registerPlugin(ScrollTrigger);
         $(window).on("scroll", checkVisible);
     };
 
-    /* scrollTransform
-    -------------------------------------------------------------------------------------*/
-    var scrollTransform = function () {
-        const scrollTransformElements =
-            document.querySelectorAll(".scroll-tranform");
-        if (scrollTransformElements.length > 0) {
-            scrollTransformElements.forEach(function (element) {
-                const direction = element.dataset.direction || "up";
-                const distance = element.dataset.distance || "10%";
-                let animationProperty;
-                switch (direction.toLowerCase()) {
-                    case "left":
-                        animationProperty = { x: `-${distance}` };
-                        break;
-                    case "right":
-                        animationProperty = { x: `${distance}` };
-                        break;
-                    case "up":
-                        animationProperty = { y: `-${distance}` };
-                        break;
-                    case "down":
-                        animationProperty = { y: `${distance}` };
-                        break;
-                    default:
-                        animationProperty = { y: `-${distance}` };
-                }
-
-                gsap.to(element, {
-                    ...animationProperty,
-                    scrollTrigger: {
-                        trigger: element,
-                        start: "top center",
-                        end: "bottom top",
-                        scrub: 2,
-                    },
-                });
-            });
-        }
-    };
-
     $(function () {
         animation_text();
-        scrolling_effect();
         animateImgItem();
-        scrollTransform();
     });
 })(jQuery);
