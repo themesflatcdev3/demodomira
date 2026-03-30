@@ -194,7 +194,7 @@
                 var $this = $(this);
                 var style = $this.data("style") || "left";
                 var clone = $this.data("clone") || 4;
-                var speed = $this.data("speed") || 100;
+                var speed = $this.data("speed") || 50;
                 $this.infiniteslide({
                     speed: speed,
                     direction: style,
