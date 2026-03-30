@@ -863,7 +863,7 @@
     @include res(xl) {
         position: fixed !important;
         bottom: 0;
-        top: 0;
+        top: 0 !important;
         left: 0;
         z-index: 10000;
         display: flex;

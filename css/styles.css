@@ -181,13 +181,12 @@ body {
   color: var(--Text-secondary);
 }
 body::-webkit-scrollbar {
-  width: 10px;
-  background-color: var(--Text-muted);
-  width: 0px;
+  width: 8px;
+  background-color: var(--Line);
 }
 body::-webkit-scrollbar-thumb {
-  background: var(--Primary);
-  border-radius: 999px;
+  background: var(--Text-secondary);
+  border-radius: 0;
 }
 
 article,
@@ -2304,13 +2303,13 @@ a:focus, a:hover {
 #menu-mobile-menu .menu-item-has-children-mobile .item-menu-mobile::before {
   position: absolute;
   content: "";
-  top: 50%;
+  top: 18px;
   right: 5px;
-  transform: translateY(-50%);
   width: 2px;
   height: 12px;
   border-radius: 99px;
   background-color: var(--Text-primary);
+  opacity: 1;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -2318,7 +2317,8 @@ a:focus, a:hover {
   transition: all 0.3s ease;
 }
 #menu-mobile-menu .menu-item-has-children-mobile .item-menu-mobile:not(.collapsed)::before {
-  display: none;
+  transform: rotate(90deg);
+  opacity: 0;
 }
 #menu-mobile-menu .sub-mobile {
   padding-left: 25px;
@@ -5625,7 +5625,7 @@ input.tf-check::before {
   .tf-filter-sidebar {
     position: fixed !important;
     bottom: 0;
-    top: 0;
+    top: 0 !important;
     left: 0;
     z-index: 10000;
     display: flex;

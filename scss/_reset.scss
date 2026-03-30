@@ -131,13 +131,12 @@ body {
     font-family: $font-main;
     color: var(--Text-secondary);
     &::-webkit-scrollbar {
-        width: 10px;
-        background-color: var(--Text-muted);
-        width: 0px;
+        width: 8px;
+        background-color: var(--Line);
     }
     &::-webkit-scrollbar-thumb {
-        background: var(--Primary);
-        border-radius: 999px;
+        background: var(--Text-secondary);
+        border-radius: 0;
     }
 }
 

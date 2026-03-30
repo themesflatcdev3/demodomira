@@ -300,8 +300,8 @@ document.addEventListener("DOMContentLoaded", function () {
         setNiceSelectValue('bedrooms', 'any');
         setNiceSelectValue('baths', 'all');
         setNiceSelectValue('garages', 'all');
-        setSliderRange('price-value-range', 'price-min-value', 'price-max-value', defaultPriceRange);
-        setSliderRange('price-value-range-2', 'price-min-value-2', 'price-max-value-2', defaultSqftRange);
+        setSliderRange('price-value-range', 'price-min-value', 'price-max-value', { min: 0, max: 10000 });
+        setSliderRange('price-value-range-2', 'price-min-value-2', 'price-max-value-2', { min: 0, max: 10000 });
         applyFilters();
     }
 
